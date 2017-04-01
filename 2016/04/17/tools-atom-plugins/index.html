@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>atom编辑器常用插件 | Kompasim | Personal technology blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="tools,atom">
+    <meta name="description" content="demo
+            
+…
+1. emmethtml补全
+2. active-power-mode文字泡沫
+3. power-mode随地泡沫
+4. atom-mikumiku
+5. autocompl">
+<meta property="og:type" content="article">
+<meta property="og:title" content="atom编辑器常用插件">
+<meta property="og:url" content="http://kompasim.github.io/2016/04/17/tools-atom-plugins/index.html">
+<meta property="og:site_name" content="Kompasim">
+<meta property="og:description" content="demo
+            
+…
+1. emmethtml补全
+2. active-power-mode文字泡沫
+3. power-mode随地泡沫
+4. atom-mikumiku
+5. autocompl">
+<meta property="og:image" content="http://file06.16sucai.com/2016/0321/8a404146f33c074173c10d52e2d5fa3f.jpg">
+<meta property="og:image" content="http://kompasim.github.io/images/atom-plugin/atom3.png">
+<meta property="og:image" content="http://kompasim.github.io/images/atom-plugin/atom1.png">
+<meta property="og:image" content="http://kompasim.github.io/images/atom-plugin/atom2.png">
+<meta property="og:updated_time" content="2017-04-01T14:04:43.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="atom编辑器常用插件">
+<meta name="twitter:description" content="demo
+            
+…
+1. emmethtml补全
+2. active-power-mode文字泡沫
+3. power-mode随地泡沫
+4. atom-mikumiku
+5. autocompl">
+<meta name="twitter:image" content="http://file06.16sucai.com/2016/0321/8a404146f33c074173c10d52e2d5fa3f.jpg">
+    
+        <link rel="alternative" href="/atom.xml" title="Kompasim" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@1.5.2/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">alimjan</h5>
+          <a href="mailto:kompasim@163.com" title="kompasim@163.com" class="mail">kompasim@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                HOME
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/kompasim" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://stackoverflow.com/users/6213502/kompasim" target="_blank" >
+                <i class="icon icon-lg icon-stack-overflow"></i>
+                Stack Overflow
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://segmentfault.com/u/kompasim" target="_blank" >
+                <i class="icon icon-lg icon-link"></i>
+                segmentfault
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">atom编辑器常用插件</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">atom编辑器常用插件</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2016-04-16T18:42:36.000Z" itemprop="datePublished" class="page-time">
+  2016-04-17
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/tools/">tools</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-emmet"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. emmet</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-active-power-mode"><span class="post-toc-number">2.</span> <span class="post-toc-text">2. active-power-mode</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-power-mode"><span class="post-toc-number">3.</span> <span class="post-toc-text">3. power-mode</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-atom-miku"><span class="post-toc-number">4.</span> <span class="post-toc-text">4. atom-miku</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-autocomplete-plus"><span class="post-toc-number">5.</span> <span class="post-toc-text">5. autocomplete-plus</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-atomic-chrome"><span class="post-toc-number">6.</span> <span class="post-toc-text">5. atomic-chrome</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-minimap"><span class="post-toc-number">7.</span> <span class="post-toc-text">6. minimap</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-file-icons-file-icon-supplement"><span class="post-toc-number">8.</span> <span class="post-toc-text">7. file-icons || file-icon-supplement</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-atom-beautify"><span class="post-toc-number">9.</span> <span class="post-toc-text">8. atom-beautify</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#9-Color-Picker"><span class="post-toc-number">10.</span> <span class="post-toc-text">9. Color Picker</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#10-Editor-setting"><span class="post-toc-number">11.</span> <span class="post-toc-text">10. Editor-setting</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#11-atom-terminal-panel"><span class="post-toc-number">12.</span> <span class="post-toc-text">11. atom-terminal-panel</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#12-Git"><span class="post-toc-number">13.</span> <span class="post-toc-text">12. Git</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#13-language-JavaScript-jsx"><span class="post-toc-number">14.</span> <span class="post-toc-text">13. language-JavaScript-jsx</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#14-markdown-preview-plus"><span class="post-toc-number">15.</span> <span class="post-toc-text">14. markdown-preview-plus</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#15-tool-bar"><span class="post-toc-number">16.</span> <span class="post-toc-text">15. tool-bar</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#16-atom-html-preview"><span class="post-toc-number">17.</span> <span class="post-toc-text">16. atom-html-preview</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#17-vim-mode"><span class="post-toc-number">18.</span> <span class="post-toc-text">17. vim-mode</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#18-pigments"><span class="post-toc-number">19.</span> <span class="post-toc-text">18. pigments</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#19-autocomplete-modules"><span class="post-toc-number">20.</span> <span class="post-toc-text">19. autocomplete-modules</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#19-php-server"><span class="post-toc-number">21.</span> <span class="post-toc-text">19. php-server</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#20-live-server"><span class="post-toc-number">22.</span> <span class="post-toc-text">20. live-server</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#21-React"><span class="post-toc-number">23.</span> <span class="post-toc-text">21. React</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#22-tree-view-git-status"><span class="post-toc-number">24.</span> <span class="post-toc-text">22. tree-view-git-status</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#23-tree-view-background"><span class="post-toc-number">25.</span> <span class="post-toc-text">23. tree-view-background</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#24-glowing-cursor"><span class="post-toc-number">26.</span> <span class="post-toc-text">24. glowing-cursor</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#25-filecolor"><span class="post-toc-number">27.</span> <span class="post-toc-text">25. filecolor</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#26-windows-context-menu"><span class="post-toc-number">28.</span> <span class="post-toc-text">26. windows-context-menu</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#27-open-in-browser"><span class="post-toc-number">29.</span> <span class="post-toc-text">27. open-in-browser</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#28-sound"><span class="post-toc-number">30.</span> <span class="post-toc-text">28. sound</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#29-video-player"><span class="post-toc-number">31.</span> <span class="post-toc-text">29. video-player</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#30-all-times-you-know"><span class="post-toc-number">32.</span> <span class="post-toc-text">30. all-times-you-know</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#31-hacker-news-background-titles"><span class="post-toc-number">33.</span> <span class="post-toc-text">31. hacker-news-background-titles</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#32-editor-background"><span class="post-toc-number">34.</span> <span class="post-toc-text">32. editor-background</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#33-server-script"><span class="post-toc-number">35.</span> <span class="post-toc-text">33. server-script</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#34-custom-title"><span class="post-toc-number">36.</span> <span class="post-toc-text">34. custom-title</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#35-status-bar"><span class="post-toc-number">37.</span> <span class="post-toc-text">35. status-bar</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#36-menu-manager"><span class="post-toc-number">38.</span> <span class="post-toc-text">36. menu-manager</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#37-php-class-tree"><span class="post-toc-number">39.</span> <span class="post-toc-text">37. php-class-tree</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#38-Nuclide"><span class="post-toc-number">40.</span> <span class="post-toc-text">38. Nuclide</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#39-Script"><span class="post-toc-number">41.</span> <span class="post-toc-text">39. Script</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#40-remote-edit"><span class="post-toc-number">42.</span> <span class="post-toc-text">40. remote-edit</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#41-remote-sync"><span class="post-toc-number">43.</span> <span class="post-toc-text">41. remote-sync</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#42-remote-ftp"><span class="post-toc-number">44.</span> <span class="post-toc-text">42. remote-ftp</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#43-browser-plus"><span class="post-toc-number">45.</span> <span class="post-toc-text">43. browser-plus</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#44-preview-plus"><span class="post-toc-number">46.</span> <span class="post-toc-text">44. preview-plus</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#45-open-in-browser"><span class="post-toc-number">47.</span> <span class="post-toc-text">45. open-in-browser</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#46-language-babel"><span class="post-toc-number">48.</span> <span class="post-toc-text">46. language-babel</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#47-games"><span class="post-toc-number">49.</span> <span class="post-toc-text">47. games</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#48-markdown-preview-amp-amp-markdown-scroll-sync"><span class="post-toc-number">50.</span> <span class="post-toc-text">48. markdown-preview && markdown-scroll-sync</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#49-markdown-writer"><span class="post-toc-number">51.</span> <span class="post-toc-text">49. markdown-writer</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#50-markdown-table-format"><span class="post-toc-number">52.</span> <span class="post-toc-text">50. markdown-table-format</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#51-atom-hexo"><span class="post-toc-number">53.</span> <span class="post-toc-text">51. atom-hexo</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#52-github-issure"><span class="post-toc-number">54.</span> <span class="post-toc-text">52. github-issure</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#53-github"><span class="post-toc-number">55.</span> <span class="post-toc-text">53. github</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#54-sourcerer"><span class="post-toc-number">56.</span> <span class="post-toc-text">54. sourcerer</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#55-ask-stack"><span class="post-toc-number">57.</span> <span class="post-toc-text">55. ask-stack</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#56-debug"><span class="post-toc-number">58.</span> <span class="post-toc-text">56. debug</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#57-file-header-header-42"><span class="post-toc-number">59.</span> <span class="post-toc-text">57. file-header || header-42</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#58-atom-minify-uglify"><span class="post-toc-number">60.</span> <span class="post-toc-text">58 atom-minify || uglify</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#59-sync-settings"><span class="post-toc-number">61.</span> <span class="post-toc-text">59. sync-settings</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#60-atom-music"><span class="post-toc-number">62.</span> <span class="post-toc-text">60. atom-music</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#61-musicBox"><span class="post-toc-number">63.</span> <span class="post-toc-text">61. musicBox</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#62-youtube-pane-playyoutube"><span class="post-toc-number">64.</span> <span class="post-toc-text">62. youtube-pane || playyoutube</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#63-themed-settings"><span class="post-toc-number">65.</span> <span class="post-toc-text">63. themed-settings</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#64-markdown-themeable-pdf"><span class="post-toc-number">66.</span> <span class="post-toc-text">64. markdown-themeable-pdf</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#65-jupyter-notebook-note-book"><span class="post-toc-number">67.</span> <span class="post-toc-text">65. jupyter-notebook || note-book</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#66-markdown-scroll-sync"><span class="post-toc-number">68.</span> <span class="post-toc-text">66. markdown-scroll-sync</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#67-autocomplete-python"><span class="post-toc-number">69.</span> <span class="post-toc-text">67. autocomplete-python</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#68-javascript-snippets"><span class="post-toc-number">70.</span> <span class="post-toc-text">68. javascript-snippets</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#69-go-to-line"><span class="post-toc-number">71.</span> <span class="post-toc-text">69. go-to-line</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#70-atom-ternjs"><span class="post-toc-number">72.</span> <span class="post-toc-text">70. atom-ternjs</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#71-regex-railroad-diagram"><span class="post-toc-number">73.</span> <span class="post-toc-text">71. regex-railroad-diagram</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#72-atom-shell-commands"><span class="post-toc-number">74.</span> <span class="post-toc-text">72. atom-shell-commands</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#73-advanced-open-file"><span class="post-toc-number">75.</span> <span class="post-toc-text">73. advanced-open-file</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#74-seti-ui"><span class="post-toc-number">76.</span> <span class="post-toc-text">74. seti-ui</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#75-php-cx-fixer"><span class="post-toc-number">77.</span> <span class="post-toc-text">75. php-cx-fixer</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#76-git-log"><span class="post-toc-number">78.</span> <span class="post-toc-text">76. git-log</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#77-pretty-json"><span class="post-toc-number">79.</span> <span class="post-toc-text">77. pretty-json</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#78-drag-drop-text"><span class="post-toc-number">80.</span> <span class="post-toc-text">78. drag-drop-text</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#79-to-base64-base64"><span class="post-toc-number">81.</span> <span class="post-toc-text">79. to-base64 | base64</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#80-draw-on-image"><span class="post-toc-number">82.</span> <span class="post-toc-text">80. draw-on-image</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#81-command-toolbar"><span class="post-toc-number">83.</span> <span class="post-toc-text">81. command-toolbar</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#82-Encourage"><span class="post-toc-number">84.</span> <span class="post-toc-text">82. Encourage</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#83-platformio-ide-terminal"><span class="post-toc-number">85.</span> <span class="post-toc-text">83. platformio-ide-terminal</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#84-auto-hide-sidebar"><span class="post-toc-number">86.</span> <span class="post-toc-text">84. auto hide sidebar</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#85-slack-chat"><span class="post-toc-number">87.</span> <span class="post-toc-text">85. slack-chat</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#86-atomic-game-engine"><span class="post-toc-number">88.</span> <span class="post-toc-text">86. atomic-game-engine</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#87-canvas-snippets"><span class="post-toc-number">89.</span> <span class="post-toc-text">87. canvas-snippets</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#88-draw-package"><span class="post-toc-number">90.</span> <span class="post-toc-text">88. draw-package</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#89-open-in-browsers"><span class="post-toc-number">91.</span> <span class="post-toc-text">89. open-in-browsers</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#90-lunar-particle-ui-seti-ui"><span class="post-toc-number">92.</span> <span class="post-toc-text">90. lunar-particle-ui | seti-ui</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#91-atom-monokai-monokai"><span class="post-toc-number">93.</span> <span class="post-toc-text">91. atom-monokai | monokai</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#92-SyncedSidebarBg"><span class="post-toc-number">94.</span> <span class="post-toc-text">92. SyncedSidebarBg</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#93-api-docs"><span class="post-toc-number">95.</span> <span class="post-toc-text">93. api-docs</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#94-goto-definition"><span class="post-toc-number">96.</span> <span class="post-toc-text">94. goto-definition</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#95-template-generator"><span class="post-toc-number">97.</span> <span class="post-toc-text">95. template-generator</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#96-project-viewer"><span class="post-toc-number">98.</span> <span class="post-toc-text">96. project-viewer</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#97-Docblockr"><span class="post-toc-number">99.</span> <span class="post-toc-text">97. Docblockr</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#98-api-docs-api-docs"><span class="post-toc-number">100.</span> <span class="post-toc-text">98. api-docs | api-docs</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-tools-atom-plugins"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">atom编辑器常用插件</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2016年04月17日 2:42" datetime="2016-04-16T18:42:36.000Z"  itemprop="datePublished">2016-04-17</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/tools/">tools</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://file06.16sucai.com/2016/0321/8a404146f33c074173c10d52e2d5fa3f.jpg" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure>
+<p>…</p>
+<h2 id="1-emmet"><a href="#1-emmet" class="headerlink" title="1. emmet"></a>1. emmet</h2><pre><code>html补全
+</code></pre><h2 id="2-active-power-mode"><a href="#2-active-power-mode" class="headerlink" title="2. active-power-mode"></a>2. active-power-mode</h2><pre><code>文字泡沫
+</code></pre><h2 id="3-power-mode"><a href="#3-power-mode" class="headerlink" title="3. power-mode"></a>3. power-mode</h2><pre><code>随地泡沫
+</code></pre><h2 id="4-atom-miku"><a href="#4-atom-miku" class="headerlink" title="4. atom-miku"></a>4. atom-miku</h2><pre><code>miku
+</code></pre><h2 id="5-autocomplete-plus"><a href="#5-autocomplete-plus" class="headerlink" title="5. autocomplete-plus"></a>5. autocomplete-plus</h2><pre><code>当输入的时候，提供可能的候选项。
+</code></pre><h2 id="5-atomic-chrome"><a href="#5-atomic-chrome" class="headerlink" title="5. atomic-chrome"></a>5. atomic-chrome</h2><pre><code>chrome里面的编辑框直接在atom编辑
+</code></pre><h2 id="6-minimap"><a href="#6-minimap" class="headerlink" title="6. minimap"></a>6. minimap</h2><pre><code>源码预览图，提供丰富的自定义选项
+</code></pre><h2 id="7-file-icons-file-icon-supplement"><a href="#7-file-icons-file-icon-supplement" class="headerlink" title="7. file-icons || file-icon-supplement"></a>7. file-icons || file-icon-supplement</h2><pre><code>显示文件类型对应的图标。
+</code></pre><h2 id="8-atom-beautify"><a href="#8-atom-beautify" class="headerlink" title="8. atom-beautify"></a>8. atom-beautify</h2><pre><code>格式化代码，更统一的代码风格。
+</code></pre><h2 id="9-Color-Picker"><a href="#9-Color-Picker" class="headerlink" title="9. Color Picker"></a>9. Color Picker</h2><pre><code>在编辑器里面挑选颜色。
+</code></pre><h2 id="10-Editor-setting"><a href="#10-Editor-setting" class="headerlink" title="10. Editor-setting"></a>10. Editor-setting</h2><pre><code>给每个语言独立设置扩展和功能
+</code></pre><h2 id="11-atom-terminal-panel"><a href="#11-atom-terminal-panel" class="headerlink" title="11. atom-terminal-panel"></a>11. atom-terminal-panel</h2><pre><code>atom内置命令行工具
+</code></pre><h2 id="12-Git"><a href="#12-Git" class="headerlink" title="12. Git"></a>12. Git</h2><pre><code>git-control git面板
+git-controlhub git面板
+open-gitub  在atom打开gitub
+</code></pre><h2 id="13-language-JavaScript-jsx"><a href="#13-language-JavaScript-jsx" class="headerlink" title="13. language-JavaScript-jsx"></a>13. language-JavaScript-jsx</h2><pre><code>jsx扩展
+</code></pre><h2 id="14-markdown-preview-plus"><a href="#14-markdown-preview-plus" class="headerlink" title="14. markdown-preview-plus"></a>14. markdown-preview-plus</h2><pre><code>markdown预览
+</code></pre><h2 id="15-tool-bar"><a href="#15-tool-bar" class="headerlink" title="15. tool-bar"></a>15. tool-bar</h2><pre><code>tool-bar-almighty // 我个人喜欢
+tool-bar-shortcut //功能丰富
+tool-bar-shortcuts //可以自选选项
+右侧工具栏 （必须把tool-bar和上面三个任意选一个一起安装，只安装一个没有效果的）
+</code></pre><h2 id="16-atom-html-preview"><a href="#16-atom-html-preview" class="headerlink" title="16. atom-html-preview"></a>16. atom-html-preview</h2><pre><code>预览lhtml页面
+</code></pre><h2 id="17-vim-mode"><a href="#17-vim-mode" class="headerlink" title="17. vim-mode"></a>17. vim-mode</h2><pre><code>atom添加vin模式
+</code></pre><h2 id="18-pigments"><a href="#18-pigments" class="headerlink" title="18. pigments"></a>18. pigments</h2><pre><code>颜色代码着色显示（代码指定的颜色）
+</code></pre><h2 id="19-autocomplete-modules"><a href="#19-autocomplete-modules" class="headerlink" title="19. autocomplete-modules"></a>19. autocomplete-modules</h2><pre><code>模块名自动补全
+</code></pre><h2 id="19-php-server"><a href="#19-php-server" class="headerlink" title="19. php-server"></a>19. php-server</h2><pre><code>给某个文件夹php服务器启动
+</code></pre><h2 id="20-live-server"><a href="#20-live-server" class="headerlink" title="20. live-server"></a>20. live-server</h2><pre><code>自动刷新的服务器
+</code></pre><h2 id="21-React"><a href="#21-React" class="headerlink" title="21. React"></a>21. React</h2><pre><code>atom-react-preview  react预览
+react 语法支持
+atom-react-native-autocomplete RN代码补全
+</code></pre><h2 id="22-tree-view-git-status"><a href="#22-tree-view-git-status" class="headerlink" title="22. tree-view-git-status"></a>22. tree-view-git-status</h2><pre><code>文件夹git状态
+</code></pre><h2 id="23-tree-view-background"><a href="#23-tree-view-background" class="headerlink" title="23. tree-view-background"></a>23. tree-view-background</h2><pre><code>文件栏背景图
+</code></pre><h2 id="24-glowing-cursor"><a href="#24-glowing-cursor" class="headerlink" title="24. glowing-cursor"></a>24. glowing-cursor</h2><pre><code>打字时候光标颜色
+</code></pre><h2 id="25-filecolor"><a href="#25-filecolor" class="headerlink" title="25. filecolor"></a>25. filecolor</h2><pre><code>文件名颜色
+</code></pre><h2 id="26-windows-context-menu"><a href="#26-windows-context-menu" class="headerlink" title="26. windows-context-menu"></a>26. windows-context-menu</h2><pre><code>给windows添加打开快捷方式
+</code></pre><h2 id="27-open-in-browser"><a href="#27-open-in-browser" class="headerlink" title="27. open-in-browser"></a>27. open-in-browser</h2><pre><code>默认程序打开代码
+</code></pre><h2 id="28-sound"><a href="#28-sound" class="headerlink" title="28. sound"></a>28. sound</h2><pre><code>keyboard-sound
+typewriter-sound
+敲代码声音
+</code></pre><h2 id="29-video-player"><a href="#29-video-player" class="headerlink" title="29. video-player"></a>29. video-player</h2><pre><code>背景播放视频
+</code></pre><h2 id="30-all-times-you-know"><a href="#30-all-times-you-know" class="headerlink" title="30. all-times-you-know"></a>30. all-times-you-know</h2><pre><code>atom全局背景
+</code></pre><h2 id="31-hacker-news-background-titles"><a href="#31-hacker-news-background-titles" class="headerlink" title="31. hacker-news-background-titles"></a>31. hacker-news-background-titles</h2><pre><code>黑客新闻标题和打开链接（无文件打开状态下在背景）
+</code></pre><h2 id="32-editor-background"><a href="#32-editor-background" class="headerlink" title="32. editor-background"></a>32. editor-background</h2><pre><code>背景图片和视频
+</code></pre><h2 id="33-server-script"><a href="#33-server-script" class="headerlink" title="33. server-script"></a>33. server-script</h2><pre><code>同步/运行脚本到服务器
+</code></pre><h2 id="34-custom-title"><a href="#34-custom-title" class="headerlink" title="34. custom-title"></a>34. custom-title</h2><pre><code>给atom设置个性化标题
+</code></pre><h2 id="35-status-bar"><a href="#35-status-bar" class="headerlink" title="35. status-bar"></a>35. status-bar</h2><pre><code>line-count-status
+move-status-items
+status-bar-clock
+battery-status
+git-status
+terminal-status
+ctags-status //类，函数，作用域
+</code></pre><h2 id="36-menu-manager"><a href="#36-menu-manager" class="headerlink" title="36. menu-manager"></a>36. menu-manager</h2><pre><code>顶部菜单管理
+</code></pre><h2 id="37-php-class-tree"><a href="#37-php-class-tree" class="headerlink" title="37. php-class-tree"></a>37. php-class-tree</h2><pre><code>php类和方法树状图
+</code></pre><h2 id="38-Nuclide"><a href="#38-Nuclide" class="headerlink" title="38. Nuclide"></a>38. Nuclide</h2><pre><code>Facebook的IDE
+</code></pre><h2 id="39-Script"><a href="#39-Script" class="headerlink" title="39. Script"></a>39. Script</h2><pre><code>在编辑器里运行代码
+</code></pre><h2 id="40-remote-edit"><a href="#40-remote-edit" class="headerlink" title="40. remote-edit"></a>40. remote-edit</h2><pre><code>编辑服务器上的文件
+</code></pre><h2 id="41-remote-sync"><a href="#41-remote-sync" class="headerlink" title="41. remote-sync"></a>41. remote-sync</h2><pre><code>同步服务器上的文件
+</code></pre><h2 id="42-remote-ftp"><a href="#42-remote-ftp" class="headerlink" title="42. remote-ftp"></a>42. remote-ftp</h2><pre><code>服务器文件的树状结构显示
+</code></pre><h2 id="43-browser-plus"><a href="#43-browser-plus" class="headerlink" title="43. browser-plus"></a>43. browser-plus</h2><pre><code>浏览器
+</code></pre><h2 id="44-preview-plus"><a href="#44-preview-plus" class="headerlink" title="44. preview-plus"></a>44. preview-plus</h2><pre><code>浏览一切
+</code></pre><h2 id="45-open-in-browser"><a href="#45-open-in-browser" class="headerlink" title="45. open-in-browser"></a>45. open-in-browser</h2><pre><code>在浏览器打开
+</code></pre><h2 id="46-language-babel"><a href="#46-language-babel" class="headerlink" title="46. language-babel"></a>46. language-babel</h2><pre><code>jsx语法
+</code></pre><h2 id="47-games"><a href="#47-games" class="headerlink" title="47. games"></a>47. games</h2><pre><code>atom-2048
+snake
+tetromino
+</code></pre><h2 id="48-markdown-preview-amp-amp-markdown-scroll-sync"><a href="#48-markdown-preview-amp-amp-markdown-scroll-sync" class="headerlink" title="48. markdown-preview &amp;&amp; markdown-scroll-sync"></a>48. markdown-preview &amp;&amp; markdown-scroll-sync</h2><pre><code>将markdown-preview编辑区和预览区同步滚动
+</code></pre><h2 id="49-markdown-writer"><a href="#49-markdown-writer" class="headerlink" title="49. markdown-writer"></a>49. markdown-writer</h2><pre><code>方便管理markdown里的图片和链接
+</code></pre><h2 id="50-markdown-table-format"><a href="#50-markdown-table-format" class="headerlink" title="50. markdown-table-format"></a>50. markdown-table-format</h2><pre><code>格式化markdown的表格
+</code></pre><h2 id="51-atom-hexo"><a href="#51-atom-hexo" class="headerlink" title="51. atom-hexo"></a>51. atom-hexo</h2><pre><code>atom编辑器里执行hexo命令写博客
+</code></pre><h2 id="52-github-issure"><a href="#52-github-issure" class="headerlink" title="52. github-issure"></a>52. github-issure</h2><pre><code>github-issure帮助工具
+</code></pre><h2 id="53-github"><a href="#53-github" class="headerlink" title="53. github"></a>53. github</h2><pre><code>github-user-dataip  显示文档里github账号的详细信息
+create-github-repo  创建github repository
+my-github-profile  显示自己github信息在状态栏
+github-notification 通知github消息
+gist-it 快速分享代码到gist.github.com(可惜天朝用不了gist)
+</code></pre><h2 id="54-sourcerer"><a href="#54-sourcerer" class="headerlink" title="54. sourcerer"></a>54. sourcerer</h2><pre><code>根据遇到的问题查找stackoverflow代码片段
+</code></pre><h2 id="55-ask-stack"><a href="#55-ask-stack" class="headerlink" title="55. ask-stack"></a>55. ask-stack</h2><pre><code>在atom快速提问stackoverflow
+</code></pre><h2 id="56-debug"><a href="#56-debug" class="headerlink" title="56. debug"></a>56. debug</h2><pre><code>node-debugger
+php-debug
+python-debugger
+swift-debugger
+go-debug
+...
+</code></pre><h2 id="57-file-header-header-42"><a href="#57-file-header-header-42" class="headerlink" title="57. file-header || header-42"></a>57. file-header || header-42</h2><pre><code>给当前编辑文件添加用户时间等头部信息
+</code></pre><h2 id="58-atom-minify-uglify"><a href="#58-atom-minify-uglify" class="headerlink" title="58 atom-minify || uglify"></a>58 atom-minify || uglify</h2><pre><code>js 代码混淆
+</code></pre><h2 id="59-sync-settings"><a href="#59-sync-settings" class="headerlink" title="59. sync-settings"></a>59. sync-settings</h2><pre><code>备份同步atom的插件和配置
+</code></pre><h2 id="60-atom-music"><a href="#60-atom-music" class="headerlink" title="60. atom-music"></a>60. atom-music</h2><pre><code>本地音乐播放器
+</code></pre><h2 id="61-musicBox"><a href="#61-musicBox" class="headerlink" title="61. musicBox"></a>61. musicBox</h2><pre><code>atomn内嵌listenvideo.com
+</code></pre><h2 id="62-youtube-pane-playyoutube"><a href="#62-youtube-pane-playyoutube" class="headerlink" title="62. youtube-pane || playyoutube"></a>62. youtube-pane || playyoutube</h2><pre><code>atom内嵌youtube
+</code></pre><h2 id="63-themed-settings"><a href="#63-themed-settings" class="headerlink" title="63. themed-settings"></a>63. themed-settings</h2><pre><code>美化设置面板
+</code></pre><h2 id="64-markdown-themeable-pdf"><a href="#64-markdown-themeable-pdf" class="headerlink" title="64. markdown-themeable-pdf"></a>64. markdown-themeable-pdf</h2><pre><code>markdown转换成pdf,html,png
+</code></pre><h2 id="65-jupyter-notebook-note-book"><a href="#65-jupyter-notebook-note-book" class="headerlink" title="65. jupyter-notebook || note-book"></a>65. jupyter-notebook || note-book</h2><pre><code>atom内嵌notebook
+</code></pre><h2 id="66-markdown-scroll-sync"><a href="#66-markdown-scroll-sync" class="headerlink" title="66. markdown-scroll-sync"></a>66. markdown-scroll-sync</h2><pre><code>当markdown-preview时编辑框和预览框同步
+</code></pre><h2 id="67-autocomplete-python"><a href="#67-autocomplete-python" class="headerlink" title="67. autocomplete-python"></a>67. autocomplete-python</h2><pre><code>python代码自动补全
+</code></pre><h2 id="68-javascript-snippets"><a href="#68-javascript-snippets" class="headerlink" title="68. javascript-snippets"></a>68. javascript-snippets</h2><pre><code>输入特殊的字符后自动扩展成对应的 Javascript 代码片段
+</code></pre><h2 id="69-go-to-line"><a href="#69-go-to-line" class="headerlink" title="69. go-to-line"></a>69. go-to-line</h2><pre><code>跳转到指定的行，只要 ctrl + g 后输入行号即可
+</code></pre><h2 id="70-atom-ternjs"><a href="#70-atom-ternjs" class="headerlink" title="70. atom-ternjs"></a>70. atom-ternjs</h2><pre><code>js,nodejs,es6补全
+</code></pre><h2 id="71-regex-railroad-diagram"><a href="#71-regex-railroad-diagram" class="headerlink" title="71. regex-railroad-diagram"></a>71. regex-railroad-diagram</h2><pre><code>正则表达式图形化显示
+</code></pre><h2 id="72-atom-shell-commands"><a href="#72-atom-shell-commands" class="headerlink" title="72. atom-shell-commands"></a>72. atom-shell-commands</h2><pre><code>自定义shell命令
+</code></pre><h2 id="73-advanced-open-file"><a href="#73-advanced-open-file" class="headerlink" title="73. advanced-open-file"></a>73. advanced-open-file</h2><pre><code>通过 Cmd-Alt-O/Ctrl-Alt-O 快速的打开文件或新建文件，同时支持路径补全
+</code></pre><h2 id="74-seti-ui"><a href="#74-seti-ui" class="headerlink" title="74. seti-ui"></a>74. seti-ui</h2><pre><code>带文件图标的黑色主题
+</code></pre><h2 id="75-php-cx-fixer"><a href="#75-php-cx-fixer" class="headerlink" title="75. php-cx-fixer"></a>75. php-cx-fixer</h2><pre><code>运行php
+</code></pre><h2 id="76-git-log"><a href="#76-git-log" class="headerlink" title="76. git-log"></a>76. git-log</h2><pre><code>图形化git提交记录
+</code></pre><h2 id="77-pretty-json"><a href="#77-pretty-json" class="headerlink" title="77. pretty-json"></a>77. pretty-json</h2><pre><code>格式化json数据
+</code></pre><h2 id="78-drag-drop-text"><a href="#78-drag-drop-text" class="headerlink" title="78. drag-drop-text"></a>78. drag-drop-text</h2><pre><code>用鼠标复制剪切粘贴文本
+</code></pre><h2 id="79-to-base64-base64"><a href="#79-to-base64-base64" class="headerlink" title="79. to-base64 | base64"></a>79. to-base64 | base64</h2><pre><code>文件转base64
+</code></pre><h2 id="80-draw-on-image"><a href="#80-draw-on-image" class="headerlink" title="80. draw-on-image"></a>80. draw-on-image</h2><pre><code>截屏和编辑图片
+</code></pre><h2 id="81-command-toolbar"><a href="#81-command-toolbar" class="headerlink" title="81. command-toolbar"></a>81. command-toolbar</h2><pre><code>个性化atom的各个按钮命令
+</code></pre><h2 id="82-Encourage"><a href="#82-Encourage" class="headerlink" title="82. Encourage"></a>82. Encourage</h2><pre><code>atom来鼓励你写代码
+</code></pre><h2 id="83-platformio-ide-terminal"><a href="#83-platformio-ide-terminal" class="headerlink" title="83. platformio-ide-terminal"></a>83. platformio-ide-terminal</h2><pre><code>又是一个很棒的terminal
+</code></pre><h2 id="84-auto-hide-sidebar"><a href="#84-auto-hide-sidebar" class="headerlink" title="84. auto hide sidebar"></a>84. auto hide sidebar</h2><pre><code>自动隐藏树状文件面板
+</code></pre><h2 id="85-slack-chat"><a href="#85-slack-chat" class="headerlink" title="85. slack-chat"></a>85. slack-chat</h2><pre><code>slack的atom内置客户端
+</code></pre><h2 id="86-atomic-game-engine"><a href="#86-atomic-game-engine" class="headerlink" title="86. atomic-game-engine"></a>86. atomic-game-engine</h2><pre><code>游戏引擎
+</code></pre><h2 id="87-canvas-snippets"><a href="#87-canvas-snippets" class="headerlink" title="87. canvas-snippets"></a>87. canvas-snippets</h2><pre><code>html5的canvas代码片段
+</code></pre><h2 id="88-draw-package"><a href="#88-draw-package" class="headerlink" title="88. draw-package"></a>88. draw-package</h2><pre><code>文件里画图形
+</code></pre><h2 id="89-open-in-browsers"><a href="#89-open-in-browsers" class="headerlink" title="89. open-in-browsers"></a>89. open-in-browsers</h2><pre><code>在安装过的任意浏览器打开代码
+</code></pre><h2 id="90-lunar-particle-ui-seti-ui"><a href="#90-lunar-particle-ui-seti-ui" class="headerlink" title="90. lunar-particle-ui | seti-ui"></a>90. lunar-particle-ui | seti-ui</h2><pre><code>最漂亮的两个主题
+</code></pre><h2 id="91-atom-monokai-monokai"><a href="#91-atom-monokai-monokai" class="headerlink" title="91. atom-monokai | monokai"></a>91. atom-monokai | monokai</h2><pre><code>最漂亮的两个语法主题
+</code></pre><h2 id="92-SyncedSidebarBg"><a href="#92-SyncedSidebarBg" class="headerlink" title="92. SyncedSidebarBg"></a>92. SyncedSidebarBg</h2><pre><code>侧边树状文件结构的背景和主题背景同步
+</code></pre><h2 id="93-api-docs"><a href="#93-api-docs" class="headerlink" title="93. api-docs"></a>93. api-docs</h2><pre><code>文档查看
+</code></pre><h2 id="94-goto-definition"><a href="#94-goto-definition" class="headerlink" title="94. goto-definition"></a>94. goto-definition</h2><pre><code>AS的Ctrl+鼠标左键还记得吧    
+</code></pre><h2 id="95-template-generator"><a href="#95-template-generator" class="headerlink" title="95. template-generator"></a>95. template-generator</h2><pre><code>代码模板生成器
+</code></pre><h2 id="96-project-viewer"><a href="#96-project-viewer" class="headerlink" title="96. project-viewer"></a>96. project-viewer</h2><pre><code>项目管理
+</code></pre><h2 id="97-Docblockr"><a href="#97-Docblockr" class="headerlink" title="97. Docblockr"></a>97. Docblockr</h2><pre><code>主流语言给函数和类自动生成文档
+</code></pre><h2 id="98-api-docs-api-docs"><a href="#98-api-docs-api-docs" class="headerlink" title="98. api-docs | api-docs"></a>98. api-docs | api-docs</h2><pre><code>主流语言的api文档
+</code></pre><hr>
+<hr>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://kompasim.github.io/images/atom-plugin/atom3.png" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://kompasim.github.io/images/atom-plugin/atom1.png" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://kompasim.github.io/images/atom-plugin/atom2.png" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure>
+<hr>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-04-01T14:04:43.000Z" itemprop="dateUpdated">2017年4月1日 22:04</time>
+</span><br>
+
+
+        这里写留言或版权声明：<a href="/2016/04/17/tools-atom-plugins/" target="_blank" rel="external">http://kompasim.github.io/2016/04/17/tools-atom-plugins/</a>
+    </div>
+    <footer>
+        <a href="http://kompasim.github.io">
+            <img src="/img/avatar.jpg" alt="alimjan">
+            alimjan
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/atom/">atom</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tools/">tools</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://kompasim.github.io/2016/04/17/tools-atom-plugins/&title=《atom编辑器常用插件》 — Kompasim&pic=http://kompasim.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://kompasim.github.io/2016/04/17/tools-atom-plugins/&title=《atom编辑器常用插件》 — Kompasim&source=I like Atom but sometimes have to start the Sublime Text again ..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://kompasim.github.io/2016/04/17/tools-atom-plugins/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《atom编辑器常用插件》 — Kompasim&url=http://kompasim.github.io/2016/04/17/tools-atom-plugins/&via=http://kompasim.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://kompasim.github.io/2016/04/17/tools-atom-plugins/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2016/05/09/python-tkinter-demo/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">用python的tkinter模块开发桌面应用</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2016/04/17/nodejs-amazing-projects/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">12个令人惊讶的NodeJS开源项目</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="tools-atom-plugins" data-title="atom编辑器常用插件" data-url="http://kompasim.github.io/2016/04/17/tools-atom-plugins/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'kompasim', theme: 'none'};
+lazyScripts.push('//unpkg.com/hexo-theme-material-indigo@1.5.2/js/embed.min.js');
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>Kompasim &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://kompasim.github.io/2016/04/17/tools-atom-plugins/&title=《atom编辑器常用插件》 — Kompasim&pic=http://kompasim.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://kompasim.github.io/2016/04/17/tools-atom-plugins/&title=《atom编辑器常用插件》 — Kompasim&source=I like Atom but sometimes have to start the Sublime Text again ..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://kompasim.github.io/2016/04/17/tools-atom-plugins/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《atom编辑器常用插件》 — Kompasim&url=http://kompasim.github.io/2016/04/17/tools-atom-plugins/&via=http://kompasim.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://kompasim.github.io/2016/04/17/tools-atom-plugins/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKUlEQVR42u3a0U4jMQwF0P7/T5fXlRaGe50p0iQnTwjRJKdIlu349YrX+5+18vufdm4/NVwYGBiPZbwv1/Xf/H+V5KLJHfK7YWBgnMNYOT4JoNehef1cDAwMjGEQDMJ6EnAxMDAw1hk/laDXvHwHDAwMjLyIzVO3pKCdBeIbanEMDIwHMtrj//Lnj7xvYGBgPIrxLlfeVrvrITO6FQYGxtaMPMDl282eM9u0DwMD4xxGMtTVtsBmTwVtw+6b/wMGBsbWjDYgztr6eVutvg8GBsZhjFlJmTT9iwAa/x4DA+McRr5FnkrOwvdwBAQDA+MYRpuctW2yWTiOSmgMDIxjGHVCNkoc81ZdMeqBgYGxNSN/dGxDanTwctKJgYFxDiMpMvOhrjyJbEvo6G4YGBibMla2axPEe58NMDAwTmC0rf82TH9i/2JmBAMDYyNGGxBnxed6WF8atsDAwHgsIy9N87ZX25JLvohZ+w8DA2MnRjtgkRfD+ZPD7Osren4YGBhbMPJHymTkYj1wt+EbAwPjHMbs4HzYa+Wi0cwIBgbG1ow2mZuRPpGAYmBg7M14l+verl67wy8TbRgYGJsy8rW+af4icZ0O1k+YGBgYWzCSINuOXFwnjisJ6Cv/GAYGxnaMuwLfLK1si1gMDAyMvB12Q9bZXveugIuBgXEAY/3Js23h/dLOw8DAOICRFLHtMW0R2w5eYGBgnMNo86588HT2wPmJ0hcDA+OxjC8MeJNhDVJeNQAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.5.2/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.5.2/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

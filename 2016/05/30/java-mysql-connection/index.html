@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>java操作mysql | Kompasim | Personal technology blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="java,mysql">
+    <meta name="description" content="demo
+            
+
+1. 下载java的mysql驱动
+mysql-connector-java-5.1.26-bin.jar 下载
+
+2. 导入工程
+在工程的树状文件结构里右击以上jar文件选择">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java操作mysql">
+<meta property="og:url" content="http://kompasim.github.io/2016/05/30/java-mysql-connection/index.html">
+<meta property="og:site_name" content="Kompasim">
+<meta property="og:description" content="demo
+            
+
+1. 下载java的mysql驱动
+mysql-connector-java-5.1.26-bin.jar 下载
+
+2. 导入工程
+在工程的树状文件结构里右击以上jar文件选择">
+<meta property="og:image" content="http://file06.16sucai.com/2016/0424/63cfd550f761418ca94886c0c60cf184.jpg">
+<meta property="og:updated_time" content="2016-12-02T10:39:14.042Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="java操作mysql">
+<meta name="twitter:description" content="demo
+            
+
+1. 下载java的mysql驱动
+mysql-connector-java-5.1.26-bin.jar 下载
+
+2. 导入工程
+在工程的树状文件结构里右击以上jar文件选择">
+<meta name="twitter:image" content="http://file06.16sucai.com/2016/0424/63cfd550f761418ca94886c0c60cf184.jpg">
+    
+        <link rel="alternative" href="/atom.xml" title="Kompasim" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@1.5.2/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">alimjan</h5>
+          <a href="mailto:kompasim@163.com" title="kompasim@163.com" class="mail">kompasim@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                HOME
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/kompasim" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://stackoverflow.com/users/6213502/kompasim" target="_blank" >
+                <i class="icon icon-lg icon-stack-overflow"></i>
+                Stack Overflow
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://segmentfault.com/u/kompasim" target="_blank" >
+                <i class="icon icon-lg icon-link"></i>
+                segmentfault
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">java操作mysql</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">java操作mysql</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2016-05-30T13:15:03.000Z" itemprop="datePublished" class="page-time">
+  2016-05-30
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/java/">java</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-下载java的mysql驱动"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. 下载java的mysql驱动</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-导入工程"><span class="post-toc-number">2.</span> <span class="post-toc-text">2. 导入工程</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-代码如下"><span class="post-toc-number">3.</span> <span class="post-toc-text">3. 代码如下</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-insert"><span class="post-toc-number">4.</span> <span class="post-toc-text">4. insert</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-update"><span class="post-toc-number">5.</span> <span class="post-toc-text">5. update</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-delete"><span class="post-toc-number">6.</span> <span class="post-toc-text">6. delete</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-参考"><span class="post-toc-number">7.</span> <span class="post-toc-text">7. 参考</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-java-mysql-connection"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">java操作mysql</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2016年05月30日 21:15" datetime="2016-05-30T13:15:03.000Z"  itemprop="datePublished">2016-05-30</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/java/">java</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://file06.16sucai.com/2016/0424/63cfd550f761418ca94886c0c60cf184.jpg" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure>
+<hr>
+<h2 id="1-下载java的mysql驱动"><a href="#1-下载java的mysql驱动" class="headerlink" title="1. 下载java的mysql驱动"></a>1. 下载java的mysql驱动</h2><blockquote>
+<p>mysql-connector-java-5.1.26-bin.jar <a href="https://dev.mysql.com/downloads/connector/j/" target="_blank" rel="external">下载</a></p>
+</blockquote>
+<h2 id="2-导入工程"><a href="#2-导入工程" class="headerlink" title="2. 导入工程"></a>2. 导入工程</h2><blockquote>
+<p>在工程的树状文件结构里右击以上jar文件选择<code>build path</code>再选择<code>add to build path</code></p>
+</blockquote>
+<h2 id="3-代码如下"><a href="#3-代码如下" class="headerlink" title="3. 代码如下"></a>3. 代码如下</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.sql.DriverManager;</div><div class="line"><span class="keyword">import</span> java.sql.Connection;</div><div class="line"><span class="keyword">import</span> java.sql.Statement;</div><div class="line"><span class="keyword">import</span> java.sql.ResultSet;</div><div class="line"><span class="keyword">import</span> java.sql.SQLException;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaMysqlConnection</span></span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</div><div class="line">        <span class="comment">//variables used to operate the mysql database</span></div><div class="line">        Connection connection = <span class="keyword">null</span>;</div><div class="line">        Statement statement = <span class="keyword">null</span>;</div><div class="line">        String sql = <span class="keyword">null</span>;</div><div class="line">        ResultSet resultSet = <span class="keyword">null</span>;</div><div class="line">        <span class="comment">//the information of mysql database</span></div><div class="line">        String user = <span class="string">"root"</span>;</div><div class="line">        String password = <span class="string">"root"</span>;</div><div class="line">        String url = <span class="string">"jdbc:mysql://localhost/test"</span>;</div><div class="line">        <span class="comment">//look up the mysql diriver , is it useful ?</span></div><div class="line">        <span class="keyword">try</span>&#123;</div><div class="line">            Class.forName(<span class="string">"com.mysql.jdbc.Driver"</span>);</div><div class="line">        &#125;<span class="keyword">catch</span>(ClassNotFoundException e)&#123;</div><div class="line">            System.out.println(<span class="string">"mysql driver is not ready ..."</span>);</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125;</div><div class="line">        <span class="comment">// open a mysql connection to java application</span></div><div class="line">        <span class="keyword">try</span>&#123;</div><div class="line">            connection = DriverManager.getConnection(url,user,password);<span class="comment">//url,user,password</span></div><div class="line">        &#125;<span class="keyword">catch</span>(SQLException e)&#123;</div><div class="line">            System.out.println(<span class="string">"there is sql exception when connecting ..."</span>);</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125;</div><div class="line">        <span class="comment">// operate the mysql</span></div><div class="line">        <span class="keyword">try</span>&#123;</div><div class="line">            statement = connection.createStatement();</div><div class="line">            sql = <span class="string">"select * from test"</span>;<span class="comment">//sql to execute</span></div><div class="line">            resultSet = statement.executeQuery(sql);</div><div class="line">            <span class="keyword">while</span>(resultSet.next())&#123;</div><div class="line">                System.out.println(<span class="string">"id:"</span>+resultSet.getInt(<span class="string">"id"</span>)+<span class="string">"\tname:"</span>+resultSet.getString(<span class="string">"name"</span>)+<span class="string">"\tage:"</span>+resultSet.getInt(<span class="string">"age"</span>)+<span class="string">"\tdescription:"</span>+resultSet.getString(<span class="string">"description"</span>));</div><div class="line">            &#125;</div><div class="line">        &#125;<span class="keyword">catch</span>(SQLException e)&#123;</div><div class="line">            System.out.println(<span class="string">"there is sql exception ..."</span>);</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125;</div><div class="line">        <span class="comment">// close the connection</span></div><div class="line">        <span class="keyword">try</span>&#123;</div><div class="line">        	<span class="keyword">if</span>(resultSet!=<span class="keyword">null</span>)&#123;</div><div class="line">        		resultSet.close();</div><div class="line">        		resultSet = <span class="keyword">null</span>;</div><div class="line">        	&#125;</div><div class="line">        	<span class="keyword">if</span>(statement!=<span class="keyword">null</span>)&#123;</div><div class="line">        		statement.close();</div><div class="line">        		statement = <span class="keyword">null</span>;</div><div class="line">        	&#125;</div><div class="line">        	<span class="keyword">if</span>(connection!=<span class="keyword">null</span>)&#123;</div><div class="line">        		connection.close();</div><div class="line">        		connection = <span class="keyword">null</span>;</div><div class="line">        	&#125;</div><div class="line">        &#125;<span class="keyword">catch</span>(Exception e)&#123;</div><div class="line">        	System.out.println(<span class="string">"something was wrong when closing the connection to mysql ..."</span>);</div><div class="line">        	e.printStackTrace();</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        System.out.println(<span class="string">"java connection to mysql is ending..."</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="4-insert"><a href="#4-insert" class="headerlink" title="4. insert"></a>4. insert</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sql = <span class="string">"insert into test(id, name, age, description) values(88,'sofia', 19, 'this is sofia ...')"</span>;</div><div class="line">statement.executeUpdate(sql);</div></pre></td></tr></table></figure>
+<h2 id="5-update"><a href="#5-update" class="headerlink" title="5. update"></a>5. update</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sql = <span class="string">"update test set name='tony' where id&gt;6"</span>;</div><div class="line">statement.executeUpdate(sql);</div></pre></td></tr></table></figure>
+<h2 id="6-delete"><a href="#6-delete" class="headerlink" title="6. delete"></a>6. delete</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sql = <span class="string">"delete from test where name='tony'"</span>;</div><div class="line">statement.execute(sql);</div></pre></td></tr></table></figure>
+<h2 id="7-参考"><a href="#7-参考" class="headerlink" title="7. 参考"></a>7. 参考</h2><blockquote>
+<p><a href="http://blog.sina.com.cn/s/blog_4aac0cb60100bfyg.html" target="_blank" rel="external">波纹的博客</a></p>
+</blockquote>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2016-12-02T10:39:14.042Z" itemprop="dateUpdated">2016年12月2日 18:39</time>
+</span><br>
+
+
+        这里写留言或版权声明：<a href="/2016/05/30/java-mysql-connection/" target="_blank" rel="external">http://kompasim.github.io/2016/05/30/java-mysql-connection/</a>
+    </div>
+    <footer>
+        <a href="http://kompasim.github.io">
+            <img src="/img/avatar.jpg" alt="alimjan">
+            alimjan
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://kompasim.github.io/2016/05/30/java-mysql-connection/&title=《java操作mysql》 — Kompasim&pic=http://kompasim.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://kompasim.github.io/2016/05/30/java-mysql-connection/&title=《java操作mysql》 — Kompasim&source=I like Atom but sometimes have to start the Sublime Text again ..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://kompasim.github.io/2016/05/30/java-mysql-connection/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《java操作mysql》 — Kompasim&url=http://kompasim.github.io/2016/05/30/java-mysql-connection/&via=http://kompasim.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://kompasim.github.io/2016/05/30/java-mysql-connection/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2016/05/30/nodejs-mysql-connection/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">nodejs操作mysql</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2016/05/29/python-mysql-connection/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">python连接mysql</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="java-mysql-connection" data-title="java操作mysql" data-url="http://kompasim.github.io/2016/05/30/java-mysql-connection/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'kompasim', theme: 'none'};
+lazyScripts.push('//unpkg.com/hexo-theme-material-indigo@1.5.2/js/embed.min.js');
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>Kompasim &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://kompasim.github.io/2016/05/30/java-mysql-connection/&title=《java操作mysql》 — Kompasim&pic=http://kompasim.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://kompasim.github.io/2016/05/30/java-mysql-connection/&title=《java操作mysql》 — Kompasim&source=I like Atom but sometimes have to start the Sublime Text again ..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://kompasim.github.io/2016/05/30/java-mysql-connection/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《java操作mysql》 — Kompasim&url=http://kompasim.github.io/2016/05/30/java-mysql-connection/&via=http://kompasim.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://kompasim.github.io/2016/05/30/java-mysql-connection/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJklEQVR42u3aQXLCMAwF0Nz/0nTbmVLzJUE7sV9WDITYj4WQJV1XfD2W1/d7frt//eSf37o+cWFgYNyWkW8x/3T9/Pm6T6gYGBgHMJJQmL9O8HkIXt+DgYGBkad91WQxfyYGBgbG5wJu9X0MDAyMNSMvpa0Xrr7/D2dxDAyMGzLyqvvfv/5IfwMDA+NWjEfxmrc2q43MaFcYGBhbM6rLVFO9fOu972JgYJzGyDc0GcuojoWt93BVZzowMDBuyEjajdUjbq/0X00xn2S4GBgYmzKq4S8PuNWyfi9NxMDAOI2RPzppGFRztt6YBQYGxgmMXkKWtAdy5PweDAyMExjV0ls1yVs/Ofk0CrgYGBibMvJjZ7Wd2Ru2mLQQMDAwdmVUC/rzJC8Pr0ngbvYlMDAwbsXoLTlvA7xhQqT322NgYNyQ0Uvmem3IeQvzRWqIgYGxKaMXwZLSf/4DzVsRGBgYezN6s2PV5C8JvqMGAwYGxtaMPODmrc1qoT8J6L1mAwYGxk6MXiltsq38UFpoUWBgYBzAKExntJoHvVSv8F+BgYFxDGPeEuiFzvyKhi0wMDA2YjyKV7587xDbPH9jYGBszZiEuUl7IFmrd+jFwMDYlVENsnkpvwoeBVwMDIwDGNVAORkIm6R9L/JcDAwMjCBZfNe2yuU5DAwMjCIjPwZXC3AvDrEYGBhbM6qDqvloRRXQbJRiYGBszeglcJOt5LBJiMfAwNiC8QWl2xkGX2YuJwAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.5.2/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.5.2/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

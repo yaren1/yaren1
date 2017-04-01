@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Ubuntu上配置Nginx服务器 | Kompasim | Personal technology blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="Ubuntu,Nginx,tools">
+    <meta name="description" content="demo
+            
+
+0.Nginx的介绍
+Nginx是一个非常轻量级的HTTP服务器，Nginx，它的发音为“engine X”， 是一个高性能的HTTP和反向代理服务器，同时也是一个IMAP/P">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ubuntu上配置Nginx服务器">
+<meta property="og:url" content="http://kompasim.github.io/2017/01/26/nginx-on-ubuntu-two/index.html">
+<meta property="og:site_name" content="Kompasim">
+<meta property="og:description" content="demo
+            
+
+0.Nginx的介绍
+Nginx是一个非常轻量级的HTTP服务器，Nginx，它的发音为“engine X”， 是一个高性能的HTTP和反向代理服务器，同时也是一个IMAP/P">
+<meta property="og:image" content="http://img.daimg.com/uploads/allimg/160402/3-160402163G0.jpg">
+<meta property="og:updated_time" content="2017-01-26T03:56:25.598Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ubuntu上配置Nginx服务器">
+<meta name="twitter:description" content="demo
+            
+
+0.Nginx的介绍
+Nginx是一个非常轻量级的HTTP服务器，Nginx，它的发音为“engine X”， 是一个高性能的HTTP和反向代理服务器，同时也是一个IMAP/P">
+<meta name="twitter:image" content="http://img.daimg.com/uploads/allimg/160402/3-160402163G0.jpg">
+    
+        <link rel="alternative" href="/atom.xml" title="Kompasim" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@1.5.2/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">alimjan</h5>
+          <a href="mailto:kompasim@163.com" title="kompasim@163.com" class="mail">kompasim@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                HOME
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/kompasim" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://stackoverflow.com/users/6213502/kompasim" target="_blank" >
+                <i class="icon icon-lg icon-stack-overflow"></i>
+                Stack Overflow
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://segmentfault.com/u/kompasim" target="_blank" >
+                <i class="icon icon-lg icon-link"></i>
+                segmentfault
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Ubuntu上配置Nginx服务器</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Ubuntu上配置Nginx服务器</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-01-26T02:42:34.000Z" itemprop="datePublished" class="page-time">
+  2017-01-26
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/tools/">tools</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0-Nginx的介绍"><span class="post-toc-number">1.</span> <span class="post-toc-text">0.Nginx的介绍</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-安装Nginx"><span class="post-toc-number">2.</span> <span class="post-toc-text">1.安装Nginx</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-启动Nginx"><span class="post-toc-number">3.</span> <span class="post-toc-text">2.启动Nginx</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-访问服务器IP"><span class="post-toc-number">4.</span> <span class="post-toc-text">3.访问服务器IP</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-安装PHP"><span class="post-toc-number">5.</span> <span class="post-toc-text">4.安装PHP</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-配置Nginx"><span class="post-toc-number">6.</span> <span class="post-toc-text">5.配置Nginx</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-默认的网站根目录在-var-www-html"><span class="post-toc-number">7.</span> <span class="post-toc-text">6.默认的网站根目录在/var/www/html</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-参考"><span class="post-toc-number">8.</span> <span class="post-toc-text">7.参考</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-nginx-on-ubuntu-two"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Ubuntu上配置Nginx服务器</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017年01月26日 10:42" datetime="2017-01-26T02:42:34.000Z"  itemprop="datePublished">2017-01-26</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/tools/">tools</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.daimg.com/uploads/allimg/160402/3-160402163G0.jpg" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure>
+<hr>
+<h2 id="0-Nginx的介绍"><a href="#0-Nginx的介绍" class="headerlink" title="0.Nginx的介绍"></a>0.Nginx的介绍</h2><blockquote>
+<p>Nginx是一个非常轻量级的HTTP服务器，Nginx，它的发音为“engine X”， 是一个高性能的HTTP和<br>反向代理服务器，同时也是一个IMAP/POP3/SMTP 代理服务器。</p>
+</blockquote>
+<h2 id="1-安装Nginx"><a href="#1-安装Nginx" class="headerlink" title="1.安装Nginx"></a>1.安装Nginx</h2><blockquote>
+<p><code>apt-get install nginx</code></p>
+</blockquote>
+<h2 id="2-启动Nginx"><a href="#2-启动Nginx" class="headerlink" title="2.启动Nginx"></a>2.启动Nginx</h2><blockquote>
+<p><code>service nginx start</code></p>
+</blockquote>
+<h2 id="3-访问服务器IP"><a href="#3-访问服务器IP" class="headerlink" title="3.访问服务器IP"></a>3.访问服务器IP</h2><blockquote>
+<p>如果看到“Welcome to nginx!”说明安装好了。 </p>
+</blockquote>
+<h2 id="4-安装PHP"><a href="#4-安装PHP" class="headerlink" title="4.安装PHP"></a>4.安装PHP</h2><blockquote>
+<p><code>apt-get install php5-fpm</code></p>
+</blockquote>
+<h2 id="5-配置Nginx"><a href="#5-配置Nginx" class="headerlink" title="5.配置Nginx"></a>5.配置Nginx</h2><blockquote>
+<p>vim /etc/nginx/sites-available/default</p>
+<p>找到下列代码，去掉相应注释</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">location ~ \.php$ &#123;</div><div class="line">        include snippets/fastcgi-php.conf;</div><div class="line">        fastcgi_pass unix:/var/run/php5-fpm.sock;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>重启服务</p>
+<p><code>service nginx restart</code></p>
+</blockquote>
+<h2 id="6-默认的网站根目录在-var-www-html"><a href="#6-默认的网站根目录在-var-www-html" class="headerlink" title="6.默认的网站根目录在/var/www/html"></a>6.默认的网站根目录在/var/www/html</h2><blockquote>
+<p><code>vim /var/www/html/test.php</code></p>
+<p>输入以下内容,并保存</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">echo phpinfo();</div><div class="line">?&gt;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>访问网站IP/test.php，如果可以看到phpinfo的信息说明php安装成功。</p>
+</blockquote>
+<h2 id="7-参考"><a href="#7-参考" class="headerlink" title="7.参考"></a>7.参考</h2><blockquote>
+<p><a href="http://blog.csdn.net/lnho2015/article/details/51025639" target="_blank" rel="external">CSDN Lnho的专栏</a></p>
+</blockquote>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-01-26T03:56:25.598Z" itemprop="dateUpdated">2017年1月26日 11:56</time>
+</span><br>
+
+
+        这里写留言或版权声明：<a href="/2017/01/26/nginx-on-ubuntu-two/" target="_blank" rel="external">http://kompasim.github.io/2017/01/26/nginx-on-ubuntu-two/</a>
+    </div>
+    <footer>
+        <a href="http://kompasim.github.io">
+            <img src="/img/avatar.jpg" alt="alimjan">
+            alimjan
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/">Nginx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tools/">tools</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://kompasim.github.io/2017/01/26/nginx-on-ubuntu-two/&title=《Ubuntu上配置Nginx服务器》 — Kompasim&pic=http://kompasim.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://kompasim.github.io/2017/01/26/nginx-on-ubuntu-two/&title=《Ubuntu上配置Nginx服务器》 — Kompasim&source=I like Atom but sometimes have to start the Sublime Text again ..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://kompasim.github.io/2017/01/26/nginx-on-ubuntu-two/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Ubuntu上配置Nginx服务器》 — Kompasim&url=http://kompasim.github.io/2017/01/26/nginx-on-ubuntu-two/&via=http://kompasim.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://kompasim.github.io/2017/01/26/nginx-on-ubuntu-two/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/01/26/nginx-on-ubuntu-one/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Nginx在Ubuntu上的基本知识</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2016/06/02/php-upload-download/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">php简单文件上传和下载</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="nginx-on-ubuntu-two" data-title="Ubuntu上配置Nginx服务器" data-url="http://kompasim.github.io/2017/01/26/nginx-on-ubuntu-two/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'kompasim', theme: 'none'};
+lazyScripts.push('//unpkg.com/hexo-theme-material-indigo@1.5.2/js/embed.min.js');
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>Kompasim &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://kompasim.github.io/2017/01/26/nginx-on-ubuntu-two/&title=《Ubuntu上配置Nginx服务器》 — Kompasim&pic=http://kompasim.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://kompasim.github.io/2017/01/26/nginx-on-ubuntu-two/&title=《Ubuntu上配置Nginx服务器》 — Kompasim&source=I like Atom but sometimes have to start the Sublime Text again ..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://kompasim.github.io/2017/01/26/nginx-on-ubuntu-two/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Ubuntu上配置Nginx服务器》 — Kompasim&url=http://kompasim.github.io/2017/01/26/nginx-on-ubuntu-two/&via=http://kompasim.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://kompasim.github.io/2017/01/26/nginx-on-ubuntu-two/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJElEQVR42u3aQW7EIAwF0Ln/pdPN7EYh3zipFHisKg2BvCxc2/D5xOM4Gb9zfucna+ZPtQYGBsZrGcdwjDfIeWdrJnOSXTAwMHZgnEWwJJj2kcm+F++MgYGBES+dh9Q8EGNgYGD0GePiM0n4kg+BgYGB0Q+CCayaPj5Si2NgYLyQkXfd///vR843MDAwXsU4iuNeav99vqthYGAszeinetVrFp1i+GImBgbGooy5pC1vrnXacIViGAMDYwNG3hrrhMX86lj1QBQDA2MHRt64H89J0sS5T3ZRNmNgYGzJyK9HlLcsFrRJEMfAwFibUU0B8wA996Kdi2IYGBhrM+YeqIbdvIjN972444aBgbEEo5oIVi9A5J8mKW7LXUMMDIyFGE8kgp1DgjIYAwNjM0Y1XZtLBMcfIm+9YWBg7MPI07LOAWR1rxsyXAwMjIUY+QNJK/+uRDCZj4GBsQMjeSAvd8dlcPLrDZctMDAwFmWMR7WJ9olHJyWt7oWBgfF2xg1pWZwOVr9u4egCAwNjY0a1QZa3+/Nfo/QRAwNjM0Y1ZZw7huzsG6WGGBgYSzCO4sgbZ3lZm1/yOF0NAwNjacZcmMvTvnGg7F+8mOwdYmBgvJCRB9l+spisPPkOGBgYGzDuLVOrLbb8P8BFnouBgYHx9M2OTjMOAwMDo93oryaF1eQVAwNjB0bnMCBvySXUvEjGwMDYhzF3taIaXnPSE6UvBgbGaxl/DlLk89Be2PkAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.5.2/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.5.2/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

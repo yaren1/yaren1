@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>用c语言画ppm图片（一） | Kompasim | Personal technology blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="c,image">
+    <meta name="description" content="1. PPM介绍PPM（Portable PixMap）是portable像素图片，是有netpbm项目定义的一系列的portable图片格式中的一个。这些图片格式都相对比较容易处理，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用c语言画ppm图片（一）">
+<meta property="og:url" content="http://kompasim.github.io/2017/03/14/c-and-ppm-one/index.html">
+<meta property="og:site_name" content="Kompasim">
+<meta property="og:description" content="1. PPM介绍PPM（Portable PixMap）是portable像素图片，是有netpbm项目定义的一系列的portable图片格式中的一个。这些图片格式都相对比较容易处理，">
+<meta property="og:image" content="http://img1.3lian.com/img013/v4/39/d/81.jpg">
+<meta property="og:image" content="http://img.my.csdn.net/uploads/201303/08/1362710863_3396.png">
+<meta property="og:updated_time" content="2017-03-14T15:03:29.220Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="用c语言画ppm图片（一）">
+<meta name="twitter:description" content="1. PPM介绍PPM（Portable PixMap）是portable像素图片，是有netpbm项目定义的一系列的portable图片格式中的一个。这些图片格式都相对比较容易处理，">
+<meta name="twitter:image" content="http://img1.3lian.com/img013/v4/39/d/81.jpg">
+    
+        <link rel="alternative" href="/atom.xml" title="Kompasim" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@1.5.2/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">alimjan</h5>
+          <a href="mailto:kompasim@163.com" title="kompasim@163.com" class="mail">kompasim@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                HOME
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/kompasim" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://stackoverflow.com/users/6213502/kompasim" target="_blank" >
+                <i class="icon icon-lg icon-stack-overflow"></i>
+                Stack Overflow
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://segmentfault.com/u/kompasim" target="_blank" >
+                <i class="icon icon-lg icon-link"></i>
+                segmentfault
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">用c语言画ppm图片（一）</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">用c语言画ppm图片（一）</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-03-14T14:45:47.000Z" itemprop="datePublished" class="page-time">
+  2017-03-14
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/c/">c</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-PPM介绍"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. PPM介绍</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-PPM格式分析"><span class="post-toc-number">2.</span> <span class="post-toc-text">2. PPM格式分析</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-代码如下"><span class="post-toc-number">3.</span> <span class="post-toc-text">3. 代码如下:</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-更多图形"><span class="post-toc-number">4.</span> <span class="post-toc-text">4. 更多图形</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-c-and-ppm-one"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">用c语言画ppm图片（一）</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017年03月14日 22:45" datetime="2017-03-14T14:45:47.000Z"  itemprop="datePublished">2017-03-14</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/c/">c</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img1.3lian.com/img013/v4/39/d/81.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<hr>
+<h2 id="1-PPM介绍"><a href="#1-PPM介绍" class="headerlink" title="1. PPM介绍"></a>1. PPM介绍</h2><pre><code>PPM（Portable PixMap）是portable像素图片，是有netpbm项目定义的一系列的portable图片格式中的一个。这些图片格式都相对比较容易处理，跟平台无关，所以称之为portable，简单理解，就是比较直接的图片格式，比如PPM，其实就是把每一个点的RGB分别保存起来。所以，PPM格式的文件是没有压缩的，相对比较大，但是由于图片格式简单，一般作为图片处理的中间文件（不会丢失文件信息），或者作为简单的图片格式保存。
+</code></pre><h2 id="2-PPM格式分析"><a href="#2-PPM格式分析" class="headerlink" title="2. PPM格式分析"></a>2. PPM格式分析</h2><pre><code>netpbm的几种图片格式是通过其表示的颜色类型来区别的，PBM是位图，只有黑色和白色，PGM是灰度图片，PPM是代表完整的RGB颜色的图片。
+</code></pre><p>(1) 文件头</p>
+<pre><code>文件头由三个部分（或者认为是四个部分）组成：这几个部分之间用回车或换行分隔（但是PPM标准中要求是空格）
+
+* 第一部分是文件magic number：
+每一个netpbm图片由两个字节的magic number (ASCII)组成，来标识文件的类型(PMB/PGM/PPM)以及文件的编码(ASCII或binary).
+所以PPM格式的起始两个字节为P3或者P6.
+关于编码(ASCII或binary): 其区别是ASCII编码的文件是对于阅读友好的，可以字节用文本编辑器打开，并读取其对应的图片的数据（比如RGB的值），然后中间会有空格回车等隔开。binary就是按照二进制的形式，顺序存储图片信息，没有空格回车分隔。所以很显然，binary格式的图片处理起来更快（不需要判断空格回车），而且图片会更小，但是ASCII阅读调试更为直接。
+
+* 第二部分是图像宽度和高度（空格隔开），用ASCII表示。
+
+* 第三部分是描述像素的最大颜色组成，允许描述超过一个字节（0-255）的颜色值。
+另外，在上面的三个部分里面，都可以使用&quot;#&quot;插入注释，注释是#到行尾(回车或换行)部分。
+</code></pre><p>(2) 图像数据部分</p>
+<pre><code>对于ASCII格式，就是按照RGB的顺序排列，以ASCII存储，并且，RGB中间用空格隔开，图片每一行用回车隔开。
+对于binary格式，就是每一个像素点的RGB值分别顺序存储并且按二进制写入文件(fwrite)，没有任何分隔。
+比如下面这个图片 (一共六个像素点，图片宽度为3，高度为2）:
+</code></pre><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.my.csdn.net/uploads/201303/08/1362710863_3396.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h2 id="3-代码如下"><a href="#3-代码如下" class="headerlink" title="3. 代码如下:"></a>3. 代码如下:</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;  </span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;  </span></span></div><div class="line">  </div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">writePPMHeader</span><span class="params">(FILE *f, <span class="keyword">char</span> magic, <span class="keyword">int</span> w, <span class="keyword">int</span> h, <span class="keyword">int</span> color)</span> </span>&#123;  </div><div class="line">    <span class="keyword">if</span> (f==<span class="literal">NULL</span>) &#123;  </div><div class="line">        <span class="built_in">printf</span>(<span class="string">"FILE error\n"</span>);  </div><div class="line">        <span class="built_in">exit</span>(<span class="number">0</span>);  </div><div class="line">    &#125;  </div><div class="line">  </div><div class="line">    <span class="keyword">if</span> (magic==<span class="string">'A'</span>) &#123;<span class="comment">// ASCII  </span></div><div class="line">        <span class="built_in">fprintf</span>(f, <span class="string">"P3\n"</span>);  </div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (magic==<span class="string">'B'</span>) &#123;  </div><div class="line">        <span class="built_in">fprintf</span>(f, <span class="string">"P6\n"</span>);  </div><div class="line">    &#125; <span class="keyword">else</span> &#123;  </div><div class="line">        <span class="built_in">printf</span>(<span class="string">"Magic can only be A(ASCII) or B(binary)\n"</span>);  </div><div class="line">        <span class="built_in">exit</span>(<span class="number">0</span>);  </div><div class="line">    &#125;  </div><div class="line">  </div><div class="line">    <span class="built_in">fprintf</span>(f, <span class="string">"%d %d\n"</span>, w, h);  </div><div class="line">    <span class="built_in">fprintf</span>(f, <span class="string">"%d\n"</span>, color);  </div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;  </div><div class="line">&#125;  </div><div class="line">  </div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">writePPMdataP3</span><span class="params">(FILE* f, <span class="keyword">unsigned</span> <span class="keyword">char</span>* img, <span class="keyword">int</span> w, <span class="keyword">int</span> h)</span> </span>&#123;  </div><div class="line">    <span class="keyword">int</span> i,j;  </div><div class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;h;i++) &#123;   <span class="comment">// every rwo  </span></div><div class="line">        <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;w;j++) &#123;   <span class="comment">// every line  </span></div><div class="line">            <span class="built_in">fprintf</span>(f, <span class="string">"%d "</span>,img[i*w*<span class="number">3</span>+<span class="number">3</span>*j]);  </div><div class="line">            <span class="built_in">fprintf</span>(f, <span class="string">"%d "</span>,img[i*w*<span class="number">3</span>+<span class="number">3</span>*j+<span class="number">1</span>]);  </div><div class="line">            <span class="built_in">fprintf</span>(f, <span class="string">"%d "</span>,img[i*w*<span class="number">3</span>+<span class="number">3</span>*j+<span class="number">2</span>]);&lt;span style=<span class="string">"white-space:pre"</span>&gt;   &lt;/span&gt;<span class="comment">// PS: 对于j=w-1的时候，最后一个空格可以不写，但是这里就不考虑了  </span></div><div class="line">        &#125;  </div><div class="line">        <span class="built_in">fprintf</span>(f, <span class="string">"\n"</span>);  </div><div class="line">    &#125;  </div><div class="line">&#125;  </div><div class="line">  </div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">writePPMdataP6</span><span class="params">(FILE* f, <span class="keyword">unsigned</span> <span class="keyword">char</span>* img, <span class="keyword">int</span> w, <span class="keyword">int</span> h)</span> </span>&#123;  </div><div class="line">    <span class="keyword">int</span> i,j;  </div><div class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;w;i++) &#123;  </div><div class="line">        <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;h;j++) &#123;  </div><div class="line">            fwrite(img, w*h, <span class="number">3</span>, f);  </div><div class="line">        &#125;  </div><div class="line">    &#125;  </div><div class="line">&#125;  </div><div class="line">  </div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> WIDTH   3  </span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> HEIGHT  2  </span></div><div class="line"><span class="keyword">unsigned</span> <span class="keyword">char</span> img[WIDTH*HEIGHT*<span class="number">3</span>]=&#123;<span class="number">255</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">255</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">0</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>&#125;;  </div><div class="line">  </div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;  </div><div class="line">    <span class="keyword">char</span> *filename1 = <span class="string">"testP3.ppm"</span>;  </div><div class="line">    <span class="keyword">char</span> *filename2 = <span class="string">"testP6.ppm"</span>;  </div><div class="line">  </div><div class="line">    FILE *f3 = fopen(filename1, <span class="string">"w"</span>);  </div><div class="line">    <span class="keyword">if</span> (f3==<span class="literal">NULL</span>) &#123;  </div><div class="line">        <span class="built_in">printf</span>(<span class="string">"FILE error\n"</span>);  </div><div class="line">        <span class="built_in">exit</span>(<span class="number">0</span>);  </div><div class="line">    &#125;  </div><div class="line">  </div><div class="line">    FILE *f6 = fopen(filename2, <span class="string">"w"</span>);  </div><div class="line">    <span class="keyword">if</span> (f6==<span class="literal">NULL</span>) &#123;  </div><div class="line">        <span class="built_in">printf</span>(<span class="string">"FILE error\n"</span>);  </div><div class="line">        <span class="built_in">exit</span>(<span class="number">0</span>);  </div><div class="line">    &#125;  </div><div class="line">  </div><div class="line">    writePPMHeader(f3, <span class="string">'A'</span>, WIDTH, HEIGHT, <span class="number">255</span>);  </div><div class="line">    writePPMdataP3(f3, img, WIDTH, HEIGHT);  </div><div class="line">  </div><div class="line">    writePPMHeader(f6, <span class="string">'B'</span>, WIDTH, HEIGHT, <span class="number">255</span>);  </div><div class="line">    writePPMdataP6(f6, img, WIDTH, HEIGHT);  </div><div class="line">  </div><div class="line">    fclose(f3);  </div><div class="line">    fclose(f6);  </div><div class="line">  </div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="4-更多图形"><a href="#4-更多图形" class="headerlink" title="4. 更多图形"></a>4. 更多图形</h2><p> 更多图形请看<code>用c语言画ppm图片（二）</code>这篇文章。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-03-14T15:03:29.220Z" itemprop="dateUpdated">2017年3月14日 23:03</time>
+</span><br>
+
+
+        这里写留言或版权声明：<a href="/2017/03/14/c-and-ppm-one/" target="_blank" rel="external">http://kompasim.github.io/2017/03/14/c-and-ppm-one/</a>
+    </div>
+    <footer>
+        <a href="http://kompasim.github.io">
+            <img src="/img/avatar.jpg" alt="alimjan">
+            alimjan
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/c/">c</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/image/">image</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://kompasim.github.io/2017/03/14/c-and-ppm-one/&title=《用c语言画ppm图片（一）》 — Kompasim&pic=http://kompasim.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://kompasim.github.io/2017/03/14/c-and-ppm-one/&title=《用c语言画ppm图片（一）》 — Kompasim&source=I like Atom but sometimes have to start the Sublime Text again ..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://kompasim.github.io/2017/03/14/c-and-ppm-one/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《用c语言画ppm图片（一）》 — Kompasim&url=http://kompasim.github.io/2017/03/14/c-and-ppm-one/&via=http://kompasim.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://kompasim.github.io/2017/03/14/c-and-ppm-one/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/03/15/c-and-ppm-two/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">用c语言画ppm图片（二）</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/02/20/java-http-request/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">java发起http请求</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="c-and-ppm-one" data-title="用c语言画ppm图片（一）" data-url="http://kompasim.github.io/2017/03/14/c-and-ppm-one/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'kompasim', theme: 'none'};
+lazyScripts.push('//unpkg.com/hexo-theme-material-indigo@1.5.2/js/embed.min.js');
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>Kompasim &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://kompasim.github.io/2017/03/14/c-and-ppm-one/&title=《用c语言画ppm图片（一）》 — Kompasim&pic=http://kompasim.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://kompasim.github.io/2017/03/14/c-and-ppm-one/&title=《用c语言画ppm图片（一）》 — Kompasim&source=I like Atom but sometimes have to start the Sublime Text again ..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://kompasim.github.io/2017/03/14/c-and-ppm-one/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《用c语言画ppm图片（一）》 — Kompasim&url=http://kompasim.github.io/2017/03/14/c-and-ppm-one/&via=http://kompasim.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://kompasim.github.io/2017/03/14/c-and-ppm-one/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKUlEQVR42u3a22rDQAwFwPz/T7uvhRD3SEoK0c4+FbvYOy6oq8vjEa/r13q+kty9f/Krt7x5YWBgfC3jul35tl7dfX5O8vZ8bxgYGOcwklCYh+Nki/ewfG8YGBgYCSM5Pt4H7vvrGBgYGD1G9ZVVJAYGBkYviZ2U5/IS28dzcQwMjC9k5Nv6/58/0t/AwMD4KsZVXJOgWf1MhV1hYGCsZvRKadVEtLf18tETAwNjKaM3+tAr8c8bCS/LbRgYGEcyPl1WS9oMSaL7R8DFwMBYwcgbmXkrsdr4rP5moS6IgYGxiFE9COabTg58vYGwl7k4BgbGOkZ12GtyN0+Syx8LAwNjNSOKx0H4yw+R1f8Gzb8MBgbGIka10F8drRh1VvMWAgYGxsGMSVI6H60oBG4MDIwDGL2UsjeKUR22aCauGBgYixjVBkAvyewV1MqNCgwMjAMYeaOxOlTROwiWi3cYGBirGb1mZG8IrBe48wYGBgbGVkYeWMuFsFa5rcfGwMA4k3Ff5OqV2/LDZVJoiwIuBgbGUsak0FZtcFaDb6HLgYGBcQAjahy2Pkd5i70kFgMDYwXjKq55eE2S3vJnxcDAWM2YBNNq2jlvNiRDGxgYGFsZSZCtPrrXPBgFXAwMjAMY743fyejGJInFwMDASMphvSu9tz8mPgwMjCMZ98fBfPA0aR7kIRsDA+MERpLE9sCTJkF+3MTAwNjNqJ678oDbK7rNWwsYGBiLGD/NW7JQr5DLSgAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.5.2/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.5.2/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>开源项目托管GitHub入门 | Kompasim | Personal technology blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="tools,github">
+    <meta name="description" content="demo
+            
+
+自从google code关闭了下载服务了之后，GitHub作为了目前最好用的免费开源项目托管站点，众多开源项目都托管在github，其中不乏著名的播放器MPC-HC。不习惯于">
+<meta property="og:type" content="article">
+<meta property="og:title" content="开源项目托管GitHub入门">
+<meta property="og:url" content="http://kompasim.github.io/2017/04/01/tools-github-demo/index.html">
+<meta property="og:site_name" content="Kompasim">
+<meta property="og:description" content="demo
+            
+
+自从google code关闭了下载服务了之后，GitHub作为了目前最好用的免费开源项目托管站点，众多开源项目都托管在github，其中不乏著名的播放器MPC-HC。不习惯于">
+<meta property="og:image" content="http://file02.16sucai.com/d/file/2014/1115/91ed57c42464bc65cb61e8de9b8940d9.jpg">
+<meta property="og:image" content="http://www.linuxidc.com/upload/2014-09/140906064370981.png">
+<meta property="og:image" content="http://img.my.csdn.net/uploads/201301/13/1358083533_2978.png">
+<meta property="og:image" content="http://www.admin10000.com/UploadFiles/Document/201410/27/20141027155323641881.JPG">
+<meta property="og:image" content="http://www.admin10000.com/UploadFiles/Document/201410/27/20141027155323946973.PNG">
+<meta property="og:image" content="http://www.admin10000.com/UploadFiles/Document/201410/27/20141027155323329134.PNG">
+<meta property="og:image" content="http://www.admin10000.com/UploadFiles/Document/201410/27/20141027155323934746.PNG">
+<meta property="og:image" content="http://www.admin10000.com/UploadFiles/Document/201410/27/20141027155323816495.PNG">
+<meta property="og:updated_time" content="2016-12-02T10:39:14.042Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="开源项目托管GitHub入门">
+<meta name="twitter:description" content="demo
+            
+
+自从google code关闭了下载服务了之后，GitHub作为了目前最好用的免费开源项目托管站点，众多开源项目都托管在github，其中不乏著名的播放器MPC-HC。不习惯于">
+<meta name="twitter:image" content="http://file02.16sucai.com/d/file/2014/1115/91ed57c42464bc65cb61e8de9b8940d9.jpg">
+    
+        <link rel="alternative" href="/atom.xml" title="Kompasim" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@1.5.2/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">alimjan</h5>
+          <a href="mailto:kompasim@163.com" title="kompasim@163.com" class="mail">kompasim@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                HOME
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/kompasim" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://stackoverflow.com/users/6213502/kompasim" target="_blank" >
+                <i class="icon icon-lg icon-stack-overflow"></i>
+                Stack Overflow
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://segmentfault.com/u/kompasim" target="_blank" >
+                <i class="icon icon-lg icon-link"></i>
+                segmentfault
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">开源项目托管GitHub入门</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">开源项目托管GitHub入门</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-04-01T14:06:55.774Z" itemprop="datePublished" class="page-time">
+  2017-04-01
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/tools/">tools</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#注册github"><span class="post-toc-number">1.</span> <span class="post-toc-text">注册github</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#创建仓库"><span class="post-toc-number">2.</span> <span class="post-toc-text">创建仓库</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#下载仓库到本地"><span class="post-toc-number">3.</span> <span class="post-toc-text">下载仓库到本地</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#配置用户信息"><span class="post-toc-number">4.</span> <span class="post-toc-text">配置用户信息</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#编辑需要提交的文件"><span class="post-toc-number">5.</span> <span class="post-toc-text">编辑需要提交的文件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#添加到缓存区"><span class="post-toc-number">6.</span> <span class="post-toc-text">添加到缓存区</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#添加到本地仓库"><span class="post-toc-number">7.</span> <span class="post-toc-text">添加到本地仓库</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#获取ssh地址"><span class="post-toc-number">8.</span> <span class="post-toc-text">获取ssh地址</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#上传到github服务器"><span class="post-toc-number">9.</span> <span class="post-toc-text">上传到github服务器</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-tools-github-demo"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">开源项目托管GitHub入门</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017年04月01日 22:06" datetime="2017-04-01T14:06:55.774Z"  itemprop="datePublished">2017-04-01</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/tools/">tools</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://file02.16sucai.com/d/file/2014/1115/91ed57c42464bc65cb61e8de9b8940d9.jpg" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure>
+<hr>
+<p>自从google code关闭了下载服务了之后，GitHub作为了目前最好用的免费开源项目托管站点，众多开源项目都托管在github，其中不乏著名的播放器MPC-HC。<br>不习惯于英文的朋友，难免少不了要进行摸索一番，甚至会因此头大而放弃。<br>这里将手把手地教大家一些本人的入门心得</p>
+<h3 id="注册github"><a href="#注册github" class="headerlink" title="注册github"></a>注册github</h3><p>要托管到github，那你就应该要有一个属于你自己的github帐号，所以你应该先到github.com注册<br>打开浏览器<br>在地址栏输入地址：github.com<br>填写用户名、邮箱、密码<br>点击Sign up即可简单地注册</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://www.linuxidc.com/upload/2014-09/140906064370981.png" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure>
+<h3 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h3><p>完成注册，进入github平台，<br>点击new repositories<br>新建一个新项目（你也可以加入到一个已有的项目）<br>新建项目的操作，其实很简单，输入项目名就可以直接Create了<br>如图</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.my.csdn.net/uploads/201301/13/1358083533_2978.png" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure>
+<h3 id="下载仓库到本地"><a href="#下载仓库到本地" class="headerlink" title="下载仓库到本地"></a>下载仓库到本地</h3><p>输入<code>git  clone</code>  接着将先前记录下来的地址复制到后面，回车<br>将下载下来的项目文件夹的所有文件及文件夹，包括.git文件夹在内，全部拷贝到你的托管项目的根目录（或者将你的托管项目拷贝到该目录）<br>然后<code>cd test</code>进入到该托管项目的根目录。</p>
+<h3 id="配置用户信息"><a href="#配置用户信息" class="headerlink" title="配置用户信息"></a>配置用户信息</h3><p>因为Git是分布式版本控制系统，所以需要填写用户名和邮箱作为一个标识。<br>　　注意：git config  –global 参数，有了这个参数，表示你这台机器上所有的Git仓库都会使用这个配置，当然你也可以对某个仓库指定的不同的用户名和邮箱。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://www.admin10000.com/UploadFiles/Document/201410/27/20141027155323641881.JPG" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure></p>
+<h3 id="编辑需要提交的文件"><a href="#编辑需要提交的文件" class="headerlink" title="编辑需要提交的文件"></a>编辑需要提交的文件</h3><p>我在版本库目录下新建一个记事本文件 readme.txt 内容如下：11111111</p>
+<h3 id="添加到缓存区"><a href="#添加到缓存区" class="headerlink" title="添加到缓存区"></a>添加到缓存区</h3><p>使用命令 git add readme.txt添加到暂存区里面去。如下：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://www.admin10000.com/UploadFiles/Document/201410/27/20141027155323946973.PNG" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure></p>
+<h3 id="添加到本地仓库"><a href="#添加到本地仓库" class="headerlink" title="添加到本地仓库"></a>添加到本地仓库</h3><p>用命令 git commit告诉Git，把文件提交到仓库。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://www.admin10000.com/UploadFiles/Document/201410/27/20141027155323329134.PNG" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure><br>现在我们已经提交了一个readme.txt文件了，我们下面可以通过命令git status来查看是否还有文件未提交</p>
+<h3 id="获取ssh地址"><a href="#获取ssh地址" class="headerlink" title="获取ssh地址"></a>获取ssh地址</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://www.admin10000.com/UploadFiles/Document/201410/27/20141027155323934746.PNG" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure>
+<h3 id="上传到github服务器"><a href="#上传到github服务器" class="headerlink" title="上传到github服务器"></a>上传到github服务器</h3><p>现在，我们根据GitHub的提示，在本地的testgit仓库下运行命令：<br><code>git remote add origin https://github.com/tugenhua0707/testgit.git</code><br><code>git push origin master</code><br>所有的如下：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://www.admin10000.com/UploadFiles/Document/201410/27/20141027155323816495.PNG" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure></p>
+<p>把本地库的内容推送到远程，使用 git push命令，实际上是把当前分支master推送到远程。</p>
+<p>由于远程库是空的，我们第一次推送master分支时，加上了 –u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。推送成功后，可以立刻在github页面中看到远程库的内容已经和本地一模一样了.</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2016-12-02T10:39:14.042Z" itemprop="dateUpdated">2016年12月2日 18:39</time>
+</span><br>
+
+
+        这里写留言或版权声明：<a href="/2017/04/01/tools-github-demo/" target="_blank" rel="external">http://kompasim.github.io/2017/04/01/tools-github-demo/</a>
+    </div>
+    <footer>
+        <a href="http://kompasim.github.io">
+            <img src="/img/avatar.jpg" alt="alimjan">
+            alimjan
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tools/">tools</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://kompasim.github.io/2017/04/01/tools-github-demo/&title=《开源项目托管GitHub入门》 — Kompasim&pic=http://kompasim.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://kompasim.github.io/2017/04/01/tools-github-demo/&title=《开源项目托管GitHub入门》 — Kompasim&source=I like Atom but sometimes have to start the Sublime Text again ..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://kompasim.github.io/2017/04/01/tools-github-demo/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《开源项目托管GitHub入门》 — Kompasim&url=http://kompasim.github.io/2017/04/01/tools-github-demo/&via=http://kompasim.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://kompasim.github.io/2017/04/01/tools-github-demo/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/04/01/tools-git-demo/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">本地仓库管理Git入门</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="tools-github-demo" data-title="开源项目托管GitHub入门" data-url="http://kompasim.github.io/2017/04/01/tools-github-demo/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'kompasim', theme: 'none'};
+lazyScripts.push('//unpkg.com/hexo-theme-material-indigo@1.5.2/js/embed.min.js');
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>Kompasim &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://kompasim.github.io/2017/04/01/tools-github-demo/&title=《开源项目托管GitHub入门》 — Kompasim&pic=http://kompasim.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://kompasim.github.io/2017/04/01/tools-github-demo/&title=《开源项目托管GitHub入门》 — Kompasim&source=I like Atom but sometimes have to start the Sublime Text again ..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://kompasim.github.io/2017/04/01/tools-github-demo/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《开源项目托管GitHub入门》 — Kompasim&url=http://kompasim.github.io/2017/04/01/tools-github-demo/&via=http://kompasim.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://kompasim.github.io/2017/04/01/tools-github-demo/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLUlEQVR42u3aS7KqQBAE0Lv/TfOmbwJmVqMRNKdHBhLqYVDW7+8vPsd/5/rK2buzz7z5YGBgPJZxXJ7rL8jvyd89+8zrz8HAwHgD4yyCXb9uAUkwvf6u0+sYGBgYcahNksXkTgwMDIx7A+5d1695GBgYGLOAmLfSkp/+o1ocAwPjgYy86/7711+Zb2BgYDyKcZRnltLlP/EYHQwMjL0ZK6leMgxoA3c7PMDAwHgDo12hmBWlbdLZLnlgYGDszUjGk7M7Z48jeaDF/wYGBsYWjHadKwmjbVs/TyWHqSEGBsbDGe0ocb34zJcqZstqGBgYezNm4fKuMUB7pZ64YmBgPJZxb3M/T+baJt2Hx4SBgbE1I1+VaIvPNuq3vNOuIQYGxnaMlbJz5YcmpW8BxsDA2JrRTjvzNtlKOG4HpRgYGG9jrBSr30gxl3ZGMDAwtmDMVrVyTD5UuG1nBAMDYztGO4Bsg+b1nfl3RaknBgbGCxh5oCyyzpuqznrlAgMDY2vGrNHWhub8ERSFNAYGxgsY7UgyX/zKV77all8UpzEwMLZjtMPF9UHC7GF9CLgYGBgbMY7y5M36vKCdpZXDKhwDA+OBjPwsLWyVzbhvtPYwMDCezpgNA9qlijbFrAMuBgbGCxgrgW/WwlsvYjEwMDBaRlvu5vf8NOBiYGBsxGjr4CR9zEvlD3u4GBgYmzKSIna2tjULxG26iYGBsTdjqXS8aTyZh92loSYGBsbzGP8AJJfk8/1YIXEAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.5.2/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.5.2/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>用python的tkinter模块开发桌面应用 | Kompasim | Personal technology blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="python,tkinter">
+    <meta name="description" content="demo
+            
+原文
+1. 安装pythonclick here to download双击安装（我用的是3.5.1版本）
+2. 运行脚本创建 trinker.py写以下代码双击运行代码
+3.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用python的tkinter模块开发桌面应用">
+<meta property="og:url" content="http://kompasim.github.io/2016/05/09/python-tkinter-demo/index.html">
+<meta property="og:site_name" content="Kompasim">
+<meta property="og:description" content="demo
+            
+原文
+1. 安装pythonclick here to download双击安装（我用的是3.5.1版本）
+2. 运行脚本创建 trinker.py写以下代码双击运行代码
+3.">
+<meta property="og:image" content="http://file01.16sucai.com/d/file/2012/0709/20120709092203555.jpg">
+<meta property="og:updated_time" content="2016-12-02T10:39:14.044Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="用python的tkinter模块开发桌面应用">
+<meta name="twitter:description" content="demo
+            
+原文
+1. 安装pythonclick here to download双击安装（我用的是3.5.1版本）
+2. 运行脚本创建 trinker.py写以下代码双击运行代码
+3.">
+<meta name="twitter:image" content="http://file01.16sucai.com/d/file/2012/0709/20120709092203555.jpg">
+    
+        <link rel="alternative" href="/atom.xml" title="Kompasim" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@1.5.2/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">alimjan</h5>
+          <a href="mailto:kompasim@163.com" title="kompasim@163.com" class="mail">kompasim@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                HOME
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/kompasim" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://stackoverflow.com/users/6213502/kompasim" target="_blank" >
+                <i class="icon icon-lg icon-stack-overflow"></i>
+                Stack Overflow
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://segmentfault.com/u/kompasim" target="_blank" >
+                <i class="icon icon-lg icon-link"></i>
+                segmentfault
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">用python的tkinter模块开发桌面应用</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">用python的tkinter模块开发桌面应用</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2016-05-09T14:36:37.000Z" itemprop="datePublished" class="page-time">
+  2016-05-09
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/python/">python</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-安装python"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. 安装python</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-运行脚本"><span class="post-toc-number">2.</span> <span class="post-toc-text">2. 运行脚本</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-入门"><span class="post-toc-number">3.</span> <span class="post-toc-text">3. 入门</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-窗口参数"><span class="post-toc-number">4.</span> <span class="post-toc-text">4. 窗口参数</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-窗口函数"><span class="post-toc-number">5.</span> <span class="post-toc-text">5. 窗口函数</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-几何布局之pack"><span class="post-toc-number">6.</span> <span class="post-toc-text">7. 几何布局之pack</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-几何布局之grid"><span class="post-toc-number">7.</span> <span class="post-toc-text">7. 几何布局之grid</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-几何布局之place"><span class="post-toc-number">8.</span> <span class="post-toc-text">7. 几何布局之place</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-常用颜色定义"><span class="post-toc-number">9.</span> <span class="post-toc-text">8. 常用颜色定义</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-python-tkinter-demo"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">用python的tkinter模块开发桌面应用</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2016年05月09日 22:36" datetime="2016-05-09T14:36:37.000Z"  itemprop="datePublished">2016-05-09</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/python/">python</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://file01.16sucai.com/d/file/2012/0709/20120709092203555.jpg" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure>
+<p><a href="http://www.cnblogs.com/kaituorensheng/p/3287652.html" target="_blank" rel="external">原文</a></p>
+<h2 id="1-安装python"><a href="#1-安装python" class="headerlink" title="1. 安装python"></a>1. 安装python</h2><p>click <a href="https://www.python.org/downloads/" target="_blank" rel="external">here</a> to download<br>双击安装（我用的是3.5.1版本）</p>
+<h2 id="2-运行脚本"><a href="#2-运行脚本" class="headerlink" title="2. 运行脚本"></a>2. 运行脚本</h2><p>创建 trinker.py<br>写以下代码<br>双击运行代码</p>
+<h2 id="3-入门"><a href="#3-入门" class="headerlink" title="3. 入门"></a>3. 入门</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># import the tkinter core package</span></div><div class="line"><span class="keyword">import</span> tkinter</div><div class="line"><span class="comment"># create a root window with tkinter</span></div><div class="line">root = tkinter.Tk()</div><div class="line"><span class="comment">## start the event loop</span></div><div class="line"><span class="comment">## (actually i don't know what does it look like in python at this time)</span></div><div class="line">root.mainloop()</div></pre></td></tr></table></figure>
+<h2 id="4-窗口参数"><a href="#4-窗口参数" class="headerlink" title="4. 窗口参数"></a>4. 窗口参数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># print (root.keys) # printing the all options</span></div><div class="line"><span class="comment"># root['key'] = value</span></div><div class="line">root[<span class="string">'bg'</span>] = <span class="string">'black'</span> <span class="comment"># same to background</span></div><div class="line"><span class="comment"># relief</span></div><div class="line"><span class="comment"># screen</span></div><div class="line"><span class="comment"># use</span></div><div class="line"><span class="comment"># colormap</span></div><div class="line"><span class="comment"># container</span></div><div class="line">root[<span class="string">'cursor'</span>] = <span class="string">'abc.png'</span> <span class="comment"># cursor image</span></div><div class="line">root[<span class="string">'bd'</span>] = <span class="string">'2'</span> <span class="comment"># same to borderwidth</span></div><div class="line">root[<span class="string">'height'</span>] = <span class="string">'400'</span> <span class="comment"># height</span></div><div class="line"><span class="comment"># highlightbackground # 部件具有焦点时的亮点区域的背景颜色.</span></div><div class="line"><span class="comment"># highlightcolor # 前景色的亮点区域，部件具有焦点时.</span></div><div class="line"><span class="comment"># highlightthickness # 焦点时边框宽度</span></div><div class="line">root[<span class="string">'padx'</span>] = <span class="string">'10'</span> <span class="comment"># inner padding x</span></div><div class="line">root[<span class="string">'pady'</span>] = <span class="string">'10'</span> <span class="comment"># inner padding y</span></div><div class="line"><span class="comment"># takefocus # 获取焦点的键盘定义</span></div><div class="line"><span class="comment"># visual</span></div><div class="line">root[<span class="string">'width'</span>] = <span class="string">'400'</span> <span class="comment"># width</span></div><div class="line">root[<span class="string">'menu'</span>] = myMenu <span class="comment"># add myMenu</span></div></pre></td></tr></table></figure>
+<h2 id="5-窗口函数"><a href="#5-窗口函数" class="headerlink" title="5. 窗口函数"></a>5. 窗口函数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># set the window's title</span></div><div class="line">root.title(<span class="string">"this is a window created with tkinter in python"</span>)</div><div class="line"><span class="comment"># set the size of the window(WxH+X+Y)</span></div><div class="line">root.geometry(<span class="string">'600x500+10+20'</span>);</div><div class="line"><span class="comment"># set the resizability</span></div><div class="line">root.resizable(width=<span class="keyword">True</span>,height=<span class="keyword">False</span>)</div><div class="line"><span class="comment"># icon of the window</span></div><div class="line">root.iconbitmap(<span class="string">'gif/003.ico'</span>)</div><div class="line"><span class="comment"># enter the event loop</span></div><div class="line">root.mainloop()</div></pre></td></tr></table></figure>
+<h2 id="7-几何布局之pack"><a href="#7-几何布局之pack" class="headerlink" title="7. 几何布局之pack"></a>7. 几何布局之pack</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">elem.pack(**options)</div><div class="line"><span class="comment"># same ad pack</span></div><div class="line">pack_configure()</div><div class="line"><span class="comment"># remome , but not destroy , can display again with pack()</span></div><div class="line">pack_forget()</div><div class="line"><span class="comment"># Returns a dictionary containing the current packer options.</span></div><div class="line">pack_info()</div><div class="line"><span class="comment"># (Manager method) Controls geometry propagation. If enabled, the manager widget will be resized if not large enough to hold all the child widgets.</span></div><div class="line">pack_propagate(flag)</div><div class="line"><span class="comment"># (Manager method) Returns a list of all child (“slave”) widgets managed by the packer for this widget.Returns: A list of child widgets.</span></div><div class="line">pack_slaves()</div><div class="line"><span class="comment"># Where the widget is placed inside the packing box. Default is CENTER.</span></div><div class="line">anchor = center,x,e,nw,ne,se,sw,s,n</div><div class="line"><span class="comment"># Specifies whether the widgets should be expanded to fill any extra space in the geometry master. If false (default), the widget is not expanded.</span></div><div class="line">expand = <span class="keyword">True</span>,false</div><div class="line"><span class="comment"># Specifies whether the widget should occupy all the space provided to it by the master.</span></div><div class="line">fill = none,both,x,y</div><div class="line"><span class="comment"># Pack this widget inside the given widget.</span></div><div class="line"><span class="keyword">in</span> =</div><div class="line"><span class="comment"># inner pading</span></div><div class="line">ipadx = <span class="number">0</span></div><div class="line">ipady = <span class="number">0</span></div><div class="line"><span class="comment"># outer padding</span></div><div class="line">padx = <span class="number">0</span></div><div class="line">pady = <span class="number">0</span></div><div class="line"><span class="comment"># Specifies which side to pack the widget against.</span></div><div class="line">side = left,right,top,bottom</div></pre></td></tr></table></figure>
+<h2 id="7-几何布局之grid"><a href="#7-几何布局之grid" class="headerlink" title="7. 几何布局之grid"></a>7. 几何布局之grid</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">elem.grid(**options)</div><div class="line"><span class="comment"># Returns a list of the “slave” widgets managed by this widget.</span></div><div class="line">grid_slaves(row = <span class="string">'none'</span>, column = <span class="string">'none'</span>)</div><div class="line"><span class="comment"># Returns the current grid size for the geometry manager attached to this widget.</span></div><div class="line">grid_size()</div><div class="line"><span class="comment"># Set options for a row,column of cells.</span></div><div class="line"><span class="comment"># padsize=,pad=,weight=</span></div><div class="line">elem.grid_rowconfigure(index, **options)</div><div class="line">grid_columnconfigure(index, **options)</div><div class="line"><span class="comment"># Enables or disables geometry propagation.</span></div><div class="line">girid_propagate(flag) <span class="keyword">True</span>,<span class="keyword">False</span></div><div class="line"><span class="comment"># Returns the grid cell under (or closest to) a given pixel.</span></div><div class="line">grid_location(x, y)</div><div class="line"><span class="comment"># Return a dictionary containing the current cell options for the cell used by this widget.</span></div><div class="line">grid_info()</div><div class="line"><span class="comment"># Remove this widget from the grid manager. The widget is not destroyed, and can be displayed again by grid or any other manager.</span></div><div class="line">grid_forget()</div><div class="line"><span class="comment"># Same as grid.</span></div><div class="line">grid_configure(**options) [<span class="comment">#]</span></div><div class="line"><span class="comment"># The grid_bbox method.</span></div><div class="line">grid_bbox(column=<span class="keyword">None</span>, row=<span class="keyword">None</span>, col2=<span class="keyword">None</span>, row2=<span class="keyword">None</span>)</div><div class="line"><span class="comment"># column row number</span></div><div class="line">column = <span class="number">1</span></div><div class="line">row = <span class="number">2</span></div><div class="line"><span class="comment"># If given, indicates that the widget cell should span multiple columns or rows. The default is 1.</span></div><div class="line">columnspan = <span class="number">2</span></div><div class="line">rowspan = <span class="number">3</span></div><div class="line"><span class="comment"># Place widget inside to the given widget.</span></div><div class="line"><span class="keyword">in</span> =</div><div class="line">in_ = <span class="comment"># same as in</span></div><div class="line"><span class="comment"># the inner paddings</span></div><div class="line">ipadx =</div><div class="line">ipady =</div><div class="line"><span class="comment"># the outer paddings</span></div><div class="line">padx =</div><div class="line">pady =</div><div class="line"><span class="comment"># Defines how to expand the widget if the resulting cell is larger than the widget itself.</span></div><div class="line">sticky = w,e,n,s,se,we,ne,nw</div></pre></td></tr></table></figure>
+<h2 id="7-几何布局之place"><a href="#7-几何布局之place" class="headerlink" title="7. 几何布局之place"></a>7. 几何布局之place</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">elem.place(**options)</div><div class="line"><span class="comment"># Same as place.</span></div><div class="line">place_configure(**options)</div><div class="line"><span class="comment"># The place_forget method.</span></div><div class="line">place_forget()</div><div class="line"><span class="comment"># The place_info method.</span></div><div class="line">place_info()</div><div class="line"><span class="comment"># The place_slaves method.</span></div><div class="line">place_slaves()</div><div class="line">Same <span class="keyword">as</span> place_slaves.</div><div class="line">slaves()</div></pre></td></tr></table></figure>
+<h2 id="8-常用颜色定义"><a href="#8-常用颜色定义" class="headerlink" title="8. 常用颜色定义"></a>8. 常用颜色定义</h2><ul>
+<li><p>bg: 背景颜色</p>
+</li>
+<li><p>fg：前景颜色</p>
+</li>
+<li><p>activebackground: 当widget是活跃widget的背景颜色.</p>
+</li>
+<li><p>activeforeground:小部件时，部件是活跃的前景色.</p>
+</li>
+<li><p>background: widget的背景颜色。这也可以代表ASBG.</p>
+</li>
+<li><p>disabledforeground: 前景色的部件，当部件被禁用.</p>
+</li>
+<li><p>foreground: widget的前景色。这也可以表示为FG.</p>
+</li>
+<li><p>highlightbackground: 部件具有焦点时的亮点区域的背景颜色.</p>
+</li>
+<li><p>highlightcolor: 前景色的亮点区域，部件具有焦点时.</p>
+</li>
+<li><p>selectbackground: widget的所选项目的背景颜色.</p>
+</li>
+<li><p>selectforeground: 前景色为widget的选定项目.</p>
+</li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2016-12-02T10:39:14.044Z" itemprop="dateUpdated">2016年12月2日 18:39</time>
+</span><br>
+
+
+        这里写留言或版权声明：<a href="/2016/05/09/python-tkinter-demo/" target="_blank" rel="external">http://kompasim.github.io/2016/05/09/python-tkinter-demo/</a>
+    </div>
+    <footer>
+        <a href="http://kompasim.github.io">
+            <img src="/img/avatar.jpg" alt="alimjan">
+            alimjan
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tkinter/">tkinter</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://kompasim.github.io/2016/05/09/python-tkinter-demo/&title=《用python的tkinter模块开发桌面应用》 — Kompasim&pic=http://kompasim.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://kompasim.github.io/2016/05/09/python-tkinter-demo/&title=《用python的tkinter模块开发桌面应用》 — Kompasim&source=I like Atom but sometimes have to start the Sublime Text again ..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://kompasim.github.io/2016/05/09/python-tkinter-demo/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《用python的tkinter模块开发桌面应用》 — Kompasim&url=http://kompasim.github.io/2016/05/09/python-tkinter-demo/&via=http://kompasim.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://kompasim.github.io/2016/05/09/python-tkinter-demo/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2016/05/09/python-tkinter-komponents-one/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">python模块tkinter的常用控件1</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2016/04/17/tools-atom-plugins/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">atom编辑器常用插件</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="python-tkinter-demo" data-title="用python的tkinter模块开发桌面应用" data-url="http://kompasim.github.io/2016/05/09/python-tkinter-demo/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'kompasim', theme: 'none'};
+lazyScripts.push('//unpkg.com/hexo-theme-material-indigo@1.5.2/js/embed.min.js');
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>Kompasim &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://kompasim.github.io/2016/05/09/python-tkinter-demo/&title=《用python的tkinter模块开发桌面应用》 — Kompasim&pic=http://kompasim.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://kompasim.github.io/2016/05/09/python-tkinter-demo/&title=《用python的tkinter模块开发桌面应用》 — Kompasim&source=I like Atom but sometimes have to start the Sublime Text again ..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://kompasim.github.io/2016/05/09/python-tkinter-demo/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《用python的tkinter模块开发桌面应用》 — Kompasim&url=http://kompasim.github.io/2016/05/09/python-tkinter-demo/&via=http://kompasim.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://kompasim.github.io/2016/05/09/python-tkinter-demo/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJElEQVR42u3aS26EQAxF0d7/psm0pQS4zy4i4bqMIoKqOQws/z4ffB1f1/ed6//+vn928tk5iy8ZMmS8lnFcXtfPkJcmpPR3/zhHhgwZGzBIKOQhOH2G/+7pfRkyZMgAYZSnjzxky5AhQ8bTAZfcJ8WwDBkyZKShs4ZMA/eDtbgMGTJeyOBd9///+5H5hgwZMl7FOMIrDZ1p+6x2yZAhYzaDBzgynkwXJnhCid5HhgwZQxmrGvq8KK21227CvQwZMkYzai2tWlisJXzk48qQIWM2Iy1NyVeptfVraaIMGTJ2YPCSlYww+U+mKSYfncqQIWMeo1+41r4WX5sgYBkyZMxmrAqXtY2IdMns5kkZMmQMZaRt/bQBF7T1w/NRu02GDBmDGDxRq5WjnfFDsC0iQ4aMzRgk7JJUr1ag8gAtQ4aMHRi149YGWf4hgp0RGTJkDGLUjlsVuEm6iRJEGTJkjGakjfvnFizSVp0MGTL2ZJBX4aE2HWqSO2jlQoYMGUMZtdZ8mhSStYnOEoYMGTL2ZKRI8oqdF5UhQ4aMNH9My8sFWSpvtMmQIWMQY1VDv9OM6w9KZciQMZvRCXMdcFok86JXhgwZUxmdNhkZD/CTWwFXhgwZGzBqgY8ni6sK2ps8V4YMGTLC7LJTdvJFMRkyZMiIR4lhAsobcGg8IEOGjNEMXojygWUtWUzX0WTIkLEDI03UeLstXcjgo81i6ilDhoz3MX4AyuFBz6F1g1wAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.5.2/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.5.2/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

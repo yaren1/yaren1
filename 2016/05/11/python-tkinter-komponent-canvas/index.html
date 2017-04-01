@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>python-tkinter-komponent-canvas | Kompasim | Personal technology blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="python,tkinter">
+    <meta name="description" content="demo
+            
+原文
+1. Canvas12345678910canvas = tkinter.Canvas(root, height = 300, width = 300)canvas.pac">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python-tkinter-komponent-canvas">
+<meta property="og:url" content="http://kompasim.github.io/2016/05/11/python-tkinter-komponent-canvas/index.html">
+<meta property="og:site_name" content="Kompasim">
+<meta property="og:description" content="demo
+            
+原文
+1. Canvas12345678910canvas = tkinter.Canvas(root, height = 300, width = 300)canvas.pac">
+<meta property="og:image" content="http://file06.16sucai.com/2016/0420/14631aab0012269997725837021a1d7c.jpg">
+<meta property="og:updated_time" content="2016-12-02T10:39:14.044Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python-tkinter-komponent-canvas">
+<meta name="twitter:description" content="demo
+            
+原文
+1. Canvas12345678910canvas = tkinter.Canvas(root, height = 300, width = 300)canvas.pac">
+<meta name="twitter:image" content="http://file06.16sucai.com/2016/0420/14631aab0012269997725837021a1d7c.jpg">
+    
+        <link rel="alternative" href="/atom.xml" title="Kompasim" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@1.5.2/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">alimjan</h5>
+          <a href="mailto:kompasim@163.com" title="kompasim@163.com" class="mail">kompasim@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                HOME
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/kompasim" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://stackoverflow.com/users/6213502/kompasim" target="_blank" >
+                <i class="icon icon-lg icon-stack-overflow"></i>
+                Stack Overflow
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://segmentfault.com/u/kompasim" target="_blank" >
+                <i class="icon icon-lg icon-link"></i>
+                segmentfault
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">python-tkinter-komponent-canvas</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">python-tkinter-komponent-canvas</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2016-05-11T04:10:21.000Z" itemprop="datePublished" class="page-time">
+  2016-05-11
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/python/">python</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-Canvas"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. Canvas</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-tags-of-canvas"><span class="post-toc-number">2.</span> <span class="post-toc-text">2. tags of canvas</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#3-other-functions"><span class="post-toc-number"></span> <span class="post-toc-text">3. other functions</span></a>
+        </nav>
+    </aside>
+    
+<article id="post-python-tkinter-komponent-canvas"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">python-tkinter-komponent-canvas</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2016年05月11日 12:10" datetime="2016-05-11T04:10:21.000Z"  itemprop="datePublished">2016-05-11</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/python/">python</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://file06.16sucai.com/2016/0420/14631aab0012269997725837021a1d7c.jpg" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure>
+<p><a href="http://effbot.org/tkinterbook/tkinter-index.htm" target="_blank" rel="external">原文</a></p>
+<h2 id="1-Canvas"><a href="#1-Canvas" class="headerlink" title="1. Canvas"></a>1. Canvas</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">canvas = tkinter.Canvas(root, height = <span class="number">300</span>, width = <span class="number">300</span>)</div><div class="line">canvas.pack()</div><div class="line">canvas.create_line(</div><div class="line">    <span class="number">0</span>,</div><div class="line">    <span class="number">0</span>,</div><div class="line">    <span class="number">200</span>,</div><div class="line">    <span class="number">200</span>,</div><div class="line">    fill = <span class="string">"red"</span>,</div><div class="line">    dash = (<span class="number">4</span>,<span class="number">4</span>)</div><div class="line">)</div></pre></td></tr></table></figure>
+<h2 id="2-tags-of-canvas"><a href="#2-tags-of-canvas" class="headerlink" title="2. tags of canvas"></a>2. tags of canvas</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># the tags</span></div><div class="line">item = canvas.create_line(<span class="number">0</span>, <span class="number">0</span>, <span class="number">100</span>, <span class="number">100</span>, tags=<span class="string">"uno"</span>)</div><div class="line">canvas.itemconfig(item, tags=(<span class="string">"one"</span>, <span class="string">"two"</span>))</div><div class="line">canvas.addtag_withtag(<span class="string">"three"</span>, <span class="string">"one"</span>)</div><div class="line">canvas.gettags(item)</div><div class="line">canvas.find_withtag(<span class="string">"one"</span>)</div></pre></td></tr></table></figure>
+<h1 id="3-other-functions"><a href="#3-other-functions" class="headerlink" title="3. other functions"></a>3. other functions</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># other functions</span></div><div class="line">coords(item, *coords)</div><div class="line">create_arc(bbox, **options)</div><div class="line">create_bitmap(position, **options)</div><div class="line">create_image(position, **options)</div><div class="line">create_line(coords, **options)</div><div class="line">create_oval(bbox, **options)</div><div class="line">create_polygon(coords, **options)</div><div class="line">create_rectangle(bbox, **options)</div><div class="line">create_text(position, **options)</div><div class="line">create_window(position, **options)</div><div class="line">dchars(item, <span class="keyword">from</span>, to=<span class="keyword">None</span>)</div><div class="line">delete(item)</div><div class="line">dtag(item, tag=<span class="keyword">None</span>)</div><div class="line">find_above(item)</div><div class="line">find_all()</div><div class="line">find_below(item)</div><div class="line">find_closest(x, y, halo=<span class="keyword">None</span>, start=<span class="keyword">None</span>)</div><div class="line">find_enclosed(x1, y1, x2, y2)</div><div class="line">find_overlapping(x1, y1, x2, y2)</div><div class="line">find_withtag(item)</div><div class="line">focus(item=<span class="keyword">None</span>)</div><div class="line">gettags(item)</div><div class="line">icursor(item, index)</div><div class="line">index(item, index)</div><div class="line">insert(item, index, text)</div><div class="line">itemcget(item, option)</div><div class="line">itemconfig(item, **options)</div><div class="line">itemconfigure(item, **options)</div><div class="line">lift(item, **options)</div><div class="line">lower(item, **options)</div><div class="line">move(item, dx, dy)</div><div class="line">postscript(**options)</div><div class="line">scale(self, xscale, yscale, xoffset, yoffset)</div><div class="line">scan_dragto(x, y)</div><div class="line">scan_mark(x, y)</div><div class="line">select_adjust(item, index)</div><div class="line">select_clear()</div><div class="line">select_from(item, index)</div><div class="line">select_item()</div><div class="line">select_to(item, index)</div><div class="line">tag_bind(item, event=<span class="keyword">None</span>, callback, add=<span class="keyword">None</span>)</div><div class="line">tag_lower(item)</div><div class="line">tag_raise(item)</div><div class="line">tag_unbind(self, item, event)</div><div class="line">tkraise(item, **options)</div><div class="line">xview(how, *args)</div><div class="line">xview_moveto(fraction)</div><div class="line">xview_scroll(number, what)</div><div class="line">yview(how, *args)</div><div class="line">yview_moveto(fraction)</div><div class="line">yview_scroll(number, what)</div></pre></td></tr></table></figure>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2016-12-02T10:39:14.044Z" itemprop="dateUpdated">2016年12月2日 18:39</time>
+</span><br>
+
+
+        这里写留言或版权声明：<a href="/2016/05/11/python-tkinter-komponent-canvas/" target="_blank" rel="external">http://kompasim.github.io/2016/05/11/python-tkinter-komponent-canvas/</a>
+    </div>
+    <footer>
+        <a href="http://kompasim.github.io">
+            <img src="/img/avatar.jpg" alt="alimjan">
+            alimjan
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tkinter/">tkinter</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://kompasim.github.io/2016/05/11/python-tkinter-komponent-canvas/&title=《python-tkinter-komponent-canvas》 — Kompasim&pic=http://kompasim.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://kompasim.github.io/2016/05/11/python-tkinter-komponent-canvas/&title=《python-tkinter-komponent-canvas》 — Kompasim&source=I like Atom but sometimes have to start the Sublime Text again ..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://kompasim.github.io/2016/05/11/python-tkinter-komponent-canvas/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《python-tkinter-komponent-canvas》 — Kompasim&url=http://kompasim.github.io/2016/05/11/python-tkinter-komponent-canvas/&via=http://kompasim.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://kompasim.github.io/2016/05/11/python-tkinter-komponent-canvas/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2016/05/11/python-tkinter-komponent-methods/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">python模块tkinter的komponent-methods</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2016/05/11/python-tkinter-komponents-two/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">python模块tkinter的常用控件2</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="python-tkinter-komponent-canvas" data-title="python-tkinter-komponent-canvas" data-url="http://kompasim.github.io/2016/05/11/python-tkinter-komponent-canvas/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'kompasim', theme: 'none'};
+lazyScripts.push('//unpkg.com/hexo-theme-material-indigo@1.5.2/js/embed.min.js');
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>Kompasim &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://kompasim.github.io/2016/05/11/python-tkinter-komponent-canvas/&title=《python-tkinter-komponent-canvas》 — Kompasim&pic=http://kompasim.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://kompasim.github.io/2016/05/11/python-tkinter-komponent-canvas/&title=《python-tkinter-komponent-canvas》 — Kompasim&source=I like Atom but sometimes have to start the Sublime Text again ..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://kompasim.github.io/2016/05/11/python-tkinter-komponent-canvas/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《python-tkinter-komponent-canvas》 — Kompasim&url=http://kompasim.github.io/2016/05/11/python-tkinter-komponent-canvas/&via=http://kompasim.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://kompasim.github.io/2016/05/11/python-tkinter-komponent-canvas/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACqklEQVR42u3aQW7CQAwFUO5/aSp11UVJv+0xodLLClFK8mYxNt/zeMTX8/uqvpN/28/3r//62Ljw8PDwWo/+6rr+zPX3VB89ufJnxsPDw9vmXW/E1w9d3eKTuyS8qHjg4eHh3cq7fp08bnWx8vvi4eHh/S9erxGvbvd4eHh4n8artrDV9npePNazFjw8PLyYVx1ZfcLrxfkeHh4e3mCqPhmG9Y4g5KO16Gnx8PDwFnhJUzsvG3k4W40eopEbHh4e3gKv929JwUhunDNOfQ8eHh7eKV6vUc7j1HcOwPDw8PD2eEkznQ/DNpB5IPJLkcDDw8Nb4M3b6PnRqLMF4/CvBDw8PLw4hM3HXdWodx43lKNhPDw8vKO8XvBarTnzxeqFI3h4eHgbvHyQn8e4edSbt9T5EQc8PDy8d/KqcWoSNJw9fNA7RoCHh4e3wcvb30k6mm/xk8KAh4eH9x5eLxqohguTpnl0ZAEPDw9vgZeP/xNY+ZxCEIj0Ygs8PDy8PV5vK3/GV/VgVjX4aKbUeHh4eC1eLypNlqO66edRbL7QeHh4eBu8yUPkDW7++fIvgHxp8PDw8I7yqo/VKxu9OLhXVCIAHh4e3oDXqyT5YYLqsareAk0KCR4eHl6VV41o83KSD/5zTLI0eHh4eHu8fHxVDXN7G32v5ODh4eHdxZu0rUnTXA0+5gca8PDw8DZ4eT4xj1BH58Ja34yHh4e3wXsWr+R/q0cNNspG4RcDHh4eXivGrW6+Oay36fcGY/lC4+Hh4c15p8ZdkwBiHnO8bK/x8PDw1nj5Bp0UjIRXPZjVG5jh4eHh3cs71b/33i/D8PDw8D6MdzZKyFvwJOY4UBjw8PDwjuachSCgeHRgEoX80VLj4eHhHeVVB2CTWyYLlx8OmB8Fw8PDwyvyvgDBfn2C89MTQQAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.5.2/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.5.2/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>python模块tkinter的events | Kompasim | Personal technology blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="python,tkinter">
+    <meta name="description" content="demo
+            
+原文
+1. event binding1234567891011121314151617from Tkinter import *root = Tk()def key(event">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python模块tkinter的events">
+<meta property="og:url" content="http://kompasim.github.io/2016/05/11/python-tkinter-events/index.html">
+<meta property="og:site_name" content="Kompasim">
+<meta property="og:description" content="demo
+            
+原文
+1. event binding1234567891011121314151617from Tkinter import *root = Tk()def key(event">
+<meta property="og:image" content="http://file02.16sucai.com/d/file/2014/1027/6d97254929a822722ecbbdc8c41016e3.jpg">
+<meta property="og:updated_time" content="2016-12-02T10:39:14.044Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python模块tkinter的events">
+<meta name="twitter:description" content="demo
+            
+原文
+1. event binding1234567891011121314151617from Tkinter import *root = Tk()def key(event">
+<meta name="twitter:image" content="http://file02.16sucai.com/d/file/2014/1027/6d97254929a822722ecbbdc8c41016e3.jpg">
+    
+        <link rel="alternative" href="/atom.xml" title="Kompasim" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@1.5.2/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">alimjan</h5>
+          <a href="mailto:kompasim@163.com" title="kompasim@163.com" class="mail">kompasim@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                HOME
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/kompasim" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://stackoverflow.com/users/6213502/kompasim" target="_blank" >
+                <i class="icon icon-lg icon-stack-overflow"></i>
+                Stack Overflow
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://segmentfault.com/u/kompasim" target="_blank" >
+                <i class="icon icon-lg icon-link"></i>
+                segmentfault
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">python模块tkinter的events</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">python模块tkinter的events</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2016-05-11T14:44:38.000Z" itemprop="datePublished" class="page-time">
+  2016-05-11
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/python/">python</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-event-binding"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. event binding</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-events"><span class="post-toc-number">2.</span> <span class="post-toc-text">2. events</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-event-object"><span class="post-toc-number">3.</span> <span class="post-toc-text">1. event object</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-python-tkinter-events"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">python模块tkinter的events</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2016年05月11日 22:44" datetime="2016-05-11T14:44:38.000Z"  itemprop="datePublished">2016-05-11</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/python/">python</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://file02.16sucai.com/d/file/2014/1027/6d97254929a822722ecbbdc8c41016e3.jpg" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure>
+<p><a href="http://effbot.org/tkinterbook/tkinter-index.htm" target="_blank" rel="external">原文</a></p>
+<h2 id="1-event-binding"><a href="#1-event-binding" class="headerlink" title="1. event binding"></a>1. event binding</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> Tkinter <span class="keyword">import</span> *</div><div class="line"></div><div class="line">root = Tk()</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">key</span><span class="params">(event)</span>:</span></div><div class="line">    <span class="keyword">print</span> <span class="string">"pressed"</span>, repr(event.char)</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">callback</span><span class="params">(event)</span>:</span></div><div class="line">    frame.focus_set()</div><div class="line">    <span class="keyword">print</span> <span class="string">"clicked at"</span>, event.x, event.y</div><div class="line"></div><div class="line">frame = Frame(root, width=<span class="number">100</span>, height=<span class="number">100</span>)</div><div class="line">frame.bind(<span class="string">"&lt;Key&gt;"</span>, key)</div><div class="line">frame.bind(<span class="string">"&lt;Button-1&gt;"</span>, callback)</div><div class="line">frame.pack()</div><div class="line"></div><div class="line">root.mainloop()</div></pre></td></tr></table></figure>
+<h2 id="2-events"><a href="#2-events" class="headerlink" title="2. events"></a>2. events</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;Button<span class="number">-1</span>&gt;</div><div class="line">&lt;B1-Motion&gt;</div><div class="line">&lt;ButtonRelease<span class="number">-1</span>&gt;</div><div class="line">&lt;Double-Button<span class="number">-1</span>&gt;</div><div class="line">&lt;Enter&gt;</div><div class="line">&lt;Leave&gt;</div><div class="line">&lt;FocusIn&gt;</div><div class="line">&lt;FocusOut&gt;</div><div class="line">&lt;Return&gt;</div><div class="line">&lt;Key&gt;</div><div class="line">a <span class="comment"># The user typed an “a”.</span></div><div class="line">&lt;Shift-Up&gt; <span class="comment"># The user pressed the Up arrow, while holding the Shift key pressed.</span></div><div class="line">&lt;Configure&gt; <span class="comment"># The widget changed size (or location, on some platforms)</span></div></pre></td></tr></table></figure>
+<h2 id="1-event-object"><a href="#1-event-object" class="headerlink" title="1. event object"></a>1. event object</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># get the event object</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">key</span><span class="params">(event)</span>:</span></div><div class="line">    <span class="keyword">print</span> <span class="string">"pressed"</span>, repr(event.char)</div><div class="line">    <span class="keyword">print</span> <span class="string">"clicked at"</span>, event.x, event.y</div><div class="line"><span class="comment"># attributes</span></div><div class="line">widget</div><div class="line">x, y</div><div class="line">x_root, y_root</div><div class="line">char</div><div class="line">keysym</div><div class="line">keycode</div><div class="line">num</div><div class="line">width, height</div><div class="line">type</div></pre></td></tr></table></figure>
+<hr>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2016-12-02T10:39:14.044Z" itemprop="dateUpdated">2016年12月2日 18:39</time>
+</span><br>
+
+
+        这里写留言或版权声明：<a href="/2016/05/11/python-tkinter-events/" target="_blank" rel="external">http://kompasim.github.io/2016/05/11/python-tkinter-events/</a>
+    </div>
+    <footer>
+        <a href="http://kompasim.github.io">
+            <img src="/img/avatar.jpg" alt="alimjan">
+            alimjan
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tkinter/">tkinter</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://kompasim.github.io/2016/05/11/python-tkinter-events/&title=《python模块tkinter的events》 — Kompasim&pic=http://kompasim.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://kompasim.github.io/2016/05/11/python-tkinter-events/&title=《python模块tkinter的events》 — Kompasim&source=I like Atom but sometimes have to start the Sublime Text again ..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://kompasim.github.io/2016/05/11/python-tkinter-events/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《python模块tkinter的events》 — Kompasim&url=http://kompasim.github.io/2016/05/11/python-tkinter-events/&via=http://kompasim.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://kompasim.github.io/2016/05/11/python-tkinter-events/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2016/05/29/python-mysql-connection/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">python连接mysql</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2016/05/11/python-tkinter-widget/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">python模块tkinter的widget讲解</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="python-tkinter-events" data-title="python模块tkinter的events" data-url="http://kompasim.github.io/2016/05/11/python-tkinter-events/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'kompasim', theme: 'none'};
+lazyScripts.push('//unpkg.com/hexo-theme-material-indigo@1.5.2/js/embed.min.js');
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>Kompasim &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://kompasim.github.io/2016/05/11/python-tkinter-events/&title=《python模块tkinter的events》 — Kompasim&pic=http://kompasim.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://kompasim.github.io/2016/05/11/python-tkinter-events/&title=《python模块tkinter的events》 — Kompasim&source=I like Atom but sometimes have to start the Sublime Text again ..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://kompasim.github.io/2016/05/11/python-tkinter-events/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《python模块tkinter的events》 — Kompasim&url=http://kompasim.github.io/2016/05/11/python-tkinter-events/&via=http://kompasim.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://kompasim.github.io/2016/05/11/python-tkinter-events/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACK0lEQVR42u3aQW7DMAwFUd//0u62QGF5PtkEkDhaFYlj63nBkiKvC697uX5f83T9+s5/f3V9YsmQIWNbBt/i02M6366vIXuTIUPGHAYJheSR5AWtn76+5+PnMmTIkIGDYPqr9NXIkCFDBmekwXEdjtefyJAhQ0YaOslN00Twq7W4DBkyNmTwU/fv//2R/oYMGTK2YtzhSu9WSx/jXcmQIeNoBg9wnUK0n1Ci/ciQIWMAg4faWtlJtsJfSlyLy5AhY1sGaTfyQElK3zThQzuUIUPG0Yx0JKJWstb+D5A0UYYMGdMY6REbTyI5L22CypAhYwIjLUHJtmptAH6s9lKFy5Ah41AGT/jSIMu3ToLvS8CVIUPGoYx+vErLWn48FzdKZciQcSijdvRfSwrTUpmTZMiQcTaDb7p2oN8ftuCDazJkyJjA6CdwvHnAtx4PW8iQIeNoBgnH/NadRLAWrGXIkHEqgwe7NImsfcv3IEOGjDkMPnJRG8WoDVIUxzhkyJAxgFFrAKRhOmXztFWGDBlzGOkD+kVsbSCs1d+QIUPGtgweTHlpyg/6+XoZtpAhQ8ZxjDtcfGijVsTGhasMGTIGMDphrtak5KG5VvTKkCHjVAYf3uLHcLVGZivgypAhYwCDBz4+EFYby+AJqAwZMmSkY1ucXdvuBwOuDBkyBjDSIMvbovwlypAhYwKDFLFpydpvkQaNBxkyZBzN6CRq/3WUlrY2i01NGTJk7Mf4AZTtx2Vd09SDAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.5.2/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.5.2/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

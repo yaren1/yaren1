@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>python模块tkinter的常用控件1 | Kompasim | Personal technology blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="python,tkinter">
+    <meta name="description" content="demo
+            
+原文
+1. Label1234567891011121314151617181920212223242526272829303132# .config(**options)lab">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python模块tkinter的常用控件1">
+<meta property="og:url" content="http://kompasim.github.io/2016/05/09/python-tkinter-komponents-one/index.html">
+<meta property="og:site_name" content="Kompasim">
+<meta property="og:description" content="demo
+            
+原文
+1. Label1234567891011121314151617181920212223242526272829303132# .config(**options)lab">
+<meta property="og:image" content="http://file06.16sucai.com/2016/0321/44c0d4db2bc42c823839af8041c6303c.jpg">
+<meta property="og:updated_time" content="2016-12-02T10:39:14.045Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python模块tkinter的常用控件1">
+<meta name="twitter:description" content="demo
+            
+原文
+1. Label1234567891011121314151617181920212223242526272829303132# .config(**options)lab">
+<meta name="twitter:image" content="http://file06.16sucai.com/2016/0321/44c0d4db2bc42c823839af8041c6303c.jpg">
+    
+        <link rel="alternative" href="/atom.xml" title="Kompasim" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@1.5.2/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">alimjan</h5>
+          <a href="mailto:kompasim@163.com" title="kompasim@163.com" class="mail">kompasim@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                HOME
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/kompasim" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://stackoverflow.com/users/6213502/kompasim" target="_blank" >
+                <i class="icon icon-lg icon-stack-overflow"></i>
+                Stack Overflow
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://segmentfault.com/u/kompasim" target="_blank" >
+                <i class="icon icon-lg icon-link"></i>
+                segmentfault
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">python模块tkinter的常用控件1</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">python模块tkinter的常用控件1</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2016-05-09T15:09:12.000Z" itemprop="datePublished" class="page-time">
+  2016-05-09
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/python/">python</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-Label"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. Label</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-Frame"><span class="post-toc-number">2.</span> <span class="post-toc-text">2. Frame</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-Entry"><span class="post-toc-number">3.</span> <span class="post-toc-text">3. Entry</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-Text"><span class="post-toc-number">4.</span> <span class="post-toc-text">4. Text</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-Button"><span class="post-toc-number">5.</span> <span class="post-toc-text">5. Button</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-Checkbutton"><span class="post-toc-number">6.</span> <span class="post-toc-text">6. Checkbutton</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-Rudiobutton"><span class="post-toc-number">7.</span> <span class="post-toc-text">7. Rudiobutton</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-Listbox"><span class="post-toc-number">8.</span> <span class="post-toc-text">8. Listbox</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-python-tkinter-komponents-one"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">python模块tkinter的常用控件1</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2016年05月09日 23:09" datetime="2016-05-09T15:09:12.000Z"  itemprop="datePublished">2016-05-09</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/python/">python</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://file06.16sucai.com/2016/0321/44c0d4db2bc42c823839af8041c6303c.jpg" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure>
+<p><a href="http://effbot.org/tkinterbook/tkinter-index.htm" target="_blank" rel="external">原文</a></p>
+<h2 id="1-Label"><a href="#1-Label" class="headerlink" title="1. Label"></a>1. Label</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># .config(**options)</span></div><div class="line">label = tkinter.Label(</div><div class="line">    root,</div><div class="line">    text = <span class="string">"this is a label text 测试"</span>,</div><div class="line">    bg = <span class="string">"green"</span>, <span class="comment"># background</span></div><div class="line">    fg = <span class="string">"red"</span>, <span class="comment"># foreground</span></div><div class="line">    font = (<span class="string">"arial"</span>,<span class="number">15</span>),</div><div class="line">    width = <span class="number">20</span>,</div><div class="line">    height = <span class="number">5</span>,</div><div class="line">    activebackground = <span class="string">'blue'</span>, <span class="comment"># with the state option</span></div><div class="line">    activeforeground = <span class="string">"purple"</span>,</div><div class="line">    anchor = <span class="string">'ne'</span>, <span class="comment"># (center)where in the label the text should be located.</span></div><div class="line">    <span class="comment"># bitmap =</span></div><div class="line">    borderwidth = <span class="number">10</span>, <span class="comment"># bd</span></div><div class="line">    compound = <span class="string">'top'</span>, <span class="comment"># (center)Controls how to combine text and image in the label</span></div><div class="line">    <span class="comment"># cursor =</span></div><div class="line">    disabledforeground = <span class="string">"red"</span>,</div><div class="line">    highlightbackground = <span class="string">"blue"</span>,</div><div class="line">    highlightcolor = <span class="string">"green"</span>,</div><div class="line">    highlightthickness = <span class="number">2</span>,</div><div class="line">    <span class="comment"># image =</span></div><div class="line">    justify = <span class="string">'center'</span>, <span class="comment"># Defines how to align multiple lines of text ,right,left,center</span></div><div class="line">    padx = <span class="number">10</span>,</div><div class="line">    pady = <span class="number">10</span>,</div><div class="line">    relief = <span class="string">'ridge'</span>, <span class="comment"># (flat),sunken,raised,groove</span></div><div class="line">    state = <span class="string">'normal'</span>, <span class="comment"># active,disabled</span></div><div class="line">    <span class="comment"># takefocus =</span></div><div class="line">    <span class="comment"># textvariable =</span></div><div class="line">    underline = <span class="number">1</span>, <span class="comment"># (-1)</span></div><div class="line">    wraplength = <span class="number">100</span></div><div class="line">)</div><div class="line">label.pack(side=<span class="string">"left"</span>)</div></pre></td></tr></table></figure>
+<h2 id="2-Frame"><a href="#2-Frame" class="headerlink" title="2. Frame"></a>2. Frame</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># .config(**options)</span></div><div class="line">frame = tkinter.Frame(</div><div class="line">    root,</div><div class="line">    bg = <span class="string">"red"</span>,</div><div class="line">    width = <span class="number">400</span>,</div><div class="line">    height = <span class="number">600</span>,</div><div class="line">    <span class="comment"># colormap =</span></div><div class="line">    <span class="comment"># container =</span></div><div class="line">    <span class="comment"># cursor =</span></div><div class="line">    <span class="comment"># class =</span></div><div class="line">    bd = <span class="number">2</span>,</div><div class="line">    <span class="comment"># highlightbackground =</span></div><div class="line">    <span class="comment"># highlightcolor =</span></div><div class="line">    <span class="comment"># highlightthickness =</span></div><div class="line">    relief = <span class="string">'sunken'</span>, <span class="comment"># flat,sunken,raised,groove,ridge</span></div><div class="line">    <span class="comment"># takefocus =</span></div><div class="line">    <span class="comment"># visual =</span></div><div class="line">    padx = <span class="number">10</span>,</div><div class="line">    pady = <span class="number">10</span></div><div class="line">)</div><div class="line">frame.pack()</div></pre></td></tr></table></figure>
+<h2 id="3-Entry"><a href="#3-Entry" class="headerlink" title="3. Entry"></a>3. Entry</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># .config(**options)</span></div><div class="line">value = tkinter.StringVar()</div><div class="line">entry = tkinter.Entry(</div><div class="line">    root,</div><div class="line">    width = <span class="number">200</span>,</div><div class="line">    bg = <span class="string">"#222222"</span>,</div><div class="line">    fg = <span class="string">"yellow"</span>,</div><div class="line">    bd = <span class="number">20</span>,</div><div class="line">    textvariable = value,</div><div class="line">    <span class="comment"># cursor =</span></div><div class="line">    <span class="comment"># disabledbackground =</span></div><div class="line">    <span class="comment"># disabledforeground =</span></div><div class="line">    font = (<span class="string">"arial"</span>,<span class="number">15</span>),</div><div class="line">    exportselection = <span class="keyword">True</span>, <span class="comment">#selected text is automatically exported to the clipboard.</span></div><div class="line">    <span class="comment"># highlightbackground =</span></div><div class="line">    <span class="comment"># highlightcolor =</span></div><div class="line">    <span class="comment"># highlightthickness =</span></div><div class="line">    insertbackground = <span class="string">"blue"</span>, <span class="comment"># Color used for the insertion cursor.</span></div><div class="line">    insertborderwidth = <span class="number">10</span>,</div><div class="line">    insertofftime = <span class="number">1000</span>, <span class="comment"># Together with insertontime, this option controls cursor blinking. Both values are given in milliseconds.</span></div><div class="line">    insertontime = <span class="number">1000</span>,</div><div class="line">    insertwidth = <span class="number">20</span>,</div><div class="line">    justify = <span class="string">"right"</span>, <span class="comment"># right,left,center</span></div><div class="line">    <span class="comment"># invalidcommand =</span></div><div class="line">    <span class="comment"># invcmd =</span></div><div class="line">    readonlybackground = <span class="string">"orange"</span>, <span class="comment"># The background color to use when the state is “readonly”.</span></div><div class="line">    relief = <span class="string">"groove"</span>, <span class="comment"># flat,raised,ridge,sunken</span></div><div class="line">    selectbackground = <span class="string">"black"</span>,</div><div class="line">    selectborderwidth = <span class="number">2</span>,</div><div class="line">    selectforeground = <span class="string">"white"</span>,</div><div class="line">    show = <span class="string">""</span>, <span class="comment"># Controls how to display the contents of the widget.</span></div><div class="line">    state = <span class="string">"normal"</span>, <span class="comment"># disabled,readonly</span></div><div class="line">    <span class="comment"># takefocus =</span></div><div class="line">    validate = <span class="string">"none"</span> <span class="comment"># focusin,focusout,focus</span></div><div class="line">    <span class="comment"># validatecommand =</span></div><div class="line">    <span class="comment"># vcmd = # same as validatecommand</span></div><div class="line">    <span class="comment"># xscrollcommand = # Used to connect an entry field to a horizontal scrollbar. This option should be set to the set method of the corresponding scrollbar.</span></div><div class="line">)</div><div class="line">value2 = value.get()</div><div class="line">value.set(<span class="string">"hello python ..."</span>)</div><div class="line">entry.focus_set()</div><div class="line">entry.delete(<span class="number">0</span>,<span class="number">2</span>)</div><div class="line">entry.icursor(<span class="number">3</span>) <span class="comment"># Moves the insertion cursor to the given index.</span></div><div class="line">index = entry,index(<span class="number">2</span>) <span class="comment"># Gets the numerical position corresponding to the given index.</span></div><div class="line">entry.insert(<span class="number">0</span>,<span class="string">"aaaaaa"</span>)</div><div class="line"><span class="comment"># scan_dragto(x), # Sets the scanning anchor for fast horizontal scrolling to the given mouse coordinate.</span></div><div class="line"><span class="comment"># scan_mark(x),# Scrolls the widget contents sideways according to the given mouse coordinate. The text is moved 10 times the distance between the scanning anchor and the new position.</span></div><div class="line"><span class="comment">#</span></div><div class="line"><span class="comment"># select_adjust(index) [#]</span></div><div class="line"><span class="comment"># Same as selection_adjust.</span></div><div class="line"><span class="comment">#</span></div><div class="line"><span class="comment"># select_clear() [#]</span></div><div class="line"><span class="comment"># Same as selection_clear.</span></div><div class="line"><span class="comment">#</span></div><div class="line"><span class="comment"># select_from(index) [#]</span></div><div class="line"><span class="comment"># Same as selection_from.</span></div><div class="line"><span class="comment">#</span></div><div class="line"><span class="comment"># select_present() [#]</span></div><div class="line"><span class="comment"># Same as selection_present.</span></div><div class="line"><span class="comment">#</span></div><div class="line"><span class="comment"># select_range(start, end) [#]</span></div><div class="line"><span class="comment"># Same as selection_range.</span></div><div class="line"><span class="comment">#</span></div><div class="line"><span class="comment"># select_to(index) [#]</span></div><div class="line"><span class="comment"># Same as selection_to.</span></div><div class="line"><span class="comment">#</span></div><div class="line"><span class="comment"># selection_adjust(index)</span></div><div class="line"><span class="comment"># Adjusts the selection to include also the given character. If index is already selected, do nothing.</span></div><div class="line"><span class="comment">#</span></div><div class="line"><span class="comment"># selection_clear()</span></div><div class="line"><span class="comment"># Clears the selection.</span></div><div class="line"><span class="comment">#</span></div><div class="line"><span class="comment"># selection_from(index)</span></div><div class="line"><span class="comment"># Starts a new selection. This also sets the ANCHOR index.</span></div><div class="line"><span class="comment">#</span></div><div class="line"><span class="comment"># selection_present()</span></div><div class="line"><span class="comment"># Checks if text is selected.</span></div><div class="line"><span class="comment">#</span></div><div class="line"><span class="comment"># lection_range(start, end)</span></div><div class="line"><span class="comment"># Explicitly sets the selection range. Start must be smaller than end. Use selection_range(0, END) to select all text in the widget.</span></div><div class="line"><span class="comment">#</span></div><div class="line"><span class="comment"># selection_to(index)</span></div><div class="line"><span class="comment"># Selects all text between ANCHOR and the given index.</span></div><div class="line"><span class="comment">#</span></div><div class="line"><span class="comment"># xview(index)</span></div><div class="line"><span class="comment"># Makes sure the given index is visible. The entry view is scrolled if necessary.</span></div><div class="line"><span class="comment">#</span></div><div class="line"><span class="comment"># xview_moveto(fraction)</span></div><div class="line"><span class="comment"># Adjusts the entry view so that the given offset is at the left edge of the canvas. Offset 0.0 is the beginning of the entry string, 1.0 the end.</span></div><div class="line"><span class="comment">#</span></div><div class="line"><span class="comment"># xview_scroll(number, what)</span></div><div class="line"><span class="comment"># Scrolls the entry view horizontally by the given amount.</span></div><div class="line"></div><div class="line">entry.pack()</div></pre></td></tr></table></figure>
+<h2 id="4-Text"><a href="#4-Text" class="headerlink" title="4. Text"></a>4. Text</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># .config(**options)</span></div><div class="line"><span class="comment"># Text</span></div><div class="line">text = tkinter.Text(</div><div class="line">    <span class="comment"># maxundo =</span></div><div class="line">    <span class="comment"># relief =</span></div><div class="line">    <span class="comment"># setgrid = #Default value is 0.</span></div><div class="line">    <span class="comment"># spacing1 = # Default value is 0.</span></div><div class="line">    <span class="comment"># spacing2 = Default value is 0.</span></div><div class="line">    <span class="comment"># spacing3 = # Default value is 0.</span></div><div class="line">    <span class="comment"># state = # Default value is NORMAL.</span></div><div class="line">    <span class="comment"># tabs = # No default value.</span></div><div class="line">    <span class="comment"># takefocus= # No default value.</span></div><div class="line">    <span class="comment"># undo = # Default is 0.</span></div><div class="line">    <span class="comment"># wrap = #Default value is CHAR.</span></div><div class="line">    <span class="comment"># xscrollcommand =</span></div><div class="line">    <span class="comment"># yscrollcommand =</span></div><div class="line">)</div><div class="line"></div><div class="line"><span class="comment"># text.tag_config("a", foreground="blue", underline=1)</span></div><div class="line"><span class="comment"># text.tag_bind("Enter&gt;", show_hand_cursor)</span></div><div class="line"><span class="comment"># text.tag_bind("Leave&gt;", show_arrow_cursor)</span></div><div class="line"><span class="comment"># text.tag_bind("Button-1&gt;", click)</span></div><div class="line"><span class="comment"># text.config(cursor="arrow")</span></div><div class="line"><span class="comment"># text.insert("insert", "click here!", "a")</span></div><div class="line"><span class="comment"># text.tag_config("n", background="yellow", foreground="red")</span></div><div class="line"><span class="comment"># text.tag_config("a", foreground="blue")</span></div><div class="line"><span class="comment"># text.insert("contents", ("n", "a"))</span></div><div class="line"></div><div class="line"><span class="comment"># text.insert("end","aaa") # end,current,insert,sel_first,sel_last</span></div><div class="line"><span class="comment"># text.insert(1.0,'0123456789\n') # x.y</span></div><div class="line"><span class="comment"># text.insert("1.end",'zzz') # x.end</span></div><div class="line"></div><div class="line">text.pack()</div></pre></td></tr></table></figure>
+<h2 id="5-Button"><a href="#5-Button" class="headerlink" title="5. Button"></a>5. Button</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">call</span><span class="params">()</span>:</span></div><div class="line">    print(<span class="string">"call pressed ..."</span>)</div><div class="line">button = tkinter.Button(</div><div class="line">    root,</div><div class="line">    command = call,</div><div class="line">    <span class="comment"># default = # If set, the button is a default button. Tkinter will indicate this by drawing a platform specific indicator (usually an extra border). The default is DISABLED (no default behavior).</span></div><div class="line">    <span class="comment"># overrelief = # Alternative relief to use when the mouse is moved over the widget. If empty, always use the relief value.</span></div><div class="line"></div><div class="line">)</div><div class="line">button.flash() <span class="comment"># Flash the button. This method redraws the button several times, alternating between active and normal appearance.</span></div><div class="line">button.invoke() <span class="comment"># Call the command associated with the button.</span></div><div class="line">button.pack()</div></pre></td></tr></table></figure>
+<h2 id="6-Checkbutton"><a href="#6-Checkbutton" class="headerlink" title="6. Checkbutton"></a>6. Checkbutton</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># config(**options)</span></div><div class="line">val = tkinter.StringVar()</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">cbcall</span><span class="params">()</span>:</span></div><div class="line">    val.set(val.get()+<span class="string">"..."</span>)</div><div class="line">    <span class="keyword">print</span> (val.get())</div><div class="line">checkButton = tkinter.Checkbutton(</div><div class="line">    root,</div><div class="line">    text = <span class="string">"color"</span>,</div><div class="line">    variable = val,</div><div class="line">    onvalue = <span class="string">"blue"</span>,</div><div class="line">    offvalue =<span class="string">"none"</span>,</div><div class="line">    command = cbcall</div><div class="line">)</div><div class="line"><span class="comment"># deselect() # Deselects the checkbox; that is, sets the value to offvalue.</span></div><div class="line"><span class="comment"># flash() # Redraws the button several times, alternating between active and normal appearance.</span></div><div class="line"><span class="comment"># invoke() # Calls the command associated with the button.</span></div><div class="line"><span class="comment"># select() # Selects the button; that is, sets the value to onvalue.</span></div><div class="line"><span class="comment"># toggle() # Toggles the button.</span></div><div class="line">checkButton.pack()</div></pre></td></tr></table></figure>
+<h2 id="7-Rudiobutton"><a href="#7-Rudiobutton" class="headerlink" title="7. Rudiobutton"></a>7. Rudiobutton</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># config(**options)</span></div><div class="line">val = tkinter.StringVar()</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">radcall</span><span class="params">()</span>:</span></div><div class="line">    print(val.get())</div><div class="line">r1 = tkinter.Radiobutton(</div><div class="line">    root,</div><div class="line">    text = <span class="string">"one"</span>,</div><div class="line">    variable = val, <span class="comment"># the value of the value</span></div><div class="line">    <span class="comment"># textvariable = # the value of the text</span></div><div class="line">    value = <span class="string">"one1"</span>,</div><div class="line">    command = radcall</div><div class="line">)</div><div class="line">r1.pack()</div><div class="line">r2 = tkinter.Radiobutton(</div><div class="line">    root,</div><div class="line">    text = <span class="string">"two"</span>,</div><div class="line">    variable = val,</div><div class="line">    value = <span class="string">"two2"</span>,</div><div class="line">    command = radcall</div><div class="line">)</div><div class="line">r2.pack()</div><div class="line"><span class="comment"># deselect() # Deselects the button.</span></div><div class="line"><span class="comment"># flash() # Redraws the button a couple of times, alternating between active and normal appearance. This can be useful when debugging, or to indicate when some other user action has activate the button.</span></div><div class="line"><span class="comment"># invoke() # Calls the command associated with the button.</span></div><div class="line"><span class="comment"># select() # Selects the button.</span></div></pre></td></tr></table></figure>
+<h2 id="8-Listbox"><a href="#8-Listbox" class="headerlink" title="8. Listbox"></a>8. Listbox</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># config(**options)</span></div><div class="line">listbox = tkinter.Listbox(</div><div class="line">    root,</div><div class="line">    selectmode = <span class="string">"extended"</span>, <span class="comment"># browse</span></div><div class="line">    activestyle = <span class="string">"underline"</span>,</div><div class="line">    <span class="comment"># exportselection =</span></div><div class="line">    <span class="comment"># listvariable =</span></div><div class="line">    <span class="comment"># xscrollcommand =</span></div><div class="line">    <span class="comment"># yscrollcommand =</span></div><div class="line"></div><div class="line">)</div><div class="line">listbox.pack()</div><div class="line"><span class="keyword">for</span> x <span class="keyword">in</span> [x*<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">10</span>)]:</div><div class="line">    listbox.insert(<span class="string">"end"</span>,x)</div><div class="line"><span class="comment"># lb.bind("&lt;Double-Button-1&gt;", self.ok)</span></div><div class="line"><span class="comment"># activate(index)</span></div><div class="line"><span class="comment"># bbox(self, index)</span></div><div class="line"><span class="comment"># curselection()</span></div><div class="line"><span class="comment"># delete(first, last=None)</span></div><div class="line"><span class="comment"># get(first, last=None)</span></div><div class="line"><span class="comment"># index(index)</span></div><div class="line"><span class="comment"># insert(index, *elements)</span></div><div class="line"><span class="comment"># itemconfig(index, **options)</span></div><div class="line"><span class="comment"># selection_anchor(index) # Sets the selection anchor to the given index. The anchor can be refered to using the ANCHOR index.</span></div><div class="line"><span class="comment"># selection_clear(first, last=None) # Removes one or more items from the selection.</span></div><div class="line"><span class="comment"># selection_includes(index) # Checks if an item is selected.</span></div><div class="line"><span class="comment"># selection_set(first, last=None) # Adds one or more items to the selection.</span></div><div class="line"><span class="comment"># size()</span></div><div class="line"><span class="comment"># xview(column, *extra) # Controls horizontal scrolling.</span></div><div class="line"><span class="comment"># yview(*what)</span></div><div class="line"><span class="comment"># yview_scroll(number, what)</span></div><div class="line"><span class="comment"># xview_scroll(number, what)</span></div><div class="line"><span class="comment"># yview_moveto(fraction)</span></div><div class="line"><span class="comment"># xview_moveto(fraction)</span></div></pre></td></tr></table></figure>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2016-12-02T10:39:14.045Z" itemprop="dateUpdated">2016年12月2日 18:39</time>
+</span><br>
+
+
+        这里写留言或版权声明：<a href="/2016/05/09/python-tkinter-komponents-one/" target="_blank" rel="external">http://kompasim.github.io/2016/05/09/python-tkinter-komponents-one/</a>
+    </div>
+    <footer>
+        <a href="http://kompasim.github.io">
+            <img src="/img/avatar.jpg" alt="alimjan">
+            alimjan
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tkinter/">tkinter</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://kompasim.github.io/2016/05/09/python-tkinter-komponents-one/&title=《python模块tkinter的常用控件1》 — Kompasim&pic=http://kompasim.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://kompasim.github.io/2016/05/09/python-tkinter-komponents-one/&title=《python模块tkinter的常用控件1》 — Kompasim&source=I like Atom but sometimes have to start the Sublime Text again ..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://kompasim.github.io/2016/05/09/python-tkinter-komponents-one/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《python模块tkinter的常用控件1》 — Kompasim&url=http://kompasim.github.io/2016/05/09/python-tkinter-komponents-one/&via=http://kompasim.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://kompasim.github.io/2016/05/09/python-tkinter-komponents-one/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2016/05/11/python-tkinter-komponents-two/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">python模块tkinter的常用控件2</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2016/05/09/python-tkinter-demo/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">用python的tkinter模块开发桌面应用</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="python-tkinter-komponents-one" data-title="python模块tkinter的常用控件1" data-url="http://kompasim.github.io/2016/05/09/python-tkinter-komponents-one/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'kompasim', theme: 'none'};
+lazyScripts.push('//unpkg.com/hexo-theme-material-indigo@1.5.2/js/embed.min.js');
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>Kompasim &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://kompasim.github.io/2016/05/09/python-tkinter-komponents-one/&title=《python模块tkinter的常用控件1》 — Kompasim&pic=http://kompasim.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://kompasim.github.io/2016/05/09/python-tkinter-komponents-one/&title=《python模块tkinter的常用控件1》 — Kompasim&source=I like Atom but sometimes have to start the Sublime Text again ..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://kompasim.github.io/2016/05/09/python-tkinter-komponents-one/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《python模块tkinter的常用控件1》 — Kompasim&url=http://kompasim.github.io/2016/05/09/python-tkinter-komponents-one/&via=http://kompasim.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://kompasim.github.io/2016/05/09/python-tkinter-komponents-one/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACqUlEQVR42u3aQW4bMRAEQP//0woQ5OCLpe4ZUnKA4kmwJS5rDxyih19f8Xj8Hd8/f//L8++3s/302+dzrgYeHh7eaOk/jeeLSEbyUjaz/fQdPDw8vNu8TTHYbOWzpRdPxMPDw/so7/lWnmz0CSlZAx4eHt7/xdscdnNAUjzw8PDwPsvLj7DJf/PtPi8V17MWPDw8vJg3a4B99vP1/h4eHh7eqKuebLjtdpwHHJt1/psBDw8P7wLveSC7WXQe8m6ih2hOPDw8vKO8x2JsLmy11wvaeYZ1Dw8PDy8+zc4yjPZSVMveNMDw8PDw7vE2jaj20Ny+iORXLxpseHh4eBd4+QbdLqi9zpVfGqhDZDw8PLyjvHaL34cOswZYWwxeZC14eHh4C17+400gu490N7EFHh4e3llee/xtH5YHvskrSOIMPDw8vPfw9gfr2bbeRsB1icLDw8O7wMvLwH67b2GzwoCHh4f3Wd5mK08aYzNeW67w8PDwzvL2ra82mJhdTZjFFnh4eHg3eNExtJ3oaNAwu46Ah4eHd493tu2URANt26wl4eHh4b2HN2sv5by8RrXl58WrwcPDw7vAaw/TLSyZeX81YVhh8PDw8Ba8tiSculKQtMfyF1RcHcDDw8M7ypuVjVngOysz+avBw8PDu8FrN+7Zlt0ei5MgOFknHh4e3jt5ydF2E8jOZmu/iYeHh3eDtzlMnwoI2vbbLCLBw8PDO8V7lKMtGHn0MGvFFWEEHh4e3iHebLvfbPH540+FvHh4eHg3eG0xyEOE9jpCHj0UB3c8PDy8a7xNEyvfsmdH5E3DDA8PD++zvKSFn1wy2LTHChgeHh7er+SdKi1tA6wIl/Hw8PCu8fZNrzomOBT+RkdqPDw8vKO8tgG2eeTsgmwb5tYDDw8PL+X9AfvDxTqNHIq5AAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.5.2/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.5.2/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

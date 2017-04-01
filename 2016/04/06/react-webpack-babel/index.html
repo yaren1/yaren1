@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>react-webpack-babel环境搭建 | Kompasim | Personal technology blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="tools,reactjs,webpack,babel">
+    <meta name="description" content="demo
+            
+原文
+1、创建学习目录mkdir learncd learn
+2、npm初始化项目npm init //根据相关提示完善信息，入口js文件：src/index.js
+3、安装相关">
+<meta property="og:type" content="article">
+<meta property="og:title" content="react-webpack-babel环境搭建">
+<meta property="og:url" content="http://kompasim.github.io/2016/04/06/react-webpack-babel/index.html">
+<meta property="og:site_name" content="Kompasim">
+<meta property="og:description" content="demo
+            
+原文
+1、创建学习目录mkdir learncd learn
+2、npm初始化项目npm init //根据相关提示完善信息，入口js文件：src/index.js
+3、安装相关">
+<meta property="og:image" content="http://file02.16sucai.com/d/file/2015/0128/80797a37ee2a0476ba6d577ca04ca3a0.jpg">
+<meta property="og:updated_time" content="2016-12-02T10:39:14.046Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="react-webpack-babel环境搭建">
+<meta name="twitter:description" content="demo
+            
+原文
+1、创建学习目录mkdir learncd learn
+2、npm初始化项目npm init //根据相关提示完善信息，入口js文件：src/index.js
+3、安装相关">
+<meta name="twitter:image" content="http://file02.16sucai.com/d/file/2015/0128/80797a37ee2a0476ba6d577ca04ca3a0.jpg">
+    
+        <link rel="alternative" href="/atom.xml" title="Kompasim" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@1.5.2/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">alimjan</h5>
+          <a href="mailto:kompasim@163.com" title="kompasim@163.com" class="mail">kompasim@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                HOME
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/kompasim" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://stackoverflow.com/users/6213502/kompasim" target="_blank" >
+                <i class="icon icon-lg icon-stack-overflow"></i>
+                Stack Overflow
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://segmentfault.com/u/kompasim" target="_blank" >
+                <i class="icon icon-lg icon-link"></i>
+                segmentfault
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">react-webpack-babel环境搭建</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">react-webpack-babel环境搭建</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2016-04-06T07:03:23.000Z" itemprop="datePublished" class="page-time">
+  2016-04-06
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/tools/">tools</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1、创建学习目录"><span class="post-toc-number">1.</span> <span class="post-toc-text">1、创建学习目录</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2、npm初始化项目"><span class="post-toc-number">2.</span> <span class="post-toc-text">2、npm初始化项目</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3、安装相关模块"><span class="post-toc-number">3.</span> <span class="post-toc-text">3、安装相关模块</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4、创建相关文件目录结构"><span class="post-toc-number">4.</span> <span class="post-toc-text">4、创建相关文件目录结构</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5、创建webpack配置文件（webpack好强大，之后再做详细的学习）"><span class="post-toc-number">5.</span> <span class="post-toc-text">5、创建webpack配置文件（webpack好强大，之后再做详细的学习）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6、创建index-js源文件，书写经典的Hello-World！"><span class="post-toc-number">6.</span> <span class="post-toc-text">6、创建index.js源文件，书写经典的Hello World！</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7、利用webpack编译源文件"><span class="post-toc-number">7.</span> <span class="post-toc-text">7、利用webpack编译源文件</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8、创建index-html承载体文件，引入bundle-js，方便在浏览器中运行"><span class="post-toc-number">8.</span> <span class="post-toc-text">8、创建index.html承载体文件，引入bundle.js，方便在浏览器中运行</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#9、浏览器直接打开index-html，出现Hello-world！"><span class="post-toc-number">9.</span> <span class="post-toc-text">9、浏览器直接打开index.html，出现Hello world！</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-react-webpack-babel"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">react-webpack-babel环境搭建</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2016年04月06日 15:03" datetime="2016-04-06T07:03:23.000Z"  itemprop="datePublished">2016-04-06</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/tools/">tools</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://file02.16sucai.com/d/file/2015/0128/80797a37ee2a0476ba6d577ca04ca3a0.jpg" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure>
+<p><a href="http://hao.jser.com/archive/9169/" target="_blank" rel="external">原文</a></p>
+<h2 id="1、创建学习目录"><a href="#1、创建学习目录" class="headerlink" title="1、创建学习目录"></a>1、创建学习目录</h2><p><code>mkdir learn</code><br><code>cd learn</code></p>
+<h2 id="2、npm初始化项目"><a href="#2、npm初始化项目" class="headerlink" title="2、npm初始化项目"></a>2、npm初始化项目</h2><p><code>npm init //根据相关提示完善信息，入口js文件：src/index.js</code></p>
+<h2 id="3、安装相关模块"><a href="#3、安装相关模块" class="headerlink" title="3、安装相关模块"></a>3、安装相关模块</h2><p>安装相关react npm包，并且使用es2015（也就是es6支持，需要babel-preset-es2015包），因为我之前做个一些js相关项目，所以部分npm包已经全局安装，比如webpack等等，大家根据提示补足自己的npm包即可</p>
+<p><code>npm install --global webpack</code><br><code>npm install --save react</code><br><code>npm install --save react-dom</code><br><code>npm install --save babel-loader</code><br><code>npm install --save babel-preset-es2015</code><br><code>npm install --save babel-preset-react</code></p>
+<h2 id="4、创建相关文件目录结构"><a href="#4、创建相关文件目录结构" class="headerlink" title="4、创建相关文件目录结构"></a>4、创建相关文件目录结构</h2><p>mkdir src   //存放源文件<br>mkdir build //存放编译后的js文件</p>
+<h2 id="5、创建webpack配置文件（webpack好强大，之后再做详细的学习）"><a href="#5、创建webpack配置文件（webpack好强大，之后再做详细的学习）" class="headerlink" title="5、创建webpack配置文件（webpack好强大，之后再做详细的学习）"></a>5、创建webpack配置文件（webpack好强大，之后再做详细的学习）</h2><p><code>touch webpack.config.js</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line"><span class="attr">entry</span>:[</div><div class="line">  <span class="string">'./src/index.js'</span></div><div class="line">],</div><div class="line"><span class="attr">output</span>: &#123;</div><div class="line">  <span class="attr">path</span>: <span class="string">'./build/'</span>,</div><div class="line">  <span class="attr">filename</span>: <span class="string">'bundle.js'</span></div><div class="line">&#125;,</div><div class="line">  <span class="attr">module</span>: &#123;</div><div class="line">      <span class="attr">loaders</span>: [&#123;</div><div class="line">        <span class="attr">test</span>: <span class="regexp">/\.js$/</span>,</div><div class="line">        <span class="attr">exclude</span>: <span class="regexp">/(node_modules|bower_components)/</span>,</div><div class="line">        <span class="attr">loader</span>: <span class="string">'babel-loader'</span>,</div><div class="line">        <span class="attr">query</span>: &#123;</div><div class="line">          <span class="attr">presets</span>: [<span class="string">'es2015'</span>,<span class="string">'react'</span>]  </div><div class="line">        &#125;</div><div class="line">      &#125;]</div><div class="line">  &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h2 id="6、创建index-js源文件，书写经典的Hello-World！"><a href="#6、创建index-js源文件，书写经典的Hello-World！" class="headerlink" title="6、创建index.js源文件，书写经典的Hello World！"></a>6、创建index.js源文件，书写经典的Hello World！</h2><p><code>touch src/index.js</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> React = <span class="built_in">require</span>(<span class="string">'react'</span>);</div><div class="line"><span class="keyword">var</span> ReactDOM = <span class="built_in">require</span>(<span class="string">'react-dom'</span>);</div><div class="line"></div><div class="line">ReactDOM.render(</div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, world!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>,</div><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">'example'</span>)</div><div class="line">);</div></pre></td></tr></table></figure>
+<h2 id="7、利用webpack编译源文件"><a href="#7、利用webpack编译源文件" class="headerlink" title="7、利用webpack编译源文件"></a>7、利用webpack编译源文件</h2><p>根目录下直接运行webpack，运行完成后会在build目录生成bundle.js文件</p>
+<p><code>$ webpack</code><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Hash: 32a8e736b4323f7ec350</div><div class="line">Version: webpack 1.12.9</div><div class="line">Time: 1318ms</div><div class="line">  Asset    Size  Chunks             Chunk Names</div><div class="line">bundle.js  676 kB       0  [emitted]  main</div><div class="line"> [0] multi main 28 bytes &#123;0&#125; [built]</div><div class="line">  + 159 hidden modules</div></pre></td></tr></table></figure></p>
+<h2 id="8、创建index-html承载体文件，引入bundle-js，方便在浏览器中运行"><a href="#8、创建index-html承载体文件，引入bundle-js，方便在浏览器中运行" class="headerlink" title="8、创建index.html承载体文件，引入bundle.js，方便在浏览器中运行"></a>8、创建index.html承载体文件，引入bundle.js，方便在浏览器中运行</h2><p><code>touch build/index.html</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>React环境搭建<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"example"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"bundle.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="9、浏览器直接打开index-html，出现Hello-world！"><a href="#9、浏览器直接打开index-html，出现Hello-world！" class="headerlink" title="9、浏览器直接打开index.html，出现Hello world！"></a>9、浏览器直接打开index.html，出现Hello world！</h2><p>下一步就是搭建调试环境</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2016-12-02T10:39:14.046Z" itemprop="dateUpdated">2016年12月2日 18:39</time>
+</span><br>
+
+
+        这里写留言或版权声明：<a href="/2016/04/06/react-webpack-babel/" target="_blank" rel="external">http://kompasim.github.io/2016/04/06/react-webpack-babel/</a>
+    </div>
+    <footer>
+        <a href="http://kompasim.github.io">
+            <img src="/img/avatar.jpg" alt="alimjan">
+            alimjan
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/babel/">babel</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/reactjs/">reactjs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tools/">tools</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://kompasim.github.io/2016/04/06/react-webpack-babel/&title=《react-webpack-babel环境搭建》 — Kompasim&pic=http://kompasim.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://kompasim.github.io/2016/04/06/react-webpack-babel/&title=《react-webpack-babel环境搭建》 — Kompasim&source=I like Atom but sometimes have to start the Sublime Text again ..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://kompasim.github.io/2016/04/06/react-webpack-babel/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《react-webpack-babel环境搭建》 — Kompasim&url=http://kompasim.github.io/2016/04/06/react-webpack-babel/&via=http://kompasim.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://kompasim.github.io/2016/04/06/react-webpack-babel/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2016/04/17/nodejs-express-demo/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">expressjs框架的安装和使用</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2016/03/21/nodejs-npm-demo/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Node.js安装和NPM包管理器使用</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="react-webpack-babel" data-title="react-webpack-babel环境搭建" data-url="http://kompasim.github.io/2016/04/06/react-webpack-babel/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'kompasim', theme: 'none'};
+lazyScripts.push('//unpkg.com/hexo-theme-material-indigo@1.5.2/js/embed.min.js');
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>Kompasim &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://kompasim.github.io/2016/04/06/react-webpack-babel/&title=《react-webpack-babel环境搭建》 — Kompasim&pic=http://kompasim.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://kompasim.github.io/2016/04/06/react-webpack-babel/&title=《react-webpack-babel环境搭建》 — Kompasim&source=I like Atom but sometimes have to start the Sublime Text again ..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://kompasim.github.io/2016/04/06/react-webpack-babel/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《react-webpack-babel环境搭建》 — Kompasim&url=http://kompasim.github.io/2016/04/06/react-webpack-babel/&via=http://kompasim.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://kompasim.github.io/2016/04/06/react-webpack-babel/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACM0lEQVR42u3aSW4DMQwFUd//0p0DBFLqk+0AokorA+5BrxeEOHw+eD2L9fvf1fX7J6+e8/KSIUPGsYxnu/YbJZte3bXfA9+bDBky7mGQULh6MbmGB1POliFDhoxaoORBeX+lDBkyZLwVcEnyST4BD+IyZMi4mcED4v4FexhPU7+Yi8uQIeNABq+6///vr/Q3ZMiQcRTjCVd6bxqsn9KSIUPGbAYPcLWjXhq40+aBDBkybmP0C/q1tiUfLwvKbTJkyBjE4Nvlhbb9lemBknxcGTJkzGbw8McflwZQfujk/8qQIWM2Iz20pU3Nd8csZMiQcQPjG6MP/GvVindBFi5DhowRDP7iIIEMWwtpY2C5WxkyZAxlpGV9cj1vOXRS1mXVUIYMGUMZnQy484Ra+yEes5AhQ8bhDN5W7ITaThkurg7KkCFjHCMdZeiE43SoojUzIkOGjEGMtBnAj3q1wN0atpAhQ8ZQRtpu5M1OTuXtzGU4liFDxmhGZ9Ch09Ts4NHIhQwZMsYxeMqaDkykHyKd9fqjyyFDhoxxDHQpLujX/iXBV4YMGTczeEKbFvTJJmrHSrQhGTJkHM7oFPQ7ZX1+AI3zbxkyZIxj8MXL9GkpnwfiToFPhgwZpzPSMlmnPUm+YjHgypAh4wJGWpQvZsyNtBmdc2XIkCEDbzEt2wXbfSvgypAh4wJGraz21tDqMomVIUPGaAZJRHkwrd1bG2yVIUPGDYz03FUMiGCj/ZAtQ4aMcYwfEW/6CJ21QiUAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.5.2/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.5.2/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,1088 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Kompasim</title>
+  <subtitle>Personal technology blog</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://kompasim.github.io/"/>
+  <updated>2016-12-02T10:39:14.042Z</updated>
+  <id>http://kompasim.github.io/</id>
+  
+  <author>
+    <name>alimjan</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>开源项目托管GitHub入门</title>
+    <link href="http://kompasim.github.io/2017/04/01/tools-github-demo/"/>
+    <id>http://kompasim.github.io/2017/04/01/tools-github-demo/</id>
+    <published>2017-04-01T14:06:55.774Z</published>
+    <updated>2016-12-02T10:39:14.042Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://file02.16sucai.com/d/file/2014/1115/91ed57c42464bc65cb61e8de9b8940d9.jpg" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure>
+<hr>
+<p>自从google code关闭了下载服务了之后，GitHub作为了目前最好用的免费开源项目托管站点，众多开源项目都托管在github，其中不乏著名的播放器MPC-HC。<br>不习惯于英文的朋友，难免少不了要进行摸索一番，甚至会因此头大而放弃。<br>这里将手把手地教大家一些本人的入门心得</p>
+<h3 id="注册github"><a href="#注册github" class="headerlink" title="注册github"></a>注册github</h3><p>要托管到github，那你就应该要有一个属于你自己的github帐号，所以你应该先到github.com注册<br>打开浏览器<br>在地址栏输入地址：github.com<br>填写用户名、邮箱、密码<br>点击Sign up即可简单地注册</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://www.linuxidc.com/upload/2014-09/140906064370981.png" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure>
+<h3 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h3><p>完成注册，进入github平台，<br>点击new repositories<br>新建一个新项目（你也可以加入到一个已有的项目）<br>新建项目的操作，其实很简单，输入项目名就可以直接Create了<br>如图</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.my.csdn.net/uploads/201301/13/1358083533_2978.png" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure>
+<h3 id="下载仓库到本地"><a href="#下载仓库到本地" class="headerlink" title="下载仓库到本地"></a>下载仓库到本地</h3><p>输入<code>git  clone</code>  接着将先前记录下来的地址复制到后面，回车<br>将下载下来的项目文件夹的所有文件及文件夹，包括.git文件夹在内，全部拷贝到你的托管项目的根目录（或者将你的托管项目拷贝到该目录）<br>然后<code>cd test</code>进入到该托管项目的根目录。</p>
+<h3 id="配置用户信息"><a href="#配置用户信息" class="headerlink" title="配置用户信息"></a>配置用户信息</h3><p>因为Git是分布式版本控制系统，所以需要填写用户名和邮箱作为一个标识。<br>　　注意：git config  –global 参数，有了这个参数，表示你这台机器上所有的Git仓库都会使用这个配置，当然你也可以对某个仓库指定的不同的用户名和邮箱。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://www.admin10000.com/UploadFiles/Document/201410/27/20141027155323641881.JPG" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure></p>
+<h3 id="编辑需要提交的文件"><a href="#编辑需要提交的文件" class="headerlink" title="编辑需要提交的文件"></a>编辑需要提交的文件</h3><p>我在版本库目录下新建一个记事本文件 readme.txt 内容如下：11111111</p>
+<h3 id="添加到缓存区"><a href="#添加到缓存区" class="headerlink" title="添加到缓存区"></a>添加到缓存区</h3><p>使用命令 git add readme.txt添加到暂存区里面去。如下：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://www.admin10000.com/UploadFiles/Document/201410/27/20141027155323946973.PNG" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure></p>
+<h3 id="添加到本地仓库"><a href="#添加到本地仓库" class="headerlink" title="添加到本地仓库"></a>添加到本地仓库</h3><p>用命令 git commit告诉Git，把文件提交到仓库。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://www.admin10000.com/UploadFiles/Document/201410/27/20141027155323329134.PNG" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure><br>现在我们已经提交了一个readme.txt文件了，我们下面可以通过命令git status来查看是否还有文件未提交</p>
+<h3 id="获取ssh地址"><a href="#获取ssh地址" class="headerlink" title="获取ssh地址"></a>获取ssh地址</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://www.admin10000.com/UploadFiles/Document/201410/27/20141027155323934746.PNG" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure>
+<h3 id="上传到github服务器"><a href="#上传到github服务器" class="headerlink" title="上传到github服务器"></a>上传到github服务器</h3><p>现在，我们根据GitHub的提示，在本地的testgit仓库下运行命令：<br><code>git remote add origin https://github.com/tugenhua0707/testgit.git</code><br><code>git push origin master</code><br>所有的如下：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://www.admin10000.com/UploadFiles/Document/201410/27/20141027155323816495.PNG" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure></p>
+<p>把本地库的内容推送到远程，使用 git push命令，实际上是把当前分支master推送到远程。</p>
+<p>由于远程库是空的，我们第一次推送master分支时，加上了 –u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。推送成功后，可以立刻在github页面中看到远程库的内容已经和本地一模一样了.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;image-bubble&quot;&gt;
+                &lt;div class=&quot;img-lightbox&quot;&gt;
+                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
+                   
+    
+    </summary>
+    
+      <category term="tools" scheme="http://kompasim.github.io/categories/tools/"/>
+    
+    
+      <category term="tools" scheme="http://kompasim.github.io/tags/tools/"/>
+    
+      <category term="github" scheme="http://kompasim.github.io/tags/github/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>本地仓库管理Git入门</title>
+    <link href="http://kompasim.github.io/2017/04/01/tools-git-demo/"/>
+    <id>http://kompasim.github.io/2017/04/01/tools-git-demo/</id>
+    <published>2017-04-01T14:06:55.758Z</published>
+    <updated>2016-12-02T10:39:14.041Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://file02.16sucai.com/d/file/2015/0123/1acbf33cc9efea1dcaad0c5d6c75a244.jpg" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure>
+<hr>
+<h3 id="Git是什么？"><a href="#Git是什么？" class="headerlink" title="Git是什么？"></a>Git是什么？</h3><p>Git是目前世界上最先进的分布式版本控制系统。</p>
+<h3 id="在windows上如何安装Git？"><a href="#在windows上如何安装Git？" class="headerlink" title="在windows上如何安装Git？"></a>在windows上如何安装Git？</h3><p>去<a href="https://git-scm.com/download/" target="_blank" rel="external">这里</a>下载git适合你电脑的版本<br>会弹出一个类似的命令窗口的东西，就说明Git安装成功。如下：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://file06.16sucai.com/2016/0321/8a404146f33c074173c10d52e2d5fa3f.jpg" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure></p>
+<h3 id="创建工作目录"><a href="#创建工作目录" class="headerlink" title="创建工作目录"></a>创建工作目录</h3><p>所以创建一个版本库也非常简单，如下我是D盘 –&gt; www下 目录下新建一个testgit版本库。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://ww4.sinaimg.cn/mw690/6941baebgw1eloyr3xaogj20g207gt92.jpg" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure></p>
+<h3 id="创建本地仓库"><a href="#创建本地仓库" class="headerlink" title="创建本地仓库"></a>创建本地仓库</h3><p>通过命令 git init 把这个目录变成git可以管理的仓库，如下：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://ww1.sinaimg.cn/mw690/6941baebgw1eloyr2rpcnj20en025mx9.jpg" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure><br> 这时候你当前testgit目录下会多了一个.git的目录，这个目录是Git来跟踪管理版本的，没事千万不要手动乱改这个目录里面的文件，否则，会把git仓库给破坏了。</p>
+<h3 id="编辑目录内想提交的文件"><a href="#编辑目录内想提交的文件" class="headerlink" title="编辑目录内想提交的文件"></a>编辑目录内想提交的文件</h3><p>我在版本库testgit目录下新建一个记事本文件 readme.txt 内容如下：11111111</p>
+<h3 id="添加到缓存区"><a href="#添加到缓存区" class="headerlink" title="添加到缓存区"></a>添加到缓存区</h3><p>使用命令 git add readme.txt添加到暂存区里面去。如下：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://ww3.sinaimg.cn/mw690/6941baebgw1eloyr0wkxbj20ch028dfu.jpg" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure></p>
+<h3 id="提交到本地仓库"><a href="#提交到本地仓库" class="headerlink" title="提交到本地仓库"></a>提交到本地仓库</h3><p>用命令 git commit告诉Git，把文件提交到仓库。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://ww4.sinaimg.cn/mw690/6941baebgw1eloyqz56axj20dp03djrr.jpg" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure></p>
+<h3 id="查看状态"><a href="#查看状态" class="headerlink" title="查看状态"></a>查看状态</h3><p>现在我们已经提交了一个readme.txt文件了，我们下面可以通过命令git status来查看是否还有文件未提交，如下：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://ww3.sinaimg.cn/mw690/6941baebgw1eloyqrg067j20d102zwen.jpg" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure></p>
+<h3 id="再查看状态"><a href="#再查看状态" class="headerlink" title="再查看状态"></a>再查看状态</h3><p> 说明没有任何文件未提交，但是我现在继续来改下readme.txt内容，比如我在下面添加一行2222222222内容，继续使用git status来查看下结果，如下：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://ww1.sinaimg.cn/mw690/6941baebgw1eloyqq7ts6j20h504r74x.jpg" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure><br>上面的命令告诉我们 readme.txt文件已被修改，但是未被提交的修改。<br>接下来我想看下readme.txt文件到底改了什么内容，如何查看呢？</p>
+<h3 id="比较出修改的部分"><a href="#比较出修改的部分" class="headerlink" title="比较出修改的部分"></a>比较出修改的部分</h3><p>git diff readme.txt 如下：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://ww1.sinaimg.cn/mw690/6941baebgw1eloyqnrvxgj20ds05maal.jpg" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure><br>如上可以看到，readme.txt文件内容从一行11111111改成 二行 添加了一行22222222内容。<br>知道了对readme.txt文件做了什么修改后，我们可以放心的提交到仓库了，提交修改和提交文件是一样的2步(第一步是git add  第二步是：git commit)。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;image-bubble&quot;&gt;
+                &lt;div class=&quot;img-lightbox&quot;&gt;
+                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
+                   
+    
+    </summary>
+    
+      <category term="tools" scheme="http://kompasim.github.io/categories/tools/"/>
+    
+    
+      <category term="tools" scheme="http://kompasim.github.io/tags/tools/"/>
+    
+      <category term="git" scheme="http://kompasim.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>nodejs用superagent发http请求</title>
+    <link href="http://kompasim.github.io/2017/03/28/nodejs-http-request/"/>
+    <id>http://kompasim.github.io/2017/03/28/nodejs-http-request/</id>
+    <published>2017-03-28T15:26:19.000Z</published>
+    <updated>2017-03-28T15:50:06.000Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img3.3lian.com/2013/v12/58/d/21.jpg" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure>
+<hr>
+<h2 id="0-导入"><a href="#0-导入" class="headerlink" title="0. 导入"></a>0. 导入</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var superagent = require(&quot;superagent&quot;);</div></pre></td></tr></table></figure>
+<h2 id="1-GET"><a href="#1-GET" class="headerlink" title="1. GET"></a>1. GET</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">superagent</div><div class="line">  .get(<span class="string">'/search'</span>) </div><div class="line">  .query(&#123; <span class="attr">name</span>: <span class="string">'Manny'</span> &#125;) </div><div class="line">  .query(&#123; <span class="attr">num</span>: <span class="string">'5'</span> &#125;) </div><div class="line">  .query(&#123; <span class="attr">order</span>: <span class="string">'desc'</span> &#125;)     </div><div class="line">  .end(<span class="function"><span class="keyword">function</span>(<span class="params">err, res</span>)</span>&#123;</div><div class="line">     <span class="keyword">if</span> (err || !res.ok) &#123;</div><div class="line">       alert(<span class="string">'Oh no! error'</span>);</div><div class="line">     &#125; <span class="keyword">else</span> &#123;</div><div class="line">       <span class="comment">//</span></div><div class="line">       </div><div class="line">     &#125;</div><div class="line">   &#125;);</div></pre></td></tr></table></figure>
+<h2 id="2-POST"><a href="#2-POST" class="headerlink" title="2. POST"></a>2. POST</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">superagent</div><div class="line">   .post(<span class="string">'/api/pet'</span>)</div><div class="line">   .type(<span class="string">"form"</span>)</div><div class="line">   .send(&#123; <span class="attr">name</span>: <span class="string">'Manny'</span>, <span class="attr">species</span>: <span class="string">'cat'</span> &#125;)</div><div class="line">   .set(<span class="string">'X-API-Key'</span>, <span class="string">'foobar'</span>)</div><div class="line">   .set(<span class="string">'Accept'</span>, <span class="string">'application/json'</span>)</div><div class="line">   .end(<span class="function"><span class="keyword">function</span>(<span class="params">err, res</span>)</span>&#123;</div><div class="line">     <span class="keyword">if</span> (err || !res.ok) &#123;</div><div class="line">       alert(<span class="string">'Oh no! error'</span>);</div><div class="line">     &#125; <span class="keyword">else</span> &#123;</div><div class="line">       <span class="comment">//</span></div><div class="line"></div><div class="line">     &#125;</div><div class="line">   &#125;);</div></pre></td></tr></table></figure>
+<h2 id="3-服务端收不到POST参数问题"><a href="#3-服务端收不到POST参数问题" class="headerlink" title="3. 服务端收不到POST参数问题"></a>3. 服务端收不到POST参数问题</h2><blockquote>
+<p>superagent的post函数调用之后别忘了加上<code>.type(&quot;form&quot;)</code> ，然后用nodejs解析获取POST参数的时候要用<code>body-parser</code>;</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;image-bubble&quot;&gt;
+                &lt;div class=&quot;img-lightbox&quot;&gt;
+                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
+                   
+    
+    </summary>
+    
+      <category term="nodejs" scheme="http://kompasim.github.io/categories/nodejs/"/>
+    
+    
+      <category term="http" scheme="http://kompasim.github.io/tags/http/"/>
+    
+      <category term="nodejs" scheme="http://kompasim.github.io/tags/nodejs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用c语言画ppm图片（二）</title>
+    <link href="http://kompasim.github.io/2017/03/15/c-and-ppm-two/"/>
+    <id>http://kompasim.github.io/2017/03/15/c-and-ppm-two/</id>
+    <published>2017-03-15T12:42:44.000Z</published>
+    <updated>2017-03-14T15:15:22.241Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img3.3lian.com/2013/v14/13/d/48.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<hr>
+<h2 id="1-PPM介绍"><a href="#1-PPM介绍" class="headerlink" title="1. PPM介绍"></a>1. PPM介绍</h2><pre><code>关于PPM的介绍请看`用c语言画ppm图片（一）`这篇文章
+</code></pre><h2 id="2-主代码"><a href="#2-主代码" class="headerlink" title="2. 主代码"></a>2. 主代码</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> DIM 1024</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> DM1 (DIM-1)</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> _sq(x) ((x)*(x)) <span class="comment">// square</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> _cb(x) abs((x)*(x)*(x)) <span class="comment">// absolute value of cube</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> _cr(x) (unsigned char)(pow((x),1.0/3.0)) <span class="comment">// cube root</span></span></div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">GR</span><span class="params">(<span class="keyword">int</span>,<span class="keyword">int</span>)</span></span>;</div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">BL</span><span class="params">(<span class="keyword">int</span>,<span class="keyword">int</span>)</span></span>;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">RD</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">   <span class="comment">// YOUR CODE HERE</span></div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">GR</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">   <span class="comment">// YOUR CODE HERE</span></div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">BL</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">   <span class="comment">// YOUR CODE HERE</span></div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">pixel_write</span><span class="params">(<span class="keyword">int</span>,<span class="keyword">int</span>)</span></span>;</div><div class="line">FILE *fp;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    fp = fopen(<span class="string">"MathPic.ppm"</span>,<span class="string">"wb"</span>);</div><div class="line">    <span class="built_in">fprintf</span>(fp, <span class="string">"P6\n%d %d\n255\n"</span>, DIM, DIM);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;DIM;j++)</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;DIM;i++)</div><div class="line">            pixel_write(i,j);</div><div class="line">    fclose(fp);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">pixel_write</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">static</span> <span class="keyword">unsigned</span> <span class="keyword">char</span> color[<span class="number">3</span>];</div><div class="line">    color[<span class="number">0</span>] = RD(i,j)&amp;<span class="number">255</span>;</div><div class="line">    color[<span class="number">1</span>] = GR(i,j)&amp;<span class="number">255</span>;</div><div class="line">    color[<span class="number">2</span>] = BL(i,j)&amp;<span class="number">255</span>;</div><div class="line">    fwrite(color, <span class="number">1</span>, <span class="number">3</span>, fp);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="3-欣赏"><a href="#3-欣赏" class="headerlink" title="3. 欣赏"></a>3. 欣赏</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://ww4.sinaimg.cn/large/7cc829d3jw1f28vpacqvxj20sg0sgtb8.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">RD</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">return</span> (<span class="keyword">char</span>)(_sq(<span class="built_in">cos</span>(<span class="built_in">atan2</span>(j<span class="number">-512</span>,i<span class="number">-512</span>)/<span class="number">2</span>))*<span class="number">255</span>);</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">GR</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">return</span> (<span class="keyword">char</span>)(_sq(<span class="built_in">cos</span>(<span class="built_in">atan2</span>(j<span class="number">-512</span>,i<span class="number">-512</span>)/<span class="number">2</span><span class="number">-2</span>*<span class="built_in">acos</span>(<span class="number">-1</span>)/<span class="number">3</span>))*<span class="number">255</span>);</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">BL</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">return</span> (<span class="keyword">char</span>)(_sq(<span class="built_in">cos</span>(<span class="built_in">atan2</span>(j<span class="number">-512</span>,i<span class="number">-512</span>)/<span class="number">2</span>+<span class="number">2</span>*<span class="built_in">acos</span>(<span class="number">-1</span>)/<span class="number">3</span>))*<span class="number">255</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="4-欣赏"><a href="#4-欣赏" class="headerlink" title="4. 欣赏"></a>4. 欣赏</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://ww1.sinaimg.cn/large/7cc829d3jw1f28vpeqlu9j20sg0sg4qp.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">RD</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> r(n)(rand()%n)</span></div><div class="line">    <span class="keyword">static</span> <span class="keyword">char</span> c[<span class="number">1024</span>][<span class="number">1024</span>];<span class="keyword">return</span>!c[i][j]?c[i][j]=!r(<span class="number">999</span>)?r(<span class="number">256</span>):RD((i+r(<span class="number">2</span>))%<span class="number">1024</span>,(j+r(<span class="number">2</span>))%<span class="number">1024</span>):c[i][j];</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">GR</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">static</span> <span class="keyword">char</span> c[<span class="number">1024</span>][<span class="number">1024</span>];<span class="keyword">return</span>!c[i][j]?c[i][j]=!r(<span class="number">999</span>)?r(<span class="number">256</span>):GR((i+r(<span class="number">2</span>))%<span class="number">1024</span>,(j+r(<span class="number">2</span>))%<span class="number">1024</span>):c[i][j];</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">BL</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">static</span> <span class="keyword">char</span> c[<span class="number">1024</span>][<span class="number">1024</span>];<span class="keyword">return</span>!c[i][j]?c[i][j]=!r(<span class="number">999</span>)?r(<span class="number">256</span>):BL((i+r(<span class="number">2</span>))%<span class="number">1024</span>,(j+r(<span class="number">2</span>))%<span class="number">1024</span>):c[i][j];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="5-欣赏"><a href="#5-欣赏" class="headerlink" title="5. 欣赏"></a>5. 欣赏</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://ww3.sinaimg.cn/large/7cc829d3jw1f28vpfzy94j20sg0sgwkn.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">RD</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">float</span> x=<span class="number">0</span>,y=<span class="number">0</span>;<span class="keyword">int</span> k;<span class="keyword">for</span>(k=<span class="number">0</span>;k++&lt;<span class="number">256</span>;)&#123;<span class="keyword">float</span> a=x*x-y*y+(i<span class="number">-768.0</span>)/<span class="number">512</span>;y=<span class="number">2</span>*x*y+(j<span class="number">-512.0</span>)/<span class="number">512</span>;x=a;<span class="keyword">if</span>(x*x+y*y&gt;<span class="number">4</span>)<span class="keyword">break</span>;&#125;<span class="keyword">return</span> <span class="built_in">log</span>(k)*<span class="number">47</span>;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">GR</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">float</span> x=<span class="number">0</span>,y=<span class="number">0</span>;<span class="keyword">int</span> k;<span class="keyword">for</span>(k=<span class="number">0</span>;k++&lt;<span class="number">256</span>;)&#123;<span class="keyword">float</span> a=x*x-y*y+(i<span class="number">-768.0</span>)/<span class="number">512</span>;y=<span class="number">2</span>*x*y+(j<span class="number">-512.0</span>)/<span class="number">512</span>;x=a;<span class="keyword">if</span>(x*x+y*y&gt;<span class="number">4</span>)<span class="keyword">break</span>;&#125;<span class="keyword">return</span> <span class="built_in">log</span>(k)*<span class="number">47</span>;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">BL</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">float</span> x=<span class="number">0</span>,y=<span class="number">0</span>;<span class="keyword">int</span> k;<span class="keyword">for</span>(k=<span class="number">0</span>;k++&lt;<span class="number">256</span>;)&#123;<span class="keyword">float</span> a=x*x-y*y+(i<span class="number">-768.0</span>)/<span class="number">512</span>;y=<span class="number">2</span>*x*y+(j<span class="number">-512.0</span>)/<span class="number">512</span>;x=a;<span class="keyword">if</span>(x*x+y*y&gt;<span class="number">4</span>)<span class="keyword">break</span>;&#125;<span class="keyword">return</span> <span class="number">128</span>-<span class="built_in">log</span>(k)*<span class="number">23</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="6-欣赏"><a href="#6-欣赏" class="headerlink" title="6. 欣赏"></a>6. 欣赏</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://ww3.sinaimg.cn/large/7cc829d3jw1f28vph3v7cj20sg0sg0yo.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">RD</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">double</span> a=<span class="number">0</span>,b=<span class="number">0</span>,c,d,n=<span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>((c=a*a)+(d=b*b)&lt;<span class="number">4</span>&amp;&amp;n++&lt;<span class="number">880</span>)</div><div class="line">    &#123;b=<span class="number">2</span>*a*b+j*<span class="number">8e-9</span><span class="number">-.645411</span>;a=c-d+i*<span class="number">8e-9</span>+<span class="number">.356888</span>;&#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">255</span>*<span class="built_in">pow</span>((n<span class="number">-80</span>)/<span class="number">800</span>,<span class="number">3.</span>);</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">GR</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">double</span> a=<span class="number">0</span>,b=<span class="number">0</span>,c,d,n=<span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>((c=a*a)+(d=b*b)&lt;<span class="number">4</span>&amp;&amp;n++&lt;<span class="number">880</span>)</div><div class="line">    &#123;b=<span class="number">2</span>*a*b+j*<span class="number">8e-9</span><span class="number">-.645411</span>;a=c-d+i*<span class="number">8e-9</span>+<span class="number">.356888</span>;&#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">255</span>*<span class="built_in">pow</span>((n<span class="number">-80</span>)/<span class="number">800</span>,<span class="number">.7</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">BL</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">double</span> a=<span class="number">0</span>,b=<span class="number">0</span>,c,d,n=<span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>((c=a*a)+(d=b*b)&lt;<span class="number">4</span>&amp;&amp;n++&lt;<span class="number">880</span>)</div><div class="line">    &#123;b=<span class="number">2</span>*a*b+j*<span class="number">8e-9</span><span class="number">-.645411</span>;a=c-d+i*<span class="number">8e-9</span>+<span class="number">.356888</span>;&#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">255</span>*<span class="built_in">pow</span>((n<span class="number">-80</span>)/<span class="number">800</span>,<span class="number">.5</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="7-欣赏"><a href="#7-欣赏" class="headerlink" title="7. 欣赏"></a>7. 欣赏</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://ww2.sinaimg.cn/large/7cc829d3jw1f28vpcabe9j20sg0sggvc.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">RD</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">static</span> <span class="keyword">double</span> k;k+=rand()/<span class="number">1.</span>/RAND_MAX;<span class="keyword">int</span> l=k;l%=<span class="number">512</span>;<span class="keyword">return</span> l&gt;<span class="number">255</span>?<span class="number">511</span>-l:l;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">GR</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">static</span> <span class="keyword">double</span> k;k+=rand()/<span class="number">1.</span>/RAND_MAX;<span class="keyword">int</span> l=k;l%=<span class="number">512</span>;<span class="keyword">return</span> l&gt;<span class="number">255</span>?<span class="number">511</span>-l:l;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">BL</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">static</span> <span class="keyword">double</span> k;k+=rand()/<span class="number">1.</span>/RAND_MAX;<span class="keyword">int</span> l=k;l%=<span class="number">512</span>;<span class="keyword">return</span> l&gt;<span class="number">255</span>?<span class="number">511</span>-l:l;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="8-欣赏"><a href="#8-欣赏" class="headerlink" title="8. 欣赏"></a>8. 欣赏</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://ww3.sinaimg.cn/large/7cc829d3jw1f28vpdjilsj20sg0sgkjl.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">RD</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">float</span> s=<span class="number">3.</span>/(j+<span class="number">99</span>);</div><div class="line">    <span class="keyword">float</span> y=(j+<span class="built_in">sin</span>((i*i+_sq(j<span class="number">-700</span>)*<span class="number">5</span>)/<span class="number">100.</span>/DIM)*<span class="number">35</span>)*s;</div><div class="line">    <span class="keyword">return</span> (<span class="keyword">int</span>((i+DIM)*s+y)%<span class="number">2</span>+<span class="keyword">int</span>((DIM*<span class="number">2</span>-i)*s+y)%<span class="number">2</span>)*<span class="number">127</span>;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">GR</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">float</span> s=<span class="number">3.</span>/(j+<span class="number">99</span>);</div><div class="line">    <span class="keyword">float</span> y=(j+<span class="built_in">sin</span>((i*i+_sq(j<span class="number">-700</span>)*<span class="number">5</span>)/<span class="number">100.</span>/DIM)*<span class="number">35</span>)*s;</div><div class="line">    <span class="keyword">return</span> (<span class="keyword">int</span>(<span class="number">5</span>*((i+DIM)*s+y))%<span class="number">2</span>+<span class="keyword">int</span>(<span class="number">5</span>*((DIM*<span class="number">2</span>-i)*s+y))%<span class="number">2</span>)*<span class="number">127</span>;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">BL</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">float</span> s=<span class="number">3.</span>/(j+<span class="number">99</span>);</div><div class="line">    <span class="keyword">float</span> y=(j+<span class="built_in">sin</span>((i*i+_sq(j<span class="number">-700</span>)*<span class="number">5</span>)/<span class="number">100.</span>/DIM)*<span class="number">35</span>)*s;</div><div class="line">    <span class="keyword">return</span> (<span class="keyword">int</span>(<span class="number">29</span>*((i+DIM)*s+y))%<span class="number">2</span>+<span class="keyword">int</span>(<span class="number">29</span>*((DIM*<span class="number">2</span>-i)*s+y))%<span class="number">2</span>)*<span class="number">127</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="9-欣赏"><a href="#9-欣赏" class="headerlink" title="9. 欣赏"></a>9. 欣赏</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://ww1.sinaimg.cn/large/7cc829d3jw1f28vpif0hwj20sg0sgh98.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">RD</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> D DIM</span></div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> M m[(x+D+(d==0)-(d==2))%D][(y+D+(d==1)-(d==3))%D]</span></div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> R rand()%D</span></div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> B m[x][y]</span></div><div class="line">    <span class="keyword">return</span>(i+j)?<span class="number">256</span>-(BL(i,j))/<span class="number">2</span>:<span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">GR</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> A static int m[D][D],e,x,y,d,c[4],f,n;<span class="meta-keyword">if</span>(i+j&lt;1)&#123;for(d=D*D;d;d--)&#123;m[d%D][d/D]=d%6?0:rand()%2000?1:255;&#125;for(n=1</span></div><div class="line">    <span class="keyword">return</span> RD(i,j);</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">BL</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    A;n;n++)&#123;x=R;y=R;<span class="keyword">if</span>(B==<span class="number">1</span>)&#123;f=<span class="number">1</span>;<span class="keyword">for</span>(d=<span class="number">0</span>;d&lt;<span class="number">4</span>;d++)&#123;c[d]=M;f=f&lt;c[d]?c[d]:f;&#125;<span class="keyword">if</span>(f&gt;<span class="number">2</span>)&#123;B=f<span class="number">-1</span>;&#125;<span class="keyword">else</span>&#123;++e%=<span class="number">4</span>;d=e;<span class="keyword">if</span>(!c[e])&#123;B=<span class="number">0</span>;M=<span class="number">1</span>;&#125;&#125;&#125;&#125;&#125;<span class="keyword">return</span> m[i][j];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="10-欣赏"><a href="#10-欣赏" class="headerlink" title="10. 欣赏"></a>10. 欣赏</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://ww1.sinaimg.cn/large/7cc829d3jw1f28vpjht21j20sg0sg79t.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">unsigned char RD(int i,int j)&#123;</div><div class="line">    #define A float a=0,b,k,r,x</div><div class="line">    #define B int e,o</div><div class="line">    #define C(x) x&gt;255?255:x</div><div class="line">    #define R return</div><div class="line">    #define D DIM</div><div class="line">    R BL(i,j)*(D-i)/D;</div><div class="line">&#125;</div><div class="line"> </div><div class="line">unsigned char GR(int i,int j)&#123;</div><div class="line">    #define E DM1</div><div class="line">    #define F static float</div><div class="line">    #define G for(</div><div class="line">    #define H r=a*1.6/D+2.4;x=1.0001*b/D</div><div class="line">    R BL(i,j)*(D-j/2)/D;</div><div class="line">&#125;</div><div class="line"> </div><div class="line">unsigned char BL(int i,int j)&#123;</div><div class="line">    F c[D][D];if(i+j&lt;1)&#123;A;B;G;a&lt;D;a+=0.1)&#123;G b=0;b&lt;D;b++)&#123;H;G k=0;k&lt;D;k++)&#123;x=r*x*(1-x);if(k&gt;D/2)&#123;e=a;o=(E*x);c[e][o]+=0.01;&#125;&#125;&#125;&#125;&#125;R C(c[j][i])*i/D;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;image-bubble&quot;&gt;
+                &lt;div class=&quot;img-lightbox&quot;&gt;
+                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
+                   
+    
+    </summary>
+    
+      <category term="c" scheme="http://kompasim.github.io/categories/c/"/>
+    
+    
+      <category term="c" scheme="http://kompasim.github.io/tags/c/"/>
+    
+      <category term="image" scheme="http://kompasim.github.io/tags/image/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用c语言画ppm图片（一）</title>
+    <link href="http://kompasim.github.io/2017/03/14/c-and-ppm-one/"/>
+    <id>http://kompasim.github.io/2017/03/14/c-and-ppm-one/</id>
+    <published>2017-03-14T14:45:47.000Z</published>
+    <updated>2017-03-14T15:03:29.220Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img1.3lian.com/img013/v4/39/d/81.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<hr>
+<h2 id="1-PPM介绍"><a href="#1-PPM介绍" class="headerlink" title="1. PPM介绍"></a>1. PPM介绍</h2><pre><code>PPM（Portable PixMap）是portable像素图片，是有netpbm项目定义的一系列的portable图片格式中的一个。这些图片格式都相对比较容易处理，跟平台无关，所以称之为portable，简单理解，就是比较直接的图片格式，比如PPM，其实就是把每一个点的RGB分别保存起来。所以，PPM格式的文件是没有压缩的，相对比较大，但是由于图片格式简单，一般作为图片处理的中间文件（不会丢失文件信息），或者作为简单的图片格式保存。
+</code></pre><h2 id="2-PPM格式分析"><a href="#2-PPM格式分析" class="headerlink" title="2. PPM格式分析"></a>2. PPM格式分析</h2><pre><code>netpbm的几种图片格式是通过其表示的颜色类型来区别的，PBM是位图，只有黑色和白色，PGM是灰度图片，PPM是代表完整的RGB颜色的图片。
+</code></pre><p>(1) 文件头</p>
+<pre><code>文件头由三个部分（或者认为是四个部分）组成：这几个部分之间用回车或换行分隔（但是PPM标准中要求是空格）
+
+* 第一部分是文件magic number：
+每一个netpbm图片由两个字节的magic number (ASCII)组成，来标识文件的类型(PMB/PGM/PPM)以及文件的编码(ASCII或binary).
+所以PPM格式的起始两个字节为P3或者P6.
+关于编码(ASCII或binary): 其区别是ASCII编码的文件是对于阅读友好的，可以字节用文本编辑器打开，并读取其对应的图片的数据（比如RGB的值），然后中间会有空格回车等隔开。binary就是按照二进制的形式，顺序存储图片信息，没有空格回车分隔。所以很显然，binary格式的图片处理起来更快（不需要判断空格回车），而且图片会更小，但是ASCII阅读调试更为直接。
+
+* 第二部分是图像宽度和高度（空格隔开），用ASCII表示。
+
+* 第三部分是描述像素的最大颜色组成，允许描述超过一个字节（0-255）的颜色值。
+另外，在上面的三个部分里面，都可以使用&quot;#&quot;插入注释，注释是#到行尾(回车或换行)部分。
+</code></pre><p>(2) 图像数据部分</p>
+<pre><code>对于ASCII格式，就是按照RGB的顺序排列，以ASCII存储，并且，RGB中间用空格隔开，图片每一行用回车隔开。
+对于binary格式，就是每一个像素点的RGB值分别顺序存储并且按二进制写入文件(fwrite)，没有任何分隔。
+比如下面这个图片 (一共六个像素点，图片宽度为3，高度为2）:
+</code></pre><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.my.csdn.net/uploads/201303/08/1362710863_3396.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h2 id="3-代码如下"><a href="#3-代码如下" class="headerlink" title="3. 代码如下:"></a>3. 代码如下:</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;  </span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;  </span></span></div><div class="line">  </div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">writePPMHeader</span><span class="params">(FILE *f, <span class="keyword">char</span> magic, <span class="keyword">int</span> w, <span class="keyword">int</span> h, <span class="keyword">int</span> color)</span> </span>&#123;  </div><div class="line">    <span class="keyword">if</span> (f==<span class="literal">NULL</span>) &#123;  </div><div class="line">        <span class="built_in">printf</span>(<span class="string">"FILE error\n"</span>);  </div><div class="line">        <span class="built_in">exit</span>(<span class="number">0</span>);  </div><div class="line">    &#125;  </div><div class="line">  </div><div class="line">    <span class="keyword">if</span> (magic==<span class="string">'A'</span>) &#123;<span class="comment">// ASCII  </span></div><div class="line">        <span class="built_in">fprintf</span>(f, <span class="string">"P3\n"</span>);  </div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (magic==<span class="string">'B'</span>) &#123;  </div><div class="line">        <span class="built_in">fprintf</span>(f, <span class="string">"P6\n"</span>);  </div><div class="line">    &#125; <span class="keyword">else</span> &#123;  </div><div class="line">        <span class="built_in">printf</span>(<span class="string">"Magic can only be A(ASCII) or B(binary)\n"</span>);  </div><div class="line">        <span class="built_in">exit</span>(<span class="number">0</span>);  </div><div class="line">    &#125;  </div><div class="line">  </div><div class="line">    <span class="built_in">fprintf</span>(f, <span class="string">"%d %d\n"</span>, w, h);  </div><div class="line">    <span class="built_in">fprintf</span>(f, <span class="string">"%d\n"</span>, color);  </div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;  </div><div class="line">&#125;  </div><div class="line">  </div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">writePPMdataP3</span><span class="params">(FILE* f, <span class="keyword">unsigned</span> <span class="keyword">char</span>* img, <span class="keyword">int</span> w, <span class="keyword">int</span> h)</span> </span>&#123;  </div><div class="line">    <span class="keyword">int</span> i,j;  </div><div class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;h;i++) &#123;   <span class="comment">// every rwo  </span></div><div class="line">        <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;w;j++) &#123;   <span class="comment">// every line  </span></div><div class="line">            <span class="built_in">fprintf</span>(f, <span class="string">"%d "</span>,img[i*w*<span class="number">3</span>+<span class="number">3</span>*j]);  </div><div class="line">            <span class="built_in">fprintf</span>(f, <span class="string">"%d "</span>,img[i*w*<span class="number">3</span>+<span class="number">3</span>*j+<span class="number">1</span>]);  </div><div class="line">            <span class="built_in">fprintf</span>(f, <span class="string">"%d "</span>,img[i*w*<span class="number">3</span>+<span class="number">3</span>*j+<span class="number">2</span>]);&lt;span style=<span class="string">"white-space:pre"</span>&gt;   &lt;/span&gt;<span class="comment">// PS: 对于j=w-1的时候，最后一个空格可以不写，但是这里就不考虑了  </span></div><div class="line">        &#125;  </div><div class="line">        <span class="built_in">fprintf</span>(f, <span class="string">"\n"</span>);  </div><div class="line">    &#125;  </div><div class="line">&#125;  </div><div class="line">  </div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">writePPMdataP6</span><span class="params">(FILE* f, <span class="keyword">unsigned</span> <span class="keyword">char</span>* img, <span class="keyword">int</span> w, <span class="keyword">int</span> h)</span> </span>&#123;  </div><div class="line">    <span class="keyword">int</span> i,j;  </div><div class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;w;i++) &#123;  </div><div class="line">        <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;h;j++) &#123;  </div><div class="line">            fwrite(img, w*h, <span class="number">3</span>, f);  </div><div class="line">        &#125;  </div><div class="line">    &#125;  </div><div class="line">&#125;  </div><div class="line">  </div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> WIDTH   3  </span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> HEIGHT  2  </span></div><div class="line"><span class="keyword">unsigned</span> <span class="keyword">char</span> img[WIDTH*HEIGHT*<span class="number">3</span>]=&#123;<span class="number">255</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">255</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">0</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>&#125;;  </div><div class="line">  </div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;  </div><div class="line">    <span class="keyword">char</span> *filename1 = <span class="string">"testP3.ppm"</span>;  </div><div class="line">    <span class="keyword">char</span> *filename2 = <span class="string">"testP6.ppm"</span>;  </div><div class="line">  </div><div class="line">    FILE *f3 = fopen(filename1, <span class="string">"w"</span>);  </div><div class="line">    <span class="keyword">if</span> (f3==<span class="literal">NULL</span>) &#123;  </div><div class="line">        <span class="built_in">printf</span>(<span class="string">"FILE error\n"</span>);  </div><div class="line">        <span class="built_in">exit</span>(<span class="number">0</span>);  </div><div class="line">    &#125;  </div><div class="line">  </div><div class="line">    FILE *f6 = fopen(filename2, <span class="string">"w"</span>);  </div><div class="line">    <span class="keyword">if</span> (f6==<span class="literal">NULL</span>) &#123;  </div><div class="line">        <span class="built_in">printf</span>(<span class="string">"FILE error\n"</span>);  </div><div class="line">        <span class="built_in">exit</span>(<span class="number">0</span>);  </div><div class="line">    &#125;  </div><div class="line">  </div><div class="line">    writePPMHeader(f3, <span class="string">'A'</span>, WIDTH, HEIGHT, <span class="number">255</span>);  </div><div class="line">    writePPMdataP3(f3, img, WIDTH, HEIGHT);  </div><div class="line">  </div><div class="line">    writePPMHeader(f6, <span class="string">'B'</span>, WIDTH, HEIGHT, <span class="number">255</span>);  </div><div class="line">    writePPMdataP6(f6, img, WIDTH, HEIGHT);  </div><div class="line">  </div><div class="line">    fclose(f3);  </div><div class="line">    fclose(f6);  </div><div class="line">  </div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="4-更多图形"><a href="#4-更多图形" class="headerlink" title="4. 更多图形"></a>4. 更多图形</h2><p> 更多图形请看<code>用c语言画ppm图片（二）</code>这篇文章。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;image-bubble&quot;&gt;
+                &lt;div class=&quot;img-lightbox&quot;&gt;
+                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
+                   
+    
+    </summary>
+    
+      <category term="c" scheme="http://kompasim.github.io/categories/c/"/>
+    
+    
+      <category term="c" scheme="http://kompasim.github.io/tags/c/"/>
+    
+      <category term="image" scheme="http://kompasim.github.io/tags/image/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>java发起http请求</title>
+    <link href="http://kompasim.github.io/2017/02/20/java-http-request/"/>
+    <id>http://kompasim.github.io/2017/02/20/java-http-request/</id>
+    <published>2017-02-20T01:50:50.000Z</published>
+    <updated>2017-02-27T03:12:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img1.3lian.com/img013/v4/39/d/81.jpg" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure>
+<hr>
+<h2 id="0-HttpUtil-类"><a href="#0-HttpUtil-类" class="headerlink" title="0. HttpUtil 类"></a>0. HttpUtil 类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.kompasim.utils;</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">import</span> java.io.BufferedReader;</div><div class="line"><span class="keyword">import</span> java.io.DataOutputStream;</div><div class="line"><span class="keyword">import</span> java.io.InputStreamReader;</div><div class="line"><span class="keyword">import</span> java.net.HttpURLConnection;</div><div class="line"><span class="keyword">import</span> java.net.MalformedURLException;</div><div class="line"><span class="keyword">import</span> java.net.URL;</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HttpUtil</span> </span>&#123;</div><div class="line"></div><div class="line">    String path = <span class="keyword">null</span>;</div><div class="line">    URL url = <span class="keyword">null</span>;</div><div class="line">    HttpURLConnection urlConnection = <span class="keyword">null</span>;</div><div class="line">    <span class="keyword">private</span> String resultData = <span class="string">""</span>;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">HttpUtil</span><span class="params">(String p)</span></span>&#123;</div><div class="line">        path = p;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">open</span><span class="params">(String string)</span></span>&#123;</div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            url = <span class="keyword">new</span> URL(path + <span class="string">"?"</span> + string);</div><div class="line">            System.out.println(<span class="string">"url is : "</span> + url);</div><div class="line">            urlConnection = (HttpURLConnection)url.openConnection();</div><div class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setHeader</span><span class="params">(String name, String value)</span></span>&#123;</div><div class="line">        urlConnection.addRequestProperty(name,value);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">get</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            <span class="comment">//headers</span></div><div class="line">            urlConnection.setRequestMethod(<span class="string">"GET"</span>);</div><div class="line">            urlConnection.setUseCaches(<span class="keyword">false</span>);</div><div class="line">            urlConnection.setConnectTimeout (<span class="number">5000</span>);</div><div class="line">            urlConnection.connect();</div><div class="line">            <span class="keyword">if</span> (urlConnection.getResponseCode()!=<span class="number">200</span>)&#123;</div><div class="line">                System.out.println(<span class="string">"err : get网络请求失败,返回200"</span>);</div><div class="line">                <span class="keyword">return</span> <span class="string">"error"</span>;</div><div class="line">            &#125;<span class="keyword">else</span> &#123;</div><div class="line">                InputStreamReader isr = <span class="keyword">new</span> InputStreamReader(urlConnection.getInputStream());</div><div class="line">                BufferedReader br = <span class="keyword">new</span> BufferedReader(isr);</div><div class="line">                String line = <span class="keyword">null</span>;</div><div class="line">                <span class="keyword">while</span>((line=br.readLine())!=<span class="keyword">null</span>)&#123;</div><div class="line">                    resultData += line;</div><div class="line">                &#125;</div><div class="line">                isr.close();</div><div class="line">                br.close();</div><div class="line">                urlConnection.disconnect();</div><div class="line">                <span class="keyword">return</span> resultData.toString();</div><div class="line">            &#125;</div><div class="line">        &#125;<span class="keyword">catch</span> (Exception e)&#123;</div><div class="line">            e.printStackTrace();</div><div class="line">            System.out.println(<span class="string">"err : "</span> + e.getStackTrace().toString());</div><div class="line">            <span class="keyword">return</span> <span class="string">"error"</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">post</span><span class="params">(String encodedString)</span></span>&#123;</div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            urlConnection.setDoOutput(<span class="keyword">true</span>);</div><div class="line">            urlConnection.setDoInput(<span class="keyword">true</span>);</div><div class="line">            urlConnection.setConnectTimeout(<span class="number">5</span>*<span class="number">1000</span>);</div><div class="line">        &#125;<span class="keyword">catch</span> (Exception e)&#123;</div><div class="line">            System.out.println(<span class="string">"err : "</span> + e.getStackTrace().toString());</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">try</span>&#123;</div><div class="line">            urlConnection.setRequestMethod(<span class="string">"POST"</span>);</div><div class="line">            urlConnection.setUseCaches(<span class="keyword">false</span>);</div><div class="line">            urlConnection.setRequestProperty(<span class="string">"Content-Type"</span>,<span class="string">"application/x-www-form-urlencoded"</span>);</div><div class="line">            urlConnection.connect();</div><div class="line">            DataOutputStream out = <span class="keyword">new</span> DataOutputStream(urlConnection.getOutputStream());</div><div class="line">            <span class="comment">// 参数</span></div><div class="line">            <span class="comment">// 将要上传的内容写入流中</span></div><div class="line">            out.writeBytes(encodedString);</div><div class="line">            <span class="comment">// 刷新关闭</span></div><div class="line">            out.flush();</div><div class="line">            out.close();</div><div class="line">            <span class="keyword">if</span> (urlConnection.getResponseCode()!=<span class="number">200</span>)&#123;</div><div class="line">                System.out.println(<span class="string">"err : post网络请求失败,返回200"</span>);</div><div class="line">                <span class="keyword">return</span> <span class="string">"error"</span>;</div><div class="line">            &#125;<span class="keyword">else</span> &#123;</div><div class="line">                InputStreamReader isr = <span class="keyword">new</span> InputStreamReader(urlConnection.getInputStream());</div><div class="line">                BufferedReader br = <span class="keyword">new</span> BufferedReader(isr);</div><div class="line">                String line = <span class="keyword">null</span>;</div><div class="line">                <span class="keyword">while</span>((line=br.readLine())!=<span class="keyword">null</span>)&#123;</div><div class="line">                    resultData += line;</div><div class="line">                &#125;</div><div class="line">                isr.close();</div><div class="line">                urlConnection.disconnect();</div><div class="line">                <span class="keyword">return</span> resultData.toString();</div><div class="line">            &#125;</div><div class="line">        &#125;<span class="keyword">catch</span>(Exception e)&#123;</div><div class="line">            System.out.println(<span class="string">"err : "</span> + e.getStackTrace().toString());</div><div class="line">            <span class="keyword">return</span> <span class="string">"error"</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="1-发起get请求"><a href="#1-发起get请求" class="headerlink" title="1. 发起get请求"></a>1. 发起get请求</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">HttpUtil httpUtil = <span class="keyword">new</span> HttpUtil(<span class="string">"http://api.kompasim.cn/humor.php"</span>);</div><div class="line">String queryStr = <span class="string">"bodyName1="</span> + URLEncoder.encode(<span class="string">"bodyValue1"</span>,<span class="string">"UTF-8"</span>) + <span class="string">"&amp;bodyName2="</span> + URLEncoder.encode(<span class="string">"bodyValue2"</span>,<span class="string">"UTF-8"</span>);</div><div class="line">httpUtil.open(queryStr);</div><div class="line">httpUtil.setHeader(<span class="string">"headerNmae1"</span>, <span class="string">"headerValue1"</span>);</div><div class="line">httpUtil.setHeader(<span class="string">"headerNmae2"</span>, <span class="string">"headerValue2"</span>);</div><div class="line">String resultStr = httpUtil.get();</div></pre></td></tr></table></figure>
+<h2 id="2-发起post请求"><a href="#2-发起post请求" class="headerlink" title="2. 发起post请求"></a>2. 发起post请求</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">HttpUtil httpUtil = <span class="keyword">new</span> HttpUtil(<span class="string">"http://api.kompasim.cn/humor.php"</span>);</div><div class="line">httpUtil.open(<span class="string">""</span>);</div><div class="line">httpUtil.setHeader(<span class="string">"headerNmae1"</span>, <span class="string">"headerValue1"</span>);</div><div class="line">httpUtil.setHeader(<span class="string">"headerNmae2"</span>, <span class="string">"headerValue2"</span>);</div><div class="line">String queryStr = <span class="string">"bodyName1="</span> + URLEncoder.encode(<span class="string">"bodyValue1"</span>,<span class="string">"UTF-8"</span>) + <span class="string">"&amp;bodyName2="</span> + URLEncoder.encode(<span class="string">"bodyValue2"</span>,<span class="string">"UTF-8"</span>);</div><div class="line">String resultStr = httpUtil.post(queryStr);</div></pre></td></tr></table></figure>
+<h2 id="3-线程间通信"><a href="#3-线程间通信" class="headerlink" title="3.  线程间通信"></a>3.  线程间通信</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// handler</span></div><div class="line">Handler handler = <span class="keyword">new</span> Handler() &#123;  </div><div class="line">    <span class="meta">@Override</span>  </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">handleMessage</span><span class="params">(Message msg)</span> </span>&#123;  </div><div class="line">        <span class="keyword">switch</span> (msg.what) &#123;  </div><div class="line">        <span class="keyword">case</span> <span class="number">1</span>:  </div><div class="line">            String resultStr = (String)msg.obj; </div><div class="line">            <span class="comment">// do something</span></div><div class="line">            TextView textView = (TextView)findViewById(R.id.textView);</div><div class="line">            textView.setText(resultStr);</div><div class="line">            <span class="keyword">break</span>; </div><div class="line">        <span class="keyword">default</span>:</div><div class="line">            <span class="keyword">break</span>; </div><div class="line">        &#125;  </div><div class="line">    &#125;  </div><div class="line">&#125;;</div><div class="line"><span class="comment">// timer task</span></div><div class="line">TimerTask tt = <span class="keyword">new</span> TimerTask() &#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="comment">// do post or do get</span></div><div class="line">        String resultStr = <span class="string">""</span>;</div><div class="line">        Message msg = <span class="keyword">new</span> Message();</div><div class="line">        msg.what = <span class="number">5</span>;</div><div class="line">        msg.obj = resultStr;</div><div class="line">        handler.sendMessage(msg);</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">Timer t = <span class="keyword">new</span> Timer(<span class="keyword">true</span>);</div><div class="line">t.schedule(tt, <span class="number">0</span>, <span class="number">1000</span>);</div></pre></td></tr></table></figure>
+<hr>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;image-bubble&quot;&gt;
+                &lt;div class=&quot;img-lightbox&quot;&gt;
+                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
+                   
+    
+    </summary>
+    
+      <category term="java" scheme="http://kompasim.github.io/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://kompasim.github.io/tags/java/"/>
+    
+      <category term="http" scheme="http://kompasim.github.io/tags/http/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Nginx在Ubuntu上的基本知识</title>
+    <link href="http://kompasim.github.io/2017/01/26/nginx-on-ubuntu-one/"/>
+    <id>http://kompasim.github.io/2017/01/26/nginx-on-ubuntu-one/</id>
+    <published>2017-01-26T03:08:55.000Z</published>
+    <updated>2017-01-26T03:57:27.755Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.daimg.com/uploads/allimg/160402/3-1604021T451.jpg" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure>
+<hr>
+<h2 id="1-在线安装"><a href="#1-在线安装" class="headerlink" title="1.在线安装"></a>1.在线安装</h2><blockquote>
+<p><code>$sudo apt-get install nginx</code></p>
+<p>ubuntu安装Nginx之后的文件结构如下:</p>
+<p>所有的配置文件都在/etc/nginx下，并且每个虚拟主机已经安排在了/etc/nginx/sites-available下</p>
+<p>启动程序文件在/usr/sbin/nginx</p>
+<p>日志放在了/var/log/nginx中，分别是access.log和error.log</p>
+<p>并已经在/etc/init.d/下创建了启动脚本nginx</p>
+<p>默认的虚拟主机的目录设置在了/usr/share/nginx/www</p>
+</blockquote>
+<h2 id="2-源代码安装"><a href="#2-源代码安装" class="headerlink" title="2.源代码安装"></a>2.源代码安装</h2><blockquote>
+<p>下载地址：<a href="http://nginx.org/download/" target="_blank" rel="external">http://nginx.org/download/</a></p>
+<p>我这里下载的是 nginx-1.3.9.tar.gz，安装过程很简单，如下：</p>
+<p><code>$./configure</code></p>
+<p><code>$make</code></p>
+<p><code>$make install</code></p>
+<p>安装成功之后，nginx放置在/usr/local/nginx目录下，主要的配置文件为conf目录下的nginx.conf，nginx的启动文件在sbin目录下的nginx文件。</p>
+</blockquote>
+<h2 id="3-修改监听端口"><a href="#3-修改监听端口" class="headerlink" title="3.修改监听端口"></a>3.修改监听端口</h2><blockquote>
+<p>修改nginx的配置文件nginx.conf，将一下这一行 <code>listen 80;</code> 修改为 <code>listen 8080;</code>  然后就可以访问了，<code>http://localhost:8080/</code> 。</p>
+</blockquote>
+<h2 id="4-配置文件"><a href="#4-配置文件" class="headerlink" title="4. 配置文件"></a>4. 配置文件</h2><blockquote>
+<p>Nginx的配置文件是/etc/nginx/nginx.conf，其中设置了一些必要的参数，我们发现其中这样的语句：<br> <code>include /etc/nginx/sites-enabled/*</code> 可以看出 <code>/etc/nginx/sites-enabled/default</code> 文件也是一个核心的配置文件，其中包含了主要的配置信息，如服务器跟目录、服务器名称、location信息和server信息。</p>
+<p>对于源代码安装的nginx，配置文件为 <code>/usr/local/nginx/conf/nginx.conf</code> 。</p>
+</blockquote>
+<h2 id="5-location的匹配规则"><a href="#5-location的匹配规则" class="headerlink" title="5. location的匹配规则"></a>5. location的匹配规则</h2><blockquote>
+<p>（1）= 前缀的指令严格匹配这个查询。如果找到，停止搜索。</p>
+<p>（2）剩下的常规字符串，最长的匹配优先使用。如果这个匹配使用 <code>^~</code> 前缀，搜索停止。</p>
+<p>（3）正则表达式，按配置文件里的顺序，第一个匹配的被使用。</p>
+<p>（4）如果第三步产生匹配，则使用这个结果。否则使用第二步的匹配结果。</p>
+<p> 在location中可以使用常规字符串和正则表达式。如果使用正则表达式，你必须使用以下规则：</p>
+<ul>
+<li>~* 前缀选择不区分大小写的匹配</li>
+<li>~  选择区分大小写的匹配</li>
+</ul>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">location = / &#123;</div><div class="line">    # 只匹配 / 查询。</div><div class="line">    [ configuration A ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">location / &#123;</div><div class="line">    # 匹配任何查询，因为所有请求都以 / 开头。</div><div class="line">    # 但是正则表达式规则和长的块规则将被优先和查询匹配。</div><div class="line">    [ configuration B ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">location ^~ /images/ &#123;</div><div class="line">    # 匹配任何以 /images/ 开头的任何查询并且停止搜索。</div><div class="line">    # 任何正则表达式将不会被测试。</div><div class="line">    [ configuration C ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">location ~* \.(gif|jpg|jpeg)$ &#123;</div><div class="line">    # 匹配任何以 gif、jpg 或 jpeg 结尾的请求。</div><div class="line">    # 然而所有 /images/ 目录的请求将使用 Configuration C。</div><div class="line">    [ configuration D ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="6-常用命令"><a href="#6-常用命令" class="headerlink" title="6. 常用命令"></a>6. 常用命令</h2><blockquote>
+<p> <code>-?,-h</code>        : this help</p>
+<p> <code>-v</code>            : show version and exit</p>
+<p> <code>-V</code>           : show version and configure options then exit</p>
+<p> <code>-t</code>           : test configuration and exit</p>
+<p> <code>-q</code>           : suppress non-error messages during configuration testing</p>
+<p> <code>-s</code> signal     : send signal to a master process: stop, quit, reopen, reload</p>
+<p> <code>-p</code> prefix     : set prefix path (default: /usr/local/nginx/)</p>
+<p> <code>-c</code> filename   : set configuration file (default: conf/nginx.conf)</p>
+<p> <code>-g</code> directives : set global directives out of configuration file</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;image-bubble&quot;&gt;
+                &lt;div class=&quot;img-lightbox&quot;&gt;
+                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
+                   
+    
+    </summary>
+    
+      <category term="tools" scheme="http://kompasim.github.io/categories/tools/"/>
+    
+    
+      <category term="Ubuntu" scheme="http://kompasim.github.io/tags/Ubuntu/"/>
+    
+      <category term="Nginx" scheme="http://kompasim.github.io/tags/Nginx/"/>
+    
+      <category term="tools" scheme="http://kompasim.github.io/tags/tools/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntu上配置Nginx服务器</title>
+    <link href="http://kompasim.github.io/2017/01/26/nginx-on-ubuntu-two/"/>
+    <id>http://kompasim.github.io/2017/01/26/nginx-on-ubuntu-two/</id>
+    <published>2017-01-26T02:42:34.000Z</published>
+    <updated>2017-01-26T03:56:25.598Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.daimg.com/uploads/allimg/160402/3-160402163G0.jpg" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure>
+<hr>
+<h2 id="0-Nginx的介绍"><a href="#0-Nginx的介绍" class="headerlink" title="0.Nginx的介绍"></a>0.Nginx的介绍</h2><blockquote>
+<p>Nginx是一个非常轻量级的HTTP服务器，Nginx，它的发音为“engine X”， 是一个高性能的HTTP和<br>反向代理服务器，同时也是一个IMAP/POP3/SMTP 代理服务器。</p>
+</blockquote>
+<h2 id="1-安装Nginx"><a href="#1-安装Nginx" class="headerlink" title="1.安装Nginx"></a>1.安装Nginx</h2><blockquote>
+<p><code>apt-get install nginx</code></p>
+</blockquote>
+<h2 id="2-启动Nginx"><a href="#2-启动Nginx" class="headerlink" title="2.启动Nginx"></a>2.启动Nginx</h2><blockquote>
+<p><code>service nginx start</code></p>
+</blockquote>
+<h2 id="3-访问服务器IP"><a href="#3-访问服务器IP" class="headerlink" title="3.访问服务器IP"></a>3.访问服务器IP</h2><blockquote>
+<p>如果看到“Welcome to nginx!”说明安装好了。 </p>
+</blockquote>
+<h2 id="4-安装PHP"><a href="#4-安装PHP" class="headerlink" title="4.安装PHP"></a>4.安装PHP</h2><blockquote>
+<p><code>apt-get install php5-fpm</code></p>
+</blockquote>
+<h2 id="5-配置Nginx"><a href="#5-配置Nginx" class="headerlink" title="5.配置Nginx"></a>5.配置Nginx</h2><blockquote>
+<p>vim /etc/nginx/sites-available/default</p>
+<p>找到下列代码，去掉相应注释</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">location ~ \.php$ &#123;</div><div class="line">        include snippets/fastcgi-php.conf;</div><div class="line">        fastcgi_pass unix:/var/run/php5-fpm.sock;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>重启服务</p>
+<p><code>service nginx restart</code></p>
+</blockquote>
+<h2 id="6-默认的网站根目录在-var-www-html"><a href="#6-默认的网站根目录在-var-www-html" class="headerlink" title="6.默认的网站根目录在/var/www/html"></a>6.默认的网站根目录在/var/www/html</h2><blockquote>
+<p><code>vim /var/www/html/test.php</code></p>
+<p>输入以下内容,并保存</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">echo phpinfo();</div><div class="line">?&gt;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>访问网站IP/test.php，如果可以看到phpinfo的信息说明php安装成功。</p>
+</blockquote>
+<h2 id="7-参考"><a href="#7-参考" class="headerlink" title="7.参考"></a>7.参考</h2><blockquote>
+<p><a href="http://blog.csdn.net/lnho2015/article/details/51025639" target="_blank" rel="external">CSDN Lnho的专栏</a></p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;image-bubble&quot;&gt;
+                &lt;div class=&quot;img-lightbox&quot;&gt;
+                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
+                   
+    
+    </summary>
+    
+      <category term="tools" scheme="http://kompasim.github.io/categories/tools/"/>
+    
+    
+      <category term="Ubuntu" scheme="http://kompasim.github.io/tags/Ubuntu/"/>
+    
+      <category term="Nginx" scheme="http://kompasim.github.io/tags/Nginx/"/>
+    
+      <category term="tools" scheme="http://kompasim.github.io/tags/tools/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>php简单文件上传和下载</title>
+    <link href="http://kompasim.github.io/2016/06/02/php-upload-download/"/>
+    <id>http://kompasim.github.io/2016/06/02/php-upload-download/</id>
+    <published>2016-06-02T14:49:31.000Z</published>
+    <updated>2016-12-02T10:39:14.043Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://file01.16sucai.com/d/file/2010/1022/20101022120506386.jpg" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure>
+<hr>
+<p>php简单实现文件上传和下载<br>当然实际应用中还是要检测文件大小呀，格式呀什么的…</p>
+<h2 id="1-html"><a href="#1-html" class="headerlink" title="1. html"></a>1. html</h2><p><code>index.php</code><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!doctype html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"Generator"</span> <span class="attr">content</span>=<span class="string">"EditPlus®"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"Author"</span> <span class="attr">content</span>=<span class="string">""</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"Keywords"</span> <span class="attr">content</span>=<span class="string">""</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"Description"</span> <span class="attr">content</span>=<span class="string">""</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line">		*&#123;</div><div class="line">			font-family:'';</div><div class="line">		&#125;</div><div class="line">  <span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"> <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">	 <span class="tag">&lt;<span class="name">center</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">h2</span>&gt;</span>upload a file<span class="tag">&lt;<span class="name">h2</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">form</span> <span class="attr">style</span>=<span class="string">'width:400px;height:400px;border:solid 5px red;border-radius:10px'</span> <span class="attr">enctype</span>=<span class="string">'multipart/form-data'</span> <span class="attr">method</span>=<span class="string">'post'</span> <span class="attr">action</span>=<span class="string">'upload.php'</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">'file'</span> <span class="attr">name</span>=<span class="string">'file'</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">br</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">'submit'</span> <span class="attr">value</span>=<span class="string">'submit'</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">br</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">br</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">form</span>&gt;</span></div><div class="line">	 <span class="tag">&lt;/<span class="name">center</span>&gt;</span></div><div class="line"> <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h2 id="2-upload"><a href="#2-upload" class="headerlink" title="2. upload"></a>2. upload</h2><p><code>upload.php</code><br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;center&gt;</div><div class="line"><span class="meta">&lt;?php</span></div><div class="line">header(<span class="string">'content-type:text/html;charset=utf-8'</span>);</div><div class="line">$file=$_FILES;</div><div class="line"><span class="comment">//echo '';</span></div><div class="line"></div><div class="line"><span class="keyword">if</span>(!is_uploaded_file($file[<span class="string">'file'</span>][<span class="string">'tmp_name'</span>]))&#123;</div><div class="line">	<span class="keyword">echo</span> <span class="string">'please select a file ...'</span>;</div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">	</div><div class="line">	move_uploaded_file($file[<span class="string">'file'</span>][<span class="string">'tmp_name'</span>],$file[<span class="string">'file'</span>][<span class="string">'name'</span>]);</div><div class="line">	</div><div class="line">	<span class="keyword">echo</span> <span class="string">"&lt;a href='download.php?a="</span>.$file[<span class="string">'file'</span>][<span class="string">'name'</span>].<span class="string">"'&gt;"</span>.$file[<span class="string">'file'</span>][<span class="string">'name'</span>].<span class="string">"&lt;/a&gt;"</span>;</div><div class="line">	</div><div class="line"></div><div class="line">&#125;</div><div class="line"><span class="meta">?&gt;</span></div><div class="line">&lt;/center&gt;</div></pre></td></tr></table></figure></p>
+<h2 id="3-download"><a href="#3-download" class="headerlink" title="3. download"></a>3. download</h2><p>download.php<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span></div><div class="line"><span class="comment">//$filename="http://liaoxuefeng-static.oss-cn-hangzhou.aliyuncs.com/static-img/maiziedu.jpg";</span></div><div class="line">$filename=$_GET[<span class="string">"a"</span>];</div><div class="line">header(<span class="string">'content-type:text/html;charset=utf-8'</span>);</div><div class="line">header(<span class="string">"Content-type: octet/stream"</span>);</div><div class="line">header(<span class="string">"content_type:application/octed-stream"</span>);</div><div class="line">header(<span class="string">'Content-Disposition: attachment; filename='</span>.$filename);</div><div class="line">ob_clean ();</div><div class="line">readfile($filename);</div><div class="line"><span class="meta">?&gt;</span></div></pre></td></tr></table></figure></p>
+<h2 id="4-HTML5"><a href="#4-HTML5" class="headerlink" title="4. HTML5"></a>4. HTML5</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;a href=&quot;photo.jpg&quot; download=&quot;photo_name&quot;&gt;download&lt;/a&gt;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;image-bubble&quot;&gt;
+                &lt;div class=&quot;img-lightbox&quot;&gt;
+                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
+                   
+    
+    </summary>
+    
+      <category term="php" scheme="http://kompasim.github.io/categories/php/"/>
+    
+    
+      <category term="php" scheme="http://kompasim.github.io/tags/php/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>android的webview和back键</title>
+    <link href="http://kompasim.github.io/2016/06/02/android-webview-demo/"/>
+    <id>http://kompasim.github.io/2016/06/02/android-webview-demo/</id>
+    <published>2016-06-02T12:29:03.000Z</published>
+    <updated>2016-12-02T10:39:14.041Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://file06.16sucai.com/2016/0523/ae30c819f1c57434797d26500c8d2833.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<hr>
+<p>这是一个简单的webview实例，你可以看到当单击back键的时候，<br>如果webview有浏览历史的话history会弹出栈，<br>如果没有浏览历史的话如果两秒内点击两次侧推出app，不然没有响应。</p>
+<h2 id="1-代码"><a href="#1-代码" class="headerlink" title="1. 代码"></a>1. 代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.example.mywork;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.util.Timer;</div><div class="line"><span class="keyword">import</span> java.util.TimerTask;</div><div class="line"></div><div class="line"><span class="keyword">import</span> android.support.v7.app.ActionBarActivity;</div><div class="line"><span class="keyword">import</span> android.support.v4.app.Fragment;</div><div class="line"><span class="keyword">import</span> android.app.Activity;</div><div class="line"><span class="keyword">import</span> android.os.Bundle;</div><div class="line"><span class="keyword">import</span> android.view.KeyEvent;</div><div class="line"><span class="keyword">import</span> android.view.LayoutInflater;</div><div class="line"><span class="keyword">import</span> android.view.Menu;</div><div class="line"><span class="keyword">import</span> android.view.MenuItem;</div><div class="line"><span class="keyword">import</span> android.view.View;</div><div class="line"><span class="keyword">import</span> android.view.ViewGroup;</div><div class="line"><span class="keyword">import</span> android.view.Window;</div><div class="line"><span class="keyword">import</span> android.webkit.WebView;</div><div class="line"><span class="keyword">import</span> android.os.Build;</div><div class="line"></div><div class="line"><span class="keyword">import</span> android.webkit.WebViewClient;</div><div class="line"><span class="keyword">import</span> android.widget.Toast;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">Activity</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> WebView webView;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">boolean</span> mBackKeyPressed = <span class="keyword">false</span>;<span class="comment">//记录是否有首次按键</span></div><div class="line">	</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">        <span class="keyword">this</span>.requestWindowFeature(Window.FEATURE_NO_TITLE);</div><div class="line">        setContentView(R.layout.activity_main);</div><div class="line">        </div><div class="line">        <span class="keyword">this</span>.initWebView();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">initWebView</span><span class="params">()</span></span>&#123;</div><div class="line"></div><div class="line">       <span class="keyword">this</span>.webView = (WebView)findViewById(R.id.webView);</div><div class="line">        <span class="keyword">this</span>.webView.getSettings().setJavaScriptEnabled(<span class="keyword">true</span>);</div><div class="line"></div><div class="line">        <span class="keyword">this</span>.webView.setWebViewClient(<span class="keyword">new</span> WebViewClient()); </div><div class="line">        <span class="keyword">this</span>.webView.loadUrl(<span class="string">"http://www.1tamche.com"</span>);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    </div><div class="line">    <span class="meta">@Override</span>  </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onKeyDown</span><span class="params">(<span class="keyword">int</span> keyCode, KeyEvent event)</span> </span>&#123;  </div><div class="line">    <span class="comment">// TODO Auto-generated method stub  </span></div><div class="line">    <span class="keyword">if</span>(keyCode==KeyEvent.KEYCODE_BACK)&#123;  </div><div class="line">        <span class="keyword">if</span>(<span class="keyword">this</span>.webView.canGoBack())&#123;</div><div class="line">        	<span class="comment">//需要处理 </span></div><div class="line">        	<span class="keyword">this</span>.webView.goBack();</div><div class="line">        	<span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">        	<span class="keyword">if</span>(!mBackKeyPressed)&#123;</div><div class="line">        		 </div><div class="line">        		mBackKeyPressed = <span class="keyword">true</span>;</div><div class="line">        		<span class="keyword">new</span> Timer().schedule(<span class="keyword">new</span> TimerTask() &#123;</div><div class="line"></div><div class="line">        			<span class="meta">@Override</span></div><div class="line">        			<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</div><div class="line">        				<span class="comment">// TODO Auto-generated method stub</span></div><div class="line">        				mBackKeyPressed = <span class="keyword">false</span>;</div><div class="line">        			&#125;<span class="comment">//延时两秒，如果超出则擦错第一次按键记录</span></div><div class="line"></div><div class="line">        		&#125;, <span class="number">2000</span>);</div><div class="line">        		<span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">        		</div><div class="line">        	&#125;</div><div class="line">        	<span class="keyword">else</span>&#123;<span class="comment">//退出程序</span></div><div class="line">        		<span class="keyword">this</span>.finish();</div><div class="line">        		System.exit(<span class="number">0</span>);</div><div class="line">        	&#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    	<span class="keyword">return</span> <span class="keyword">super</span>.onKeyDown(keyCode,event);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">   </div><div class="line"></div><div class="line">    </div><div class="line"></div><div class="line">    </div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">webViewClient</span> <span class="keyword">extends</span> <span class="title">WebViewClient</span></span>&#123; </div><div class="line"></div><div class="line">    <span class="comment">//重写shouldOverrideUrlLoading方法，使点击链接后不使用其他的浏览器打开。 </span></div><div class="line"></div><div class="line"> <span class="meta">@Override</span> </div><div class="line"></div><div class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">shouldOverrideUrlLoading</span><span class="params">(WebView view, String url)</span> </span>&#123; </div><div class="line"></div><div class="line">     view.loadUrl(url); </div><div class="line"></div><div class="line">     <span class="comment">//如果不需要其他对点击链接事件的处理返回true，否则返回false </span></div><div class="line"></div><div class="line">     <span class="keyword">return</span> <span class="keyword">true</span>; </div><div class="line"></div><div class="line"> &#125; </div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;image-bubble&quot;&gt;
+                &lt;div class=&quot;img-lightbox&quot;&gt;
+                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
+                   
+    
+    </summary>
+    
+      <category term="java" scheme="http://kompasim.github.io/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://kompasim.github.io/tags/java/"/>
+    
+      <category term="android" scheme="http://kompasim.github.io/tags/android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>nodejs操作mysql</title>
+    <link href="http://kompasim.github.io/2016/05/30/nodejs-mysql-connection/"/>
+    <id>http://kompasim.github.io/2016/05/30/nodejs-mysql-connection/</id>
+    <published>2016-05-30T15:36:00.000Z</published>
+    <updated>2016-12-02T10:39:14.043Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://file06.16sucai.com/2016/0424/0c9a78d9e1b3817ce2fd8275653681cb.jpg" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure>
+<hr>
+<h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h2><blockquote>
+<p><code>$ npm install mysql</code></p>
+</blockquote>
+<h2 id="2-代码"><a href="#2-代码" class="headerlink" title="2. 代码"></a>2. 代码</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">var</span> mysql      = <span class="built_in">require</span>(<span class="string">'mysql'</span>);</div><div class="line"><span class="keyword">var</span> connection = mysql.createConnection(&#123;</div><div class="line">  <span class="attr">host</span>     : <span class="string">'localhost'</span>,</div><div class="line">  <span class="attr">user</span>     : <span class="string">'root'</span>,</div><div class="line">  <span class="attr">password</span> : <span class="string">'root'</span>,</div><div class="line">  <span class="attr">database</span> : <span class="string">'test'</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line">connection.connect();</div><div class="line"></div><div class="line">connection.query(<span class="string">'select * from test'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">err, rows</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (err) <span class="keyword">throw</span> err;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'The solution is: '</span>, rows);</div><div class="line">  <span class="built_in">console</span>.log(fiels);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">connection.end();</div></pre></td></tr></table></figure>
+<h2 id="3-结束"><a href="#3-结束" class="headerlink" title="3. 结束"></a>3. 结束</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;image-bubble&quot;&gt;
+                &lt;div class=&quot;img-lightbox&quot;&gt;
+                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
+                   
+    
+    </summary>
+    
+      <category term="nodejs" scheme="http://kompasim.github.io/categories/nodejs/"/>
+    
+    
+      <category term="mysql" scheme="http://kompasim.github.io/tags/mysql/"/>
+    
+      <category term="nodejs" scheme="http://kompasim.github.io/tags/nodejs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>java操作mysql</title>
+    <link href="http://kompasim.github.io/2016/05/30/java-mysql-connection/"/>
+    <id>http://kompasim.github.io/2016/05/30/java-mysql-connection/</id>
+    <published>2016-05-30T13:15:03.000Z</published>
+    <updated>2016-12-02T10:39:14.042Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://file06.16sucai.com/2016/0424/63cfd550f761418ca94886c0c60cf184.jpg" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure>
+<hr>
+<h2 id="1-下载java的mysql驱动"><a href="#1-下载java的mysql驱动" class="headerlink" title="1. 下载java的mysql驱动"></a>1. 下载java的mysql驱动</h2><blockquote>
+<p>mysql-connector-java-5.1.26-bin.jar <a href="https://dev.mysql.com/downloads/connector/j/" target="_blank" rel="external">下载</a></p>
+</blockquote>
+<h2 id="2-导入工程"><a href="#2-导入工程" class="headerlink" title="2. 导入工程"></a>2. 导入工程</h2><blockquote>
+<p>在工程的树状文件结构里右击以上jar文件选择<code>build path</code>再选择<code>add to build path</code></p>
+</blockquote>
+<h2 id="3-代码如下"><a href="#3-代码如下" class="headerlink" title="3. 代码如下"></a>3. 代码如下</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.sql.DriverManager;</div><div class="line"><span class="keyword">import</span> java.sql.Connection;</div><div class="line"><span class="keyword">import</span> java.sql.Statement;</div><div class="line"><span class="keyword">import</span> java.sql.ResultSet;</div><div class="line"><span class="keyword">import</span> java.sql.SQLException;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaMysqlConnection</span></span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</div><div class="line">        <span class="comment">//variables used to operate the mysql database</span></div><div class="line">        Connection connection = <span class="keyword">null</span>;</div><div class="line">        Statement statement = <span class="keyword">null</span>;</div><div class="line">        String sql = <span class="keyword">null</span>;</div><div class="line">        ResultSet resultSet = <span class="keyword">null</span>;</div><div class="line">        <span class="comment">//the information of mysql database</span></div><div class="line">        String user = <span class="string">"root"</span>;</div><div class="line">        String password = <span class="string">"root"</span>;</div><div class="line">        String url = <span class="string">"jdbc:mysql://localhost/test"</span>;</div><div class="line">        <span class="comment">//look up the mysql diriver , is it useful ?</span></div><div class="line">        <span class="keyword">try</span>&#123;</div><div class="line">            Class.forName(<span class="string">"com.mysql.jdbc.Driver"</span>);</div><div class="line">        &#125;<span class="keyword">catch</span>(ClassNotFoundException e)&#123;</div><div class="line">            System.out.println(<span class="string">"mysql driver is not ready ..."</span>);</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125;</div><div class="line">        <span class="comment">// open a mysql connection to java application</span></div><div class="line">        <span class="keyword">try</span>&#123;</div><div class="line">            connection = DriverManager.getConnection(url,user,password);<span class="comment">//url,user,password</span></div><div class="line">        &#125;<span class="keyword">catch</span>(SQLException e)&#123;</div><div class="line">            System.out.println(<span class="string">"there is sql exception when connecting ..."</span>);</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125;</div><div class="line">        <span class="comment">// operate the mysql</span></div><div class="line">        <span class="keyword">try</span>&#123;</div><div class="line">            statement = connection.createStatement();</div><div class="line">            sql = <span class="string">"select * from test"</span>;<span class="comment">//sql to execute</span></div><div class="line">            resultSet = statement.executeQuery(sql);</div><div class="line">            <span class="keyword">while</span>(resultSet.next())&#123;</div><div class="line">                System.out.println(<span class="string">"id:"</span>+resultSet.getInt(<span class="string">"id"</span>)+<span class="string">"\tname:"</span>+resultSet.getString(<span class="string">"name"</span>)+<span class="string">"\tage:"</span>+resultSet.getInt(<span class="string">"age"</span>)+<span class="string">"\tdescription:"</span>+resultSet.getString(<span class="string">"description"</span>));</div><div class="line">            &#125;</div><div class="line">        &#125;<span class="keyword">catch</span>(SQLException e)&#123;</div><div class="line">            System.out.println(<span class="string">"there is sql exception ..."</span>);</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125;</div><div class="line">        <span class="comment">// close the connection</span></div><div class="line">        <span class="keyword">try</span>&#123;</div><div class="line">        	<span class="keyword">if</span>(resultSet!=<span class="keyword">null</span>)&#123;</div><div class="line">        		resultSet.close();</div><div class="line">        		resultSet = <span class="keyword">null</span>;</div><div class="line">        	&#125;</div><div class="line">        	<span class="keyword">if</span>(statement!=<span class="keyword">null</span>)&#123;</div><div class="line">        		statement.close();</div><div class="line">        		statement = <span class="keyword">null</span>;</div><div class="line">        	&#125;</div><div class="line">        	<span class="keyword">if</span>(connection!=<span class="keyword">null</span>)&#123;</div><div class="line">        		connection.close();</div><div class="line">        		connection = <span class="keyword">null</span>;</div><div class="line">        	&#125;</div><div class="line">        &#125;<span class="keyword">catch</span>(Exception e)&#123;</div><div class="line">        	System.out.println(<span class="string">"something was wrong when closing the connection to mysql ..."</span>);</div><div class="line">        	e.printStackTrace();</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        System.out.println(<span class="string">"java connection to mysql is ending..."</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="4-insert"><a href="#4-insert" class="headerlink" title="4. insert"></a>4. insert</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sql = <span class="string">"insert into test(id, name, age, description) values(88,'sofia', 19, 'this is sofia ...')"</span>;</div><div class="line">statement.executeUpdate(sql);</div></pre></td></tr></table></figure>
+<h2 id="5-update"><a href="#5-update" class="headerlink" title="5. update"></a>5. update</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sql = <span class="string">"update test set name='tony' where id&gt;6"</span>;</div><div class="line">statement.executeUpdate(sql);</div></pre></td></tr></table></figure>
+<h2 id="6-delete"><a href="#6-delete" class="headerlink" title="6. delete"></a>6. delete</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sql = <span class="string">"delete from test where name='tony'"</span>;</div><div class="line">statement.execute(sql);</div></pre></td></tr></table></figure>
+<h2 id="7-参考"><a href="#7-参考" class="headerlink" title="7. 参考"></a>7. 参考</h2><blockquote>
+<p><a href="http://blog.sina.com.cn/s/blog_4aac0cb60100bfyg.html" target="_blank" rel="external">波纹的博客</a></p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;image-bubble&quot;&gt;
+                &lt;div class=&quot;img-lightbox&quot;&gt;
+                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
+                   
+    
+    </summary>
+    
+      <category term="java" scheme="http://kompasim.github.io/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://kompasim.github.io/tags/java/"/>
+    
+      <category term="mysql" scheme="http://kompasim.github.io/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python连接mysql</title>
+    <link href="http://kompasim.github.io/2016/05/29/python-mysql-connection/"/>
+    <id>http://kompasim.github.io/2016/05/29/python-mysql-connection/</id>
+    <published>2016-05-29T15:22:44.000Z</published>
+    <updated>2016-12-02T10:39:14.044Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://file06.16sucai.com/2015/0915/400324053708736a57a0d4fa42ee1aee.jpg" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure>
+<hr>
+<h2 id="1-安装PyMySQL"><a href="#1-安装PyMySQL" class="headerlink" title="1. 安装PyMySQL"></a>1. 安装PyMySQL</h2><blockquote>
+<p><code>$ pip install pymysql</code></p>
+<p><a href="https://github.com/PyMySQL/PyMySQL#installation" target="_blank" rel="external">github地址</a></p>
+</blockquote>
+<h2 id="2-select操作"><a href="#2-select操作" class="headerlink" title="2. select操作"></a>2. select操作</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> pymysql</div><div class="line"></div><div class="line">connection = pymysql.connect(</div><div class="line">    host=<span class="string">"localhost"</span>,</div><div class="line">    port = <span class="number">3306</span>,</div><div class="line">    user = <span class="string">"root"</span>,</div><div class="line">    password = <span class="string">"root"</span>,</div><div class="line">    db = <span class="string">"test"</span>,</div><div class="line">    charset = <span class="string">"utf8"</span></div><div class="line">)</div><div class="line"></div><div class="line">cur = connection.cursor()</div><div class="line">cur.execute(<span class="string">"select * from test"</span>)</div><div class="line"><span class="comment"># row = cur.fetchone()</span></div><div class="line"><span class="comment"># print (row)</span></div><div class="line">res = cur.fetchall()</div><div class="line"><span class="keyword">for</span> row <span class="keyword">in</span> res:</div><div class="line">    <span class="keyword">print</span> (row)</div><div class="line">connection.close()</div><div class="line"></div><div class="line">val = input(<span class="string">"press any key to exit ..."</span>)</div></pre></td></tr></table></figure>
+<h2 id="3-insert操作"><a href="#3-insert操作" class="headerlink" title="3. insert操作"></a>3. insert操作</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">with</span> connection.cursor() <span class="keyword">as</span> cur:</div><div class="line">    sql = <span class="string">"insert into test(id, name, age, description) values(11,'tony',%s,%s)"</span></div><div class="line">    cur.execute(sql, (<span class="number">30</span>, <span class="string">"this is description to tony ..."</span>))</div><div class="line"><span class="comment"># connection is not autocommit by default.</span></div><div class="line"><span class="comment"># So you must commit to save your changes.</span></div><div class="line">connection.commit()</div></pre></td></tr></table></figure>
+<h2 id="4-错误处理"><a href="#4-错误处理" class="headerlink" title="4. 错误处理"></a>4. 错误处理</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># open the connection</span></div><div class="line"><span class="comment"># connection = pymysql.connect()</span></div><div class="line"><span class="keyword">try</span>:</div><div class="line">    <span class="comment"># with connection.cursor() as cursor:</span></div><div class="line">    <span class="comment"># do something with cursor</span></div><div class="line"><span class="keyword">finally</span>:</div><div class="line">    <span class="comment"># close the conection</span></div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;image-bubble&quot;&gt;
+                &lt;div class=&quot;img-lightbox&quot;&gt;
+                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
+                   
+    
+    </summary>
+    
+      <category term="python" scheme="http://kompasim.github.io/categories/python/"/>
+    
+    
+      <category term="mysql" scheme="http://kompasim.github.io/tags/mysql/"/>
+    
+      <category term="python" scheme="http://kompasim.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python模块tkinter的events</title>
+    <link href="http://kompasim.github.io/2016/05/11/python-tkinter-events/"/>
+    <id>http://kompasim.github.io/2016/05/11/python-tkinter-events/</id>
+    <published>2016-05-11T14:44:38.000Z</published>
+    <updated>2016-12-02T10:39:14.044Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://file02.16sucai.com/d/file/2014/1027/6d97254929a822722ecbbdc8c41016e3.jpg" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure>
+<p><a href="http://effbot.org/tkinterbook/tkinter-index.htm" target="_blank" rel="external">原文</a></p>
+<h2 id="1-event-binding"><a href="#1-event-binding" class="headerlink" title="1. event binding"></a>1. event binding</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> Tkinter <span class="keyword">import</span> *</div><div class="line"></div><div class="line">root = Tk()</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">key</span><span class="params">(event)</span>:</span></div><div class="line">    <span class="keyword">print</span> <span class="string">"pressed"</span>, repr(event.char)</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">callback</span><span class="params">(event)</span>:</span></div><div class="line">    frame.focus_set()</div><div class="line">    <span class="keyword">print</span> <span class="string">"clicked at"</span>, event.x, event.y</div><div class="line"></div><div class="line">frame = Frame(root, width=<span class="number">100</span>, height=<span class="number">100</span>)</div><div class="line">frame.bind(<span class="string">"&lt;Key&gt;"</span>, key)</div><div class="line">frame.bind(<span class="string">"&lt;Button-1&gt;"</span>, callback)</div><div class="line">frame.pack()</div><div class="line"></div><div class="line">root.mainloop()</div></pre></td></tr></table></figure>
+<h2 id="2-events"><a href="#2-events" class="headerlink" title="2. events"></a>2. events</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;Button<span class="number">-1</span>&gt;</div><div class="line">&lt;B1-Motion&gt;</div><div class="line">&lt;ButtonRelease<span class="number">-1</span>&gt;</div><div class="line">&lt;Double-Button<span class="number">-1</span>&gt;</div><div class="line">&lt;Enter&gt;</div><div class="line">&lt;Leave&gt;</div><div class="line">&lt;FocusIn&gt;</div><div class="line">&lt;FocusOut&gt;</div><div class="line">&lt;Return&gt;</div><div class="line">&lt;Key&gt;</div><div class="line">a <span class="comment"># The user typed an “a”.</span></div><div class="line">&lt;Shift-Up&gt; <span class="comment"># The user pressed the Up arrow, while holding the Shift key pressed.</span></div><div class="line">&lt;Configure&gt; <span class="comment"># The widget changed size (or location, on some platforms)</span></div></pre></td></tr></table></figure>
+<h2 id="1-event-object"><a href="#1-event-object" class="headerlink" title="1. event object"></a>1. event object</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># get the event object</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">key</span><span class="params">(event)</span>:</span></div><div class="line">    <span class="keyword">print</span> <span class="string">"pressed"</span>, repr(event.char)</div><div class="line">    <span class="keyword">print</span> <span class="string">"clicked at"</span>, event.x, event.y</div><div class="line"><span class="comment"># attributes</span></div><div class="line">widget</div><div class="line">x, y</div><div class="line">x_root, y_root</div><div class="line">char</div><div class="line">keysym</div><div class="line">keycode</div><div class="line">num</div><div class="line">width, height</div><div class="line">type</div></pre></td></tr></table></figure>
+<hr>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;image-bubble&quot;&gt;
+                &lt;div class=&quot;img-lightbox&quot;&gt;
+                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
+                   
+    
+    </summary>
+    
+      <category term="python" scheme="http://kompasim.github.io/categories/python/"/>
+    
+    
+      <category term="python" scheme="http://kompasim.github.io/tags/python/"/>
+    
+      <category term="tkinter" scheme="http://kompasim.github.io/tags/tkinter/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python模块tkinter的widget讲解</title>
+    <link href="http://kompasim.github.io/2016/05/11/python-tkinter-widget/"/>
+    <id>http://kompasim.github.io/2016/05/11/python-tkinter-widget/</id>
+    <published>2016-05-11T14:34:40.000Z</published>
+    <updated>2016-12-02T10:39:14.046Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://file01.16sucai.com/d/file/2014-01-10/13893592782946.jpg" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure>
+<p><a href="http://effbot.org/tkinterbook/tkinter-index.htm" target="_blank" rel="external">原文</a></p>
+<h2 id="1-options"><a href="#1-options" class="headerlink" title="1. options"></a>1. options</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">val = cget(“option”) =&gt; string</div><div class="line">config(option=value, …)</div><div class="line">configure(option=value, …)</div><div class="line">val = elem["option"]</div><div class="line">elem["option"] = "value"</div><div class="line">button = Button(frame, &#123;"text": "QUIT", "fg": "red", "command": frame.quit&#125;)</div></pre></td></tr></table></figure>
+<h2 id="2-print-the-method-and-options"><a href="#2-print-the-method-and-options" class="headerlink" title="2. print the method and options"></a>2. print the method and options</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">print</span> (elem.keys())</div><div class="line"><span class="keyword">print</span> (dir(elem))</div></pre></td></tr></table></figure>
+<h2 id="3-styling"><a href="#3-styling" class="headerlink" title="3. styling"></a>3. styling</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">rgb = widget.winfo_rgb(<span class="string">"red"</span>)</div><div class="line">red, green, blue = rgb[<span class="number">0</span>]/<span class="number">256</span>, rgb[<span class="number">1</span>]/<span class="number">256</span>, rgb[<span class="number">2</span>]/<span class="number">256</span></div></pre></td></tr></table></figure>
+<h2 id="3-fonts"><a href="#3-fonts" class="headerlink" title="3. fonts"></a>3. fonts</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">(<span class="string">"Times"</span>, <span class="number">10</span>, <span class="string">"bold"</span>)</div><div class="line">(<span class="string">"Helvetica"</span>, <span class="number">10</span>, <span class="string">"bold italic"</span>)</div><div class="line">(<span class="string">"Symbol"</span>, <span class="number">8</span>)</div><div class="line"><span class="string">"Times 10 bold"</span></div><div class="line"><span class="string">"Helvetica 10 bold italic"</span></div><div class="line"><span class="string">"Symbol 8"</span></div><div class="line"><span class="comment"># tkFont module</span></div><div class="line">tkFont.Font(family=<span class="string">"Times"</span>, size=<span class="number">10</span>, weight=tkFont.BOLD)</div><div class="line">tkFont.Font(family=<span class="string">"Helvetica"</span>, size=<span class="number">10</span>, weight=tkFont.BOLD,</div><div class="line">            slant=tkFont.ITALIC)</div><div class="line">tkFont.Font(family=<span class="string">"Symbol"</span>, size=<span class="number">8</span>)</div></pre></td></tr></table></figure>
+<h2 id="4-Text-Formatting"><a href="#4-Text-Formatting" class="headerlink" title="4. Text Formatting"></a>4. Text Formatting</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">justify =  <span class="comment"># option to LEFT or RIGHT. The default value is CENTER.</span></div><div class="line">wraplength = <span class="comment"># option to set a maximum width,</span></div></pre></td></tr></table></figure>
+<h2 id="1-border"><a href="#1-border" class="headerlink" title="1. border"></a>1. border</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">borderwidth (<span class="keyword">or</span> bd)</div><div class="line">relief = <span class="comment"># SUNKEN, RAISED, GROOVE, RIDGE, and FLAT.</span></div><div class="line"><span class="comment"># Focus Highlights #</span></div><div class="line">highlightcolor</div><div class="line">highlightbackground</div><div class="line">highlightthickness</div></pre></td></tr></table></figure>
+<h2 id="1-cursor"><a href="#1-cursor" class="headerlink" title="1. cursor"></a>1. cursor</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;image-bubble&quot;&gt;
+                &lt;div class=&quot;img-lightbox&quot;&gt;
+                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
+                   
+    
+    </summary>
+    
+      <category term="python" scheme="http://kompasim.github.io/categories/python/"/>
+    
+    
+      <category term="python" scheme="http://kompasim.github.io/tags/python/"/>
+    
+      <category term="tkinter" scheme="http://kompasim.github.io/tags/tkinter/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python-tkinter-menu</title>
+    <link href="http://kompasim.github.io/2016/05/11/python-tkinter-menu/"/>
+    <id>http://kompasim.github.io/2016/05/11/python-tkinter-menu/</id>
+    <published>2016-05-11T05:31:33.000Z</published>
+    <updated>2016-12-02T10:39:14.045Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://file01.16sucai.com/d/file/2013-12-06/1386321381392.jpg" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure>
+<p><a href="http://effbot.org/tkinterbook/tkinter-index.htm" target="_blank" rel="external">原文</a></p>
+<h2 id="1-Menubutton"><a href="#1-Menubutton" class="headerlink" title="1. Menubutton"></a>1. Menubutton</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">mb = tkinter.Menubutton(</div><div class="line">    root,</div><div class="line">    bg = <span class="string">"red"</span></div><div class="line">)</div><div class="line">mb.pack()</div></pre></td></tr></table></figure>
+<h2 id="2-Menu"><a href="#2-Menu" class="headerlink" title="2.Menu"></a>2.Menu</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello</span><span class="params">()</span>:</span></div><div class="line">    <span class="keyword">print</span> (<span class="string">"hello ..."</span>)</div><div class="line">m = tkinter.Menu(</div><div class="line">    root</div><div class="line">)</div><div class="line">m.add_command(label = <span class="string">"one"</span>,command = hello)</div><div class="line">m.add_command(label = <span class="string">"two"</span>,command = hello)</div><div class="line">root.config(menu = m)</div></pre></td></tr></table></figure>
+<h2 id="3-Menu"><a href="#3-Menu" class="headerlink" title="3. Menu"></a>3. Menu</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello</span><span class="params">()</span>:</span></div><div class="line">    <span class="keyword">print</span> (<span class="string">"hello!"</span>)</div><div class="line"></div><div class="line">menubar = tkinter.Menu(root)</div><div class="line"></div><div class="line"><span class="comment"># create a pulldown menu, and add it to the menu bar</span></div><div class="line">filemenu = tkinter.Menu(menubar, tearoff=<span class="number">0</span>)</div><div class="line">filemenu.add_command(label=<span class="string">"Open"</span>, command=hello)</div><div class="line">filemenu.add_command(label=<span class="string">"Save"</span>, command=hello)</div><div class="line">filemenu.add_separator()</div><div class="line">filemenu.add_command(label=<span class="string">"Exit"</span>, command=root.quit)</div><div class="line">menubar.add_cascade(label=<span class="string">"File"</span>, menu=filemenu)</div><div class="line"></div><div class="line"><span class="comment"># create more pulldown menus</span></div><div class="line">editmenu = tkinter.Menu(menubar, tearoff=<span class="number">0</span>)</div><div class="line">editmenu.add_command(label=<span class="string">"Cut"</span>, command=hello)</div><div class="line">editmenu.add_command(label=<span class="string">"Copy"</span>, command=hello)</div><div class="line">editmenu.add_command(label=<span class="string">"Paste"</span>, command=hello)</div><div class="line">menubar.add_cascade(label=<span class="string">"Edit"</span>, menu=editmenu)</div><div class="line"></div><div class="line">helpmenu = tkinter.Menu(menubar, tearoff=<span class="number">0</span>)</div><div class="line">helpmenu.add_command(label=<span class="string">"About"</span>, command=hello)</div><div class="line">menubar.add_cascade(label=<span class="string">"Help"</span>, menu=helpmenu)</div><div class="line"></div><div class="line"><span class="comment"># display the menu</span></div><div class="line">root.config(menu=menubar)</div></pre></td></tr></table></figure>
+<h2 id="4-context-menu"><a href="#4-context-menu" class="headerlink" title="4. context menu"></a>4. context menu</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello</span><span class="params">()</span>:</span></div><div class="line">    <span class="keyword">print</span> (<span class="string">"hello!"</span>)</div><div class="line"></div><div class="line"><span class="comment"># create a popup menu</span></div><div class="line">menu = tkinter.Menu(root, tearoff=<span class="number">0</span>)</div><div class="line">menu.add_command(label=<span class="string">"Undo"</span>, command=hello)</div><div class="line">menu.add_command(label=<span class="string">"Redo"</span>, command=hello)</div><div class="line"></div><div class="line"><span class="comment"># create a canvas</span></div><div class="line">frame = tkinter.Frame(root, width=<span class="number">212</span>, height=<span class="number">212</span>)</div><div class="line">frame.pack()</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">popup</span><span class="params">(event)</span>:</span></div><div class="line">    menu.post(event.x_root, event.y_root)</div><div class="line"></div><div class="line"><span class="comment"># attach popup to canvas</span></div><div class="line">frame.bind(<span class="string">"&lt;Button-3&gt;"</span>, popup)</div></pre></td></tr></table></figure>
+<h2 id="4-menu-update"><a href="#4-menu-update" class="headerlink" title="4. menu update"></a>4. menu update</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">counter = <span class="number">0</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">update</span><span class="params">()</span>:</span></div><div class="line">    <span class="keyword">global</span> counter</div><div class="line">    counter = counter + <span class="number">1</span></div><div class="line">    menu.entryconfig(<span class="number">0</span>, label=str(counter))</div><div class="line"></div><div class="line">root = Tk()</div><div class="line"></div><div class="line">menubar = Menu(root)</div><div class="line"></div><div class="line">menu = Menu(menubar, tearoff=<span class="number">0</span>, postcommand=update)</div><div class="line">menu.add_command(label=str(counter))</div><div class="line">menu.add_command(label=<span class="string">"Exit"</span>, command=root.quit)</div><div class="line"></div><div class="line">menubar.add_cascade(label=<span class="string">"Test"</span>, menu=menu)</div><div class="line"></div><div class="line">root.config(menu=menubar)</div></pre></td></tr></table></figure>
+<h2 id="5-methods"><a href="#5-methods" class="headerlink" title="5. methods"></a>5. methods</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">Menu(master=<span class="keyword">None</span>, **options)</div><div class="line">__init__(master=<span class="keyword">None</span>, **options) [<span class="comment">#]</span></div><div class="line">activate(index) [<span class="comment">#]</span></div><div class="line">add(type, **options) [<span class="comment">#]</span></div><div class="line">add_cascade(**options) [<span class="comment">#]</span></div><div class="line">add_checkbutton(**options) [<span class="comment">#]</span></div><div class="line">add_command(**options) [<span class="comment">#]</span></div><div class="line">add_radiobutton(**options) [<span class="comment">#]</span></div><div class="line">add_separator(**options) [<span class="comment">#]</span></div><div class="line">config(**options) [<span class="comment">#]</span></div><div class="line">delete(index1, index2=<span class="keyword">None</span>) [<span class="comment">#]</span></div><div class="line">entrycget(index, option) [<span class="comment">#]</span></div><div class="line">entryconfig(index, **options) [<span class="comment">#]</span></div><div class="line">entryconfigure(index, **options) [<span class="comment">#]</span></div><div class="line">index(index) [<span class="comment">#]</span></div><div class="line">insert(index, itemType, **options) [<span class="comment">#]</span></div><div class="line">insert_cascade(index, **options) [<span class="comment">#]</span></div><div class="line">insert_checkbutton(index, **options) [<span class="comment">#]</span></div><div class="line">insert_command(index, **options) [<span class="comment">#]</span></div><div class="line">insert_radiobutton(index, **options) [<span class="comment">#]</span></div><div class="line">insert_separator(index, **options) [<span class="comment">#]</span></div><div class="line">invoke(index) [<span class="comment">#]</span></div><div class="line">post(x, y) [<span class="comment">#]</span></div><div class="line">type(index) [<span class="comment">#]</span></div><div class="line">unpost() [<span class="comment">#]</span></div><div class="line">yposition(index) [<span class="comment">#]</span></div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;image-bubble&quot;&gt;
+                &lt;div class=&quot;img-lightbox&quot;&gt;
+                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
+                   
+    
+    </summary>
+    
+      <category term="python" scheme="http://kompasim.github.io/categories/python/"/>
+    
+    
+      <category term="python" scheme="http://kompasim.github.io/tags/python/"/>
+    
+      <category term="tkinter" scheme="http://kompasim.github.io/tags/tkinter/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python模块tkinter的图片运用</title>
+    <link href="http://kompasim.github.io/2016/05/11/python-tkinter-images/"/>
+    <id>http://kompasim.github.io/2016/05/11/python-tkinter-images/</id>
+    <published>2016-05-11T05:31:24.000Z</published>
+    <updated>2016-12-02T10:39:14.044Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://file02.16sucai.com/d/file/2015/0108/478675ccdf00ff2ee550021ae0f478ef.jpg" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure>
+<p><a href="http://effbot.org/tkinterbook/tkinter-index.htm" target="_blank" rel="external">原文</a></p>
+<h2 id="1-PhotoImage"><a href="#1-PhotoImage" class="headerlink" title="1. PhotoImage"></a>1. PhotoImage</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># The PhotoImage class can read GIF and PGM/PPM images from files:</span></div><div class="line">photo = PhotoImage(file=<span class="string">"image.gif"</span>)</div><div class="line"><span class="comment"># base64</span></div><div class="line">photo = <span class="string">"""</span></div><div class="line">R0lGODdhEAAQAIcAAAAAAAEBAQICAgMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgsLCwwMDA0NDQ4O</div><div class="line">Dg8PDxAQEBERERISEhMTExQUFBUVFRYWFhcXFxgYGBkZGRoaGhsbGxwcHB0dHR4eHh8fHyAgICEh</div><div class="line">...</div><div class="line">AfjHtq1bAP/i/gPwry4AAP/yAtj77x+Af4ABAwDwrzAAAP8SA/j3DwCAfwAA/JsM4J/lfwD+/QMA</div><div class="line">4B8AAP9Ci/4HoLTpfwD+qV4NoHVAADs=</div><div class="line">"""</div><div class="line">photo = PhotoImage(data=photo)</div><div class="line"><span class="comment"># If you need to work with other file formats, the Python Imaging Library (PIL) contains classes that lets you load images in over 30 formats, and convert them to Tkinter-compatible image objects:</span></div><div class="line"></div><div class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image, ImageTk</div><div class="line">image = Image.open(<span class="string">"lenna.jpg"</span>)</div><div class="line">photo = ImageTk.PhotoImage(image)</div></pre></td></tr></table></figure>
+<h2 id="2-BitmapImage"><a href="#2-BitmapImage" class="headerlink" title="2. BitmapImage"></a>2. BitmapImage</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># base64</span></div><div class="line">BITMAP = <span class="string">"""</span></div><div class="line">#define im_width 32</div><div class="line">#define im_height 32</div><div class="line">static char im_bits[] = &#123;</div><div class="line">0xaf,0x6d,0xeb,0xd6,0x55,0xdb,0xb6,0x2f,</div><div class="line">0xaf,0xaa,0x6a,0x6d,0x55,0x7b,0xd7,0x1b,</div><div class="line">0xad,0xd6,0xb5,0xae,0xad,0x55,0x6f,0x05,</div><div class="line">0xad,0xba,0xab,0xd6,0xaa,0xd5,0x5f,0x93,</div><div class="line">0xad,0x76,0x7d,0x67,0x5a,0xd5,0xd7,0xa3,</div><div class="line">0xad,0xbd,0xfe,0xea,0x5a,0xab,0x69,0xb3,</div><div class="line">0xad,0x55,0xde,0xd8,0x2e,0x2b,0xb5,0x6a,</div><div class="line">0x69,0x4b,0x3f,0xb4,0x9e,0x92,0xb5,0xed,</div><div class="line">0xd5,0xca,0x9c,0xb4,0x5a,0xa1,0x2a,0x6d,</div><div class="line">0xad,0x6c,0x5f,0xda,0x2c,0x91,0xbb,0xf6,</div><div class="line">0xad,0xaa,0x96,0xaa,0x5a,0xca,0x9d,0xfe,</div><div class="line">0x2c,0xa5,0x2a,0xd3,0x9a,0x8a,0x4f,0xfd,</div><div class="line">0x2c,0x25,0x4a,0x6b,0x4d,0x45,0x9f,0xba,</div><div class="line">0x1a,0xaa,0x7a,0xb5,0xaa,0x44,0x6b,0x5b,</div><div class="line">0x1a,0x55,0xfd,0x5e,0x4e,0xa2,0x6b,0x59,</div><div class="line">0x9a,0xa4,0xde,0x4a,0x4a,0xd2,0xf5,0xaa</div><div class="line">&#125;;</div><div class="line">"""</div><div class="line">bitmap = BitmapImage(data=BITMAP)</div><div class="line">bitmap = BitmapImage(</div><div class="line">    data=BITMAP,</div><div class="line">    foreground=<span class="string">"white"</span>,</div><div class="line">    background=<span class="string">"black"</span>,</div><div class="line">    maskdata=MASK_BITMAP</div><div class="line">)</div><div class="line"><span class="comment"># file</span></div><div class="line">bitmap = BitmapImage(file=<span class="string">"bitmap.xbm"</span>)</div><div class="line"><span class="comment"># bitmap config</span></div><div class="line">bitmap.config(foreground=<span class="string">"blue"</span>)</div><div class="line">bitmap[<span class="string">"foreground"</span>] = <span class="string">"red"</span></div><div class="line"><span class="keyword">print</span> bitmap[<span class="string">"foreground"</span>]</div></pre></td></tr></table></figure>
+<h2 id="3-usage"><a href="#3-usage" class="headerlink" title="3. usage"></a>3. usage</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># photo</span></div><div class="line">label = Label(image=photo)</div><div class="line">label.image = photo <span class="comment"># keep a reference!</span></div><div class="line">label.pack()</div><div class="line"><span class="comment"># bitmap</span></div><div class="line">label = Label(image=bitmap)</div><div class="line">label.pack()</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;image-bubble&quot;&gt;
+                &lt;div class=&quot;img-lightbox&quot;&gt;
+                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
+                   
+    
+    </summary>
+    
+      <category term="python" scheme="http://kompasim.github.io/categories/python/"/>
+    
+    
+      <category term="python" scheme="http://kompasim.github.io/tags/python/"/>
+    
+      <category term="tkinter" scheme="http://kompasim.github.io/tags/tkinter/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python模块tkinter的variable</title>
+    <link href="http://kompasim.github.io/2016/05/11/python-tkinter-variables/"/>
+    <id>http://kompasim.github.io/2016/05/11/python-tkinter-variables/</id>
+    <published>2016-05-11T05:31:15.000Z</published>
+    <updated>2016-12-02T10:39:14.046Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://file01.16sucai.com/d/file/2014-01-20/13901972045057.jpg" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure>
+<p><a href="http://effbot.org/tkinterbook/tkinter-index.htm" target="_blank" rel="external">原文</a></p>
+<h2 id="1-type"><a href="#1-type" class="headerlink" title="1. type"></a>1. type</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># The Variable Classes</span></div><div class="line">BooleanVar</div><div class="line">DoubleVar</div><div class="line">IntVar</div><div class="line">StringVar</div></pre></td></tr></table></figure>
+<h2 id="2-usage"><a href="#2-usage" class="headerlink" title="2. usage"></a>2. usage</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">val = StringVar()</div><div class="line">label = Label(text = <span class="string">"text..."</span>,textvariable = val)</div></pre></td></tr></table></figure>
+<h2 id="3-methods"><a href="#3-methods" class="headerlink" title="3. methods"></a>3. methods</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># value</span></div><div class="line">value = val.get()</div><div class="line">val.set(<span class="string">"new text ..."</span>)</div><div class="line"><span class="comment"># other</span></div><div class="line"><span class="comment"># mode is one of the "w","u","r"</span></div><div class="line">trace(mode, callback)</div><div class="line">trace_variable(mode, callback)</div><div class="line">trace_vdelete(mode, observer name)</div><div class="line">trace_vinfo()</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;image-bubble&quot;&gt;
+                &lt;div class=&quot;img-lightbox&quot;&gt;
+                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
+                   
+    
+    </summary>
+    
+      <category term="python" scheme="http://kompasim.github.io/categories/python/"/>
+    
+    
+      <category term="python" scheme="http://kompasim.github.io/tags/python/"/>
+    
+      <category term="tkinter" scheme="http://kompasim.github.io/tags/tkinter/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python模块tkinter的window-methods</title>
+    <link href="http://kompasim.github.io/2016/05/11/python-tkinter-window-methods/"/>
+    <id>http://kompasim.github.io/2016/05/11/python-tkinter-window-methods/</id>
+    <published>2016-05-11T05:30:35.000Z</published>
+    <updated>2016-12-02T10:39:14.046Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://file02.16sucai.com/d/file/2014/0712/60767b70bd8a9a4d11d20725abcfe055.jpg" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure>
+<p><a href="http://effbot.org/tkinterbook/tkinter-index.htm" target="_blank" rel="external">原文</a></p>
+<h2 id="1-args"><a href="#1-args" class="headerlink" title="1. args"></a>1. args</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">attributes(*args) <span class="comment"># Sets or gets window attributes.</span></div><div class="line"><span class="comment"># args</span></div><div class="line">alpha=</div><div class="line">disabled=</div><div class="line">modified=</div><div class="line">titlepath=</div><div class="line">toolwindow=</div><div class="line">topmost=</div></pre></td></tr></table></figure>
+<h2 id="2-methods"><a href="#2-methods" class="headerlink" title="2. methods"></a>2. methods</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">client(name=None) [#]</div><div class="line">colormapwindows(*wlist) [#]</div><div class="line">command(value=None)</div><div class="line">deiconify()</div><div class="line">iconify()</div><div class="line">iconname(newName=None) [#]</div><div class="line">iconmask(bitmap=None) [#]</div><div class="line">iconposition(x=None, y=None) [#]</div><div class="line">iconwindow(window=None) [#]</div><div class="line">geometry(geometry=None) [#]</div><div class="line">resizable(width=None, height=None) [#]</div><div class="line">iconbitmap(bitmap=None) [#]</div><div class="line">maxsize(width=None, height=None) [#]</div><div class="line">minsize(width=None, height=None) [#]</div><div class="line">overrideredirect(flag=None) [#]</div><div class="line">positionfrom(who=None) [#]</div><div class="line">sizefrom(who=None) [#]</div><div class="line">state(newstate=None) [#] iconic,withdraw,icon,normal</div><div class="line">title(string=None) [#]</div><div class="line">withdraw() [#] # Removes the window from the screen (without destroying it). To redraw the window, use deiconify.</div></pre></td></tr></table></figure>
+<hr>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;image-bubble&quot;&gt;
+                &lt;div class=&quot;img-lightbox&quot;&gt;
+                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
+                   
+    
+    </summary>
+    
+      <category term="python" scheme="http://kompasim.github.io/categories/python/"/>
+    
+    
+      <category term="python" scheme="http://kompasim.github.io/tags/python/"/>
+    
+      <category term="tkinter" scheme="http://kompasim.github.io/tags/tkinter/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python模块tkinter的komponent-methods</title>
+    <link href="http://kompasim.github.io/2016/05/11/python-tkinter-komponent-methods/"/>
+    <id>http://kompasim.github.io/2016/05/11/python-tkinter-komponent-methods/</id>
+    <published>2016-05-11T05:30:23.000Z</published>
+    <updated>2016-12-02T10:39:14.045Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://file06.16sucai.com/2016/0419/f5af1a43f2eb5fa68c3b84f6d8dc7b24.jpg" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure>
+<p><a href="http://effbot.org/tkinterbook/tkinter-index.htm" target="_blank" rel="external">原文</a></p>
+<h2 id="1-configure"><a href="#1-configure" class="headerlink" title="1. configure"></a>1. configure</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">w.config(option=value)</div><div class="line">value = w.cget(<span class="string">"option"</span>)</div><div class="line">k = w.keys()</div></pre></td></tr></table></figure>
+<h2 id="2-Event-processing"><a href="#2-Event-processing" class="headerlink" title="2. Event processing"></a>2. Event processing</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">mainloop()</div><div class="line">w.mainloop()</div><div class="line">w.quit()</div><div class="line">w.wait_variable(var)</div><div class="line">w.wait_visibility(window)</div><div class="line">w.wait_window(window)</div><div class="line">w.update()</div><div class="line">w.update_idletasks()</div></pre></td></tr></table></figure>
+<h2 id="3-Event-callbacks"><a href="#3-Event-callbacks" class="headerlink" title="3. Event callbacks"></a>3. Event callbacks</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">w.bind(event, callback)</div><div class="line">w.unbind(event)</div><div class="line">w.bind_class(event, callback)</div><div class="line">w.bindtags()</div><div class="line">w.bindtags(tags)</div></pre></td></tr></table></figure>
+<h2 id="4-Alarm-handlers-and-other-non-event-callbacks"><a href="#4-Alarm-handlers-and-other-non-event-callbacks" class="headerlink" title="4. Alarm handlers and other non-event callbacks"></a>4. Alarm handlers and other non-event callbacks</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">id = w.after(time, callback)</div><div class="line">id = w.after_idle(callback)</div><div class="line">w.after_cancel(id)</div></pre></td></tr></table></figure>
+<h2 id="5-Window-management"><a href="#5-Window-management" class="headerlink" title="5. Window management"></a>5. Window management</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">w.lift()</div><div class="line">w.lower()</div></pre></td></tr></table></figure>
+<h2 id="6-Window-related-information"><a href="#6-Window-related-information" class="headerlink" title="6. Window-related information"></a>6. Window-related information</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">w.winfo_width(), w.winfo_height()</div><div class="line">w.winfo_reqwidth(), w.winfo_reqheight()</div><div class="line">w.winfo_id()</div></pre></td></tr></table></figure>
+<h2 id="7-The-option-database"><a href="#7-The-option-database" class="headerlink" title="7. The option database"></a>7. The option database</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">w.option_add(pattern, value)</div><div class="line">w.option_get(name, <span class="class"><span class="keyword">class</span>)</span></div></pre></td></tr></table></figure>
+<h2 id="8-window"><a href="#8-window" class="headerlink" title="8. window"></a>8. window</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">destroy()</div><div class="line">winfo_rooty() [<span class="comment">#]</span></div><div class="line">winfo_rootx() [<span class="comment">#]</span></div><div class="line">winfo_rgb(color) [<span class="comment">#]</span></div><div class="line">winfo_screen() [<span class="comment">#]</span></div><div class="line">winfo_screencells() [<span class="comment">#]</span></div><div class="line">winfo_screendepth() [<span class="comment">#]</span></div><div class="line">winfo_screenheight() [<span class="comment">#]</span></div><div class="line">winfo_screenmmheight() [<span class="comment">#]</span></div><div class="line">winfo_screenmmwidth() [<span class="comment">#]</span></div><div class="line">winfo_screenvisual() [<span class="comment">#]</span></div><div class="line">winfo_screenwidth() [<span class="comment">#]</span></div><div class="line">winfo_viewable() [<span class="comment">#]</span></div><div class="line">winfo_vrootheight() [<span class="comment">#]</span></div><div class="line">winfo_vrootwidth() [<span class="comment">#]</span></div><div class="line">winfo_vrootx() [<span class="comment">#]</span></div><div class="line">winfo_vrooty() [<span class="comment">#]</span></div><div class="line">winfo_width() [<span class="comment">#]</span></div><div class="line">winfo_x() [<span class="comment">#]</span></div><div class="line">winfo_y() [<span class="comment">#]</span></div></pre></td></tr></table></figure>
+<h2 id="9-clipboard"><a href="#9-clipboard" class="headerlink" title="9. clipboard"></a>9. clipboard</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">clipboard_append(string, **options) [<span class="comment">#]</span></div><div class="line">clipboard_clear(**options) [<span class="comment">#]</span></div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;image-bubble&quot;&gt;
+                &lt;div class=&quot;img-lightbox&quot;&gt;
+                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
+                   
+    
+    </summary>
+    
+      <category term="python" scheme="http://kompasim.github.io/categories/python/"/>
+    
+    
+      <category term="python" scheme="http://kompasim.github.io/tags/python/"/>
+    
+      <category term="tkinter" scheme="http://kompasim.github.io/tags/tkinter/"/>
+    
+  </entry>
+  
+</feed>

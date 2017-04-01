@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>python模块tkinter的常用控件2 | Kompasim | Personal technology blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="python,tkinter">
+    <meta name="description" content="demo
+            
+原文
+1. Message123456# .config(**options)message = tkinter.Message(    root,    text = &quot;mes">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python模块tkinter的常用控件2">
+<meta property="og:url" content="http://kompasim.github.io/2016/05/11/python-tkinter-komponents-two/index.html">
+<meta property="og:site_name" content="Kompasim">
+<meta property="og:description" content="demo
+            
+原文
+1. Message123456# .config(**options)message = tkinter.Message(    root,    text = &quot;mes">
+<meta property="og:image" content="http://file06.16sucai.com/2016/0424/b25d1dd5abefe3ac4e3fa60c47b4bfa6.jpg">
+<meta property="og:updated_time" content="2016-12-02T10:39:14.045Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python模块tkinter的常用控件2">
+<meta name="twitter:description" content="demo
+            
+原文
+1. Message123456# .config(**options)message = tkinter.Message(    root,    text = &quot;mes">
+<meta name="twitter:image" content="http://file06.16sucai.com/2016/0424/b25d1dd5abefe3ac4e3fa60c47b4bfa6.jpg">
+    
+        <link rel="alternative" href="/atom.xml" title="Kompasim" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@1.5.2/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">alimjan</h5>
+          <a href="mailto:kompasim@163.com" title="kompasim@163.com" class="mail">kompasim@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                HOME
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/kompasim" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://stackoverflow.com/users/6213502/kompasim" target="_blank" >
+                <i class="icon icon-lg icon-stack-overflow"></i>
+                Stack Overflow
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://segmentfault.com/u/kompasim" target="_blank" >
+                <i class="icon icon-lg icon-link"></i>
+                segmentfault
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">python模块tkinter的常用控件2</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">python模块tkinter的常用控件2</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2016-05-11T04:09:58.000Z" itemprop="datePublished" class="page-time">
+  2016-05-11
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/python/">python</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-Message"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. Message</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-OptionMenu"><span class="post-toc-number">2.</span> <span class="post-toc-text">2. OptionMenu</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-LabelFrame"><span class="post-toc-number">3.</span> <span class="post-toc-text">3. LabelFrame</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#4-Scale"><span class="post-toc-number"></span> <span class="post-toc-text">4. Scale</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-Scrollbar"><span class="post-toc-number">1.</span> <span class="post-toc-text">5. Scrollbar</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-Spinbox"><span class="post-toc-number">2.</span> <span class="post-toc-text">6. Spinbox</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-Toplevel"><span class="post-toc-number">3.</span> <span class="post-toc-text">7. Toplevel</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-tkMessageBox"><span class="post-toc-number">4.</span> <span class="post-toc-text">8. tkMessageBox</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-python-tkinter-komponents-two"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">python模块tkinter的常用控件2</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2016年05月11日 12:09" datetime="2016-05-11T04:09:58.000Z"  itemprop="datePublished">2016-05-11</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/python/">python</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://file06.16sucai.com/2016/0424/b25d1dd5abefe3ac4e3fa60c47b4bfa6.jpg" alt="demo" title="">
+                </div>
+                <div class="image-caption">demo</div>
+            </figure>
+<p><a href="http://effbot.org/tkinterbook/tkinter-index.htm" target="_blank" rel="external">原文</a></p>
+<h2 id="1-Message"><a href="#1-Message" class="headerlink" title="1. Message"></a>1. Message</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># .config(**options)</span></div><div class="line">message = tkinter.Message(</div><div class="line">    root,</div><div class="line">    text = <span class="string">"message is similar to label without image"</span></div><div class="line">)</div><div class="line">message.pack()</div></pre></td></tr></table></figure>
+<h2 id="2-OptionMenu"><a href="#2-OptionMenu" class="headerlink" title="2. OptionMenu"></a>2. OptionMenu</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var = tkinter.StringVar(root)</div><div class="line">optionMenu = tkinter.OptionMenu(root, var, <span class="string">"one"</span>, <span class="string">"two"</span>, <span class="string">"three"</span>)</div><div class="line">optionMenu.pack()</div><div class="line"><span class="comment"># print (optionMenu.keys())</span></div><div class="line"><span class="comment"># print (dir(optionMenu))</span></div></pre></td></tr></table></figure>
+<h2 id="3-LabelFrame"><a href="#3-LabelFrame" class="headerlink" title="3. LabelFrame"></a>3. LabelFrame</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">group = tkinter.LabelFrame(</div><div class="line">    root,</div><div class="line">    text = <span class="string">"group box"</span>,</div><div class="line">    padx = <span class="number">10</span>,</div><div class="line">    pady = <span class="number">10</span></div><div class="line">).pack()</div><div class="line">entry = tkinter.Entry(</div><div class="line">    root</div><div class="line">).pack()</div><div class="line"><span class="comment"># as a view group</span></div></pre></td></tr></table></figure>
+<h1 id="4-Scale"><a href="#4-Scale" class="headerlink" title="4. Scale"></a>4. Scale</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">s = tkinter.Scale( <span class="comment"># a slider</span></div><div class="line">    root,</div><div class="line">    from_ = <span class="number">10</span>,</div><div class="line">    to = <span class="number">20</span>,</div><div class="line">    orient = <span class="string">"vertical"</span>, <span class="comment"># horizontal</span></div><div class="line">    resolution = <span class="number">2</span> <span class="comment"># the step ,use -1 to disable rounding.</span></div><div class="line">    <span class="comment"># digits =</span></div><div class="line">    <span class="comment"># label =</span></div><div class="line">    <span class="comment"># repeatinterval = # Default value is 100.</span></div><div class="line">    <span class="comment"># showvalue =</span></div><div class="line">    <span class="comment"># sliderlength =</span></div><div class="line">    <span class="comment"># sliderrelief =</span></div><div class="line">    <span class="comment"># tickinterval =</span></div><div class="line">    <span class="comment"># troughcolor =</span></div><div class="line">).pack()</div><div class="line"><span class="comment"># coords(value=None) # Gets the screen coordinate corresponding to the given scale value.</span></div><div class="line"><span class="comment"># get() # Gets the current scale value.</span></div><div class="line"><span class="comment"># identify(x, y) # Checks if an active part of the scale is at the given screen location.</span></div><div class="line"><span class="comment"># set(value)</span></div></pre></td></tr></table></figure>
+<h2 id="5-Scrollbar"><a href="#5-Scrollbar" class="headerlink" title="5. Scrollbar"></a>5. Scrollbar</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># The Scrollbar widget is almost always used in conjunction with a Listbox, Canvas, or Text widget. Horizontal scrollbars can also be used with the Entry widget.</span></div><div class="line"></div><div class="line"><span class="comment"># To connect a vertical scrollbar to such a widget, you have to do two things:</span></div><div class="line"><span class="comment"># Set the widget’s yscrollcommand callbacks to the set method of the scrollbar.</span></div><div class="line"><span class="comment"># Set the scrollbar’s command to the yview method of the widget.</span></div><div class="line">sb = tkinter.Scrollbar(root)</div><div class="line">sb.pack(side =<span class="string">"right"</span>,fill = <span class="string">"y"</span>)</div><div class="line">lb = tkinter.Listbox(</div><div class="line">    root,</div><div class="line">    yscrollcommand = sb.set</div><div class="line">)</div><div class="line">sb.config(command = lb.yview)</div><div class="line"><span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">10</span>,<span class="number">300</span>,<span class="number">5</span>):</div><div class="line">    lb.insert(<span class="number">0</span>,x)</div><div class="line">lb.pack(side = <span class="string">'left'</span>,fill = <span class="string">"both"</span>)</div><div class="line"><span class="comment">#</span></div><div class="line"><span class="comment"># activate(element)</span></div><div class="line"><span class="comment"># elementborderwidth=</span></div><div class="line"><span class="comment"># jump =</span></div><div class="line"><span class="comment"># orient =</span></div><div class="line"><span class="comment"># repeatdelay =</span></div><div class="line"><span class="comment"># repeatinterval=</span></div><div class="line"><span class="comment"># troughcolor=</span></div><div class="line"><span class="comment"># delta(deltax, deltay)</span></div><div class="line"><span class="comment"># fraction(x, y)</span></div><div class="line"><span class="comment"># get()</span></div><div class="line"><span class="comment"># identify(x, y)</span></div><div class="line"><span class="comment"># set(lo, hi)</span></div></pre></td></tr></table></figure>
+<h2 id="6-Spinbox"><a href="#6-Spinbox" class="headerlink" title="6. Spinbox"></a>6. Spinbox</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Spinbox</span></div><div class="line">sp = tkinter.Spinbox( <span class="comment"># numner select</span></div><div class="line">    root,</div><div class="line">    from_ = <span class="number">10</span>,</div><div class="line">    to = <span class="number">100</span>,</div><div class="line">    <span class="comment"># command =</span></div><div class="line">    <span class="comment"># xscrollcommand = # Used to connect a spinbox field to a horizontal scrollbar. This option should be set to the set method of the corresponding scrollbar</span></div><div class="line">)</div><div class="line">sp.pack()</div><div class="line"><span class="comment"># Spinbox(root, values = (3,6,9))</span></div><div class="line"><span class="comment"># delete(first, last=None)</span></div><div class="line"><span class="comment"># get()</span></div><div class="line"><span class="comment"># icursor(index)</span></div><div class="line"><span class="comment"># identify(x, y)</span></div><div class="line"><span class="comment"># index(index)</span></div><div class="line"><span class="comment"># insert(index, text)</span></div><div class="line"><span class="comment"># invoke(element)</span></div><div class="line"><span class="comment"># scan_dragto(x)</span></div><div class="line"><span class="comment"># scan_mark(x)</span></div><div class="line"><span class="comment"># selection_adjust(index)</span></div><div class="line"><span class="comment"># selection_clear()</span></div><div class="line"><span class="comment"># selection_element(element=None)</span></div></pre></td></tr></table></figure>
+<h2 id="7-Toplevel"><a href="#7-Toplevel" class="headerlink" title="7. Toplevel"></a>7. Toplevel</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># The Toplevel widget is used to display extra application windows, dialogs, and other “pop-up” windows.</span></div><div class="line">tl = tkinter.Toplevel()</div><div class="line">tl.title(<span class="string">"top level"</span>)</div><div class="line">lb = tkinter.Label(tl, text = <span class="string">"this is Toplevel lavel"</span>)</div><div class="line">lb.pack()</div><div class="line">btn = tkinter.Button(tl,text = <span class="string">"destroy"</span>,command = tl.destroy)</div><div class="line">btn.pack()</div></pre></td></tr></table></figure>
+<h2 id="8-tkMessageBox"><a href="#8-tkMessageBox" class="headerlink" title="8. tkMessageBox"></a>8. tkMessageBox</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># The tkMessageBox module provides an interface to the message dialogs.</span></div><div class="line"><span class="comment"># tkMessageBox.function(title, message [, options]).</span></div><div class="line">tkMessageBox.showwarning(</div><div class="line">    <span class="string">"Open file"</span>,</div><div class="line">    <span class="string">"Cannot open this file\n"</span></div><div class="line">)</div><div class="line"><span class="comment"># showinfo</span></div><div class="line"><span class="comment"># showwarning</span></div><div class="line"><span class="comment"># showerror</span></div><div class="line"><span class="comment"># askquestion</span></div><div class="line"><span class="comment"># askokcancel</span></div><div class="line"><span class="comment"># askyesno</span></div><div class="line"><span class="comment"># askretrycancel</span></div><div class="line"></div><div class="line"><span class="comment"># Message Box Options</span></div><div class="line">default <span class="comment"># ABORT, RETRY, IGNORE, OK, CANCEL, YES, or NO</span></div><div class="line">icon <span class="comment">#  ERROR, INFO, QUESTION, or WARNING</span></div><div class="line">message (string)</div><div class="line">parent (widget)</div><div class="line">title (string)</div><div class="line">type (constant) <span class="comment"># ABORTRETRYIGNORE, OK, OKCANCEL, RETRYCANCEL, YESNO, or YESNOCANCEL.</span></div></pre></td></tr></table></figure>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2016-12-02T10:39:14.045Z" itemprop="dateUpdated">2016年12月2日 18:39</time>
+</span><br>
+
+
+        这里写留言或版权声明：<a href="/2016/05/11/python-tkinter-komponents-two/" target="_blank" rel="external">http://kompasim.github.io/2016/05/11/python-tkinter-komponents-two/</a>
+    </div>
+    <footer>
+        <a href="http://kompasim.github.io">
+            <img src="/img/avatar.jpg" alt="alimjan">
+            alimjan
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tkinter/">tkinter</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://kompasim.github.io/2016/05/11/python-tkinter-komponents-two/&title=《python模块tkinter的常用控件2》 — Kompasim&pic=http://kompasim.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://kompasim.github.io/2016/05/11/python-tkinter-komponents-two/&title=《python模块tkinter的常用控件2》 — Kompasim&source=I like Atom but sometimes have to start the Sublime Text again ..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://kompasim.github.io/2016/05/11/python-tkinter-komponents-two/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《python模块tkinter的常用控件2》 — Kompasim&url=http://kompasim.github.io/2016/05/11/python-tkinter-komponents-two/&via=http://kompasim.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://kompasim.github.io/2016/05/11/python-tkinter-komponents-two/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2016/05/11/python-tkinter-komponent-canvas/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">python-tkinter-komponent-canvas</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2016/05/09/python-tkinter-komponents-one/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">python模块tkinter的常用控件1</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="python-tkinter-komponents-two" data-title="python模块tkinter的常用控件2" data-url="http://kompasim.github.io/2016/05/11/python-tkinter-komponents-two/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'kompasim', theme: 'none'};
+lazyScripts.push('//unpkg.com/hexo-theme-material-indigo@1.5.2/js/embed.min.js');
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>Kompasim &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://kompasim.github.io/2016/05/11/python-tkinter-komponents-two/&title=《python模块tkinter的常用控件2》 — Kompasim&pic=http://kompasim.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://kompasim.github.io/2016/05/11/python-tkinter-komponents-two/&title=《python模块tkinter的常用控件2》 — Kompasim&source=I like Atom but sometimes have to start the Sublime Text again ..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://kompasim.github.io/2016/05/11/python-tkinter-komponents-two/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《python模块tkinter的常用控件2》 — Kompasim&url=http://kompasim.github.io/2016/05/11/python-tkinter-komponents-two/&via=http://kompasim.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://kompasim.github.io/2016/05/11/python-tkinter-komponents-two/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACp0lEQVR42u3aO27DQAwFwNz/0gmQyimkPJJLKwFGlWH4s7OFSD3ux0d8fX5fr69f37n6ZO/XJr/cvPDw8PBaS7+6rj6zsSnJla8ZDw8Pb5s3uX3nN/d7WHW7o+KBh4eH9yiv1+DeA+7Lxv2G4uHh4f0vXnVZVUCyQXh4eHjP8not7JxULR6LWQseHh5ezOsFss++Xp/v4eHh4bWm6snwqTrgTwKO+/cLq8XDw8Nb4N23v6cWmjMm47TCEwMeHh7egFddRD4SO1VIqpvy4zUeHh7eAq+KyQtAL6itHj5oVj88PDy8Ae/UInqxQm/QVRiw4eHh4S3w8uXmTXP1aFS1lc+bbDw8PLxtXm94n9+Ue213NRr+JYzAw8PDO8qrNtCTMlCNdCexBR4eHt4GL3/Uz//gfjuSMKIXGePh4eFt83oN8WRINol6y8cI8PDw8NZ4yY17Muja+FYUkeDh4eEt8E41tfkhgGpc22vW8fDw8N7D6+W+9+DeYYXqCC0qDHh4eHiHeAksX1wvmEhC5CYYDw8Pb4FXbVjnVai6ZVUSHh4e3jZv8hOT5nv0BJBvDR4eHt4Crxc3JFcec+SBbDPswMPDwzvKqy4079Pn7yfR8OjQFR4eHl6L1xv55+1yHnYk/5UfC8PDw8Pb401G/tUSMjmm0CtIeHh4eO/hVdvo5Nk/Dz56hepy+/Dw8PAWePmAvxfjzo8CVMddeHh4eNu8yVjrPYHFsTACDw8P7xCvd4wpb5cnN/1TIS8eHh7eBm9eDKrsZDCWBLhR446Hh4e3xmtmGMV4t7etedG6jCTw8PDwHuL1GuJ5CekVFTw8PLy/w6sGr5MyU40qLsMIPDw8vAVeNYyoDrGqN/c8/I1aajw8PLyjvOoArHfrrw7+J2Fu+cLDw8NLeV8jEu4De0g3sQAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.5.2/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.5.2/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

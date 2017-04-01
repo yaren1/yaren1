@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>用c语言画ppm图片（二） | Kompasim | Personal technology blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="c,image">
+    <meta name="description" content="1. PPM介绍关于PPM的介绍请看`用c语言画ppm图片（一）`这篇文章
+2. 主代码123456789101112131415161718192021222324252627282">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用c语言画ppm图片（二）">
+<meta property="og:url" content="http://kompasim.github.io/2017/03/15/c-and-ppm-two/index.html">
+<meta property="og:site_name" content="Kompasim">
+<meta property="og:description" content="1. PPM介绍关于PPM的介绍请看`用c语言画ppm图片（一）`这篇文章
+2. 主代码123456789101112131415161718192021222324252627282">
+<meta property="og:image" content="http://img3.3lian.com/2013/v14/13/d/48.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/7cc829d3jw1f28vpacqvxj20sg0sgtb8.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/7cc829d3jw1f28vpeqlu9j20sg0sg4qp.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/7cc829d3jw1f28vpfzy94j20sg0sgwkn.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/7cc829d3jw1f28vph3v7cj20sg0sg0yo.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/7cc829d3jw1f28vpcabe9j20sg0sggvc.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/7cc829d3jw1f28vpdjilsj20sg0sgkjl.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/7cc829d3jw1f28vpif0hwj20sg0sgh98.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/7cc829d3jw1f28vpjht21j20sg0sg79t.jpg">
+<meta property="og:updated_time" content="2017-03-14T15:15:22.241Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="用c语言画ppm图片（二）">
+<meta name="twitter:description" content="1. PPM介绍关于PPM的介绍请看`用c语言画ppm图片（一）`这篇文章
+2. 主代码123456789101112131415161718192021222324252627282">
+<meta name="twitter:image" content="http://img3.3lian.com/2013/v14/13/d/48.jpg">
+    
+        <link rel="alternative" href="/atom.xml" title="Kompasim" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@1.5.2/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">alimjan</h5>
+          <a href="mailto:kompasim@163.com" title="kompasim@163.com" class="mail">kompasim@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                HOME
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/kompasim" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://stackoverflow.com/users/6213502/kompasim" target="_blank" >
+                <i class="icon icon-lg icon-stack-overflow"></i>
+                Stack Overflow
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://segmentfault.com/u/kompasim" target="_blank" >
+                <i class="icon icon-lg icon-link"></i>
+                segmentfault
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">用c语言画ppm图片（二）</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">用c语言画ppm图片（二）</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-03-15T12:42:44.000Z" itemprop="datePublished" class="page-time">
+  2017-03-15
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/c/">c</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-PPM介绍"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. PPM介绍</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-主代码"><span class="post-toc-number">2.</span> <span class="post-toc-text">2. 主代码</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-欣赏"><span class="post-toc-number">3.</span> <span class="post-toc-text">3. 欣赏</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-欣赏"><span class="post-toc-number">4.</span> <span class="post-toc-text">4. 欣赏</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-欣赏"><span class="post-toc-number">5.</span> <span class="post-toc-text">5. 欣赏</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-欣赏"><span class="post-toc-number">6.</span> <span class="post-toc-text">6. 欣赏</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-欣赏"><span class="post-toc-number">7.</span> <span class="post-toc-text">7. 欣赏</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-欣赏"><span class="post-toc-number">8.</span> <span class="post-toc-text">8. 欣赏</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#9-欣赏"><span class="post-toc-number">9.</span> <span class="post-toc-text">9. 欣赏</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#10-欣赏"><span class="post-toc-number">10.</span> <span class="post-toc-text">10. 欣赏</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-c-and-ppm-two"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">用c语言画ppm图片（二）</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017年03月15日 20:42" datetime="2017-03-15T12:42:44.000Z"  itemprop="datePublished">2017-03-15</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/c/">c</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img3.3lian.com/2013/v14/13/d/48.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<hr>
+<h2 id="1-PPM介绍"><a href="#1-PPM介绍" class="headerlink" title="1. PPM介绍"></a>1. PPM介绍</h2><pre><code>关于PPM的介绍请看`用c语言画ppm图片（一）`这篇文章
+</code></pre><h2 id="2-主代码"><a href="#2-主代码" class="headerlink" title="2. 主代码"></a>2. 主代码</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> DIM 1024</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> DM1 (DIM-1)</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> _sq(x) ((x)*(x)) <span class="comment">// square</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> _cb(x) abs((x)*(x)*(x)) <span class="comment">// absolute value of cube</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> _cr(x) (unsigned char)(pow((x),1.0/3.0)) <span class="comment">// cube root</span></span></div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">GR</span><span class="params">(<span class="keyword">int</span>,<span class="keyword">int</span>)</span></span>;</div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">BL</span><span class="params">(<span class="keyword">int</span>,<span class="keyword">int</span>)</span></span>;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">RD</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">   <span class="comment">// YOUR CODE HERE</span></div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">GR</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">   <span class="comment">// YOUR CODE HERE</span></div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">BL</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">   <span class="comment">// YOUR CODE HERE</span></div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">pixel_write</span><span class="params">(<span class="keyword">int</span>,<span class="keyword">int</span>)</span></span>;</div><div class="line">FILE *fp;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    fp = fopen(<span class="string">"MathPic.ppm"</span>,<span class="string">"wb"</span>);</div><div class="line">    <span class="built_in">fprintf</span>(fp, <span class="string">"P6\n%d %d\n255\n"</span>, DIM, DIM);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;DIM;j++)</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;DIM;i++)</div><div class="line">            pixel_write(i,j);</div><div class="line">    fclose(fp);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">pixel_write</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">static</span> <span class="keyword">unsigned</span> <span class="keyword">char</span> color[<span class="number">3</span>];</div><div class="line">    color[<span class="number">0</span>] = RD(i,j)&amp;<span class="number">255</span>;</div><div class="line">    color[<span class="number">1</span>] = GR(i,j)&amp;<span class="number">255</span>;</div><div class="line">    color[<span class="number">2</span>] = BL(i,j)&amp;<span class="number">255</span>;</div><div class="line">    fwrite(color, <span class="number">1</span>, <span class="number">3</span>, fp);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="3-欣赏"><a href="#3-欣赏" class="headerlink" title="3. 欣赏"></a>3. 欣赏</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://ww4.sinaimg.cn/large/7cc829d3jw1f28vpacqvxj20sg0sgtb8.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">RD</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">return</span> (<span class="keyword">char</span>)(_sq(<span class="built_in">cos</span>(<span class="built_in">atan2</span>(j<span class="number">-512</span>,i<span class="number">-512</span>)/<span class="number">2</span>))*<span class="number">255</span>);</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">GR</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">return</span> (<span class="keyword">char</span>)(_sq(<span class="built_in">cos</span>(<span class="built_in">atan2</span>(j<span class="number">-512</span>,i<span class="number">-512</span>)/<span class="number">2</span><span class="number">-2</span>*<span class="built_in">acos</span>(<span class="number">-1</span>)/<span class="number">3</span>))*<span class="number">255</span>);</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">BL</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">return</span> (<span class="keyword">char</span>)(_sq(<span class="built_in">cos</span>(<span class="built_in">atan2</span>(j<span class="number">-512</span>,i<span class="number">-512</span>)/<span class="number">2</span>+<span class="number">2</span>*<span class="built_in">acos</span>(<span class="number">-1</span>)/<span class="number">3</span>))*<span class="number">255</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="4-欣赏"><a href="#4-欣赏" class="headerlink" title="4. 欣赏"></a>4. 欣赏</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://ww1.sinaimg.cn/large/7cc829d3jw1f28vpeqlu9j20sg0sg4qp.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">RD</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> r(n)(rand()%n)</span></div><div class="line">    <span class="keyword">static</span> <span class="keyword">char</span> c[<span class="number">1024</span>][<span class="number">1024</span>];<span class="keyword">return</span>!c[i][j]?c[i][j]=!r(<span class="number">999</span>)?r(<span class="number">256</span>):RD((i+r(<span class="number">2</span>))%<span class="number">1024</span>,(j+r(<span class="number">2</span>))%<span class="number">1024</span>):c[i][j];</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">GR</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">static</span> <span class="keyword">char</span> c[<span class="number">1024</span>][<span class="number">1024</span>];<span class="keyword">return</span>!c[i][j]?c[i][j]=!r(<span class="number">999</span>)?r(<span class="number">256</span>):GR((i+r(<span class="number">2</span>))%<span class="number">1024</span>,(j+r(<span class="number">2</span>))%<span class="number">1024</span>):c[i][j];</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">BL</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">static</span> <span class="keyword">char</span> c[<span class="number">1024</span>][<span class="number">1024</span>];<span class="keyword">return</span>!c[i][j]?c[i][j]=!r(<span class="number">999</span>)?r(<span class="number">256</span>):BL((i+r(<span class="number">2</span>))%<span class="number">1024</span>,(j+r(<span class="number">2</span>))%<span class="number">1024</span>):c[i][j];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="5-欣赏"><a href="#5-欣赏" class="headerlink" title="5. 欣赏"></a>5. 欣赏</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://ww3.sinaimg.cn/large/7cc829d3jw1f28vpfzy94j20sg0sgwkn.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">RD</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">float</span> x=<span class="number">0</span>,y=<span class="number">0</span>;<span class="keyword">int</span> k;<span class="keyword">for</span>(k=<span class="number">0</span>;k++&lt;<span class="number">256</span>;)&#123;<span class="keyword">float</span> a=x*x-y*y+(i<span class="number">-768.0</span>)/<span class="number">512</span>;y=<span class="number">2</span>*x*y+(j<span class="number">-512.0</span>)/<span class="number">512</span>;x=a;<span class="keyword">if</span>(x*x+y*y&gt;<span class="number">4</span>)<span class="keyword">break</span>;&#125;<span class="keyword">return</span> <span class="built_in">log</span>(k)*<span class="number">47</span>;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">GR</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">float</span> x=<span class="number">0</span>,y=<span class="number">0</span>;<span class="keyword">int</span> k;<span class="keyword">for</span>(k=<span class="number">0</span>;k++&lt;<span class="number">256</span>;)&#123;<span class="keyword">float</span> a=x*x-y*y+(i<span class="number">-768.0</span>)/<span class="number">512</span>;y=<span class="number">2</span>*x*y+(j<span class="number">-512.0</span>)/<span class="number">512</span>;x=a;<span class="keyword">if</span>(x*x+y*y&gt;<span class="number">4</span>)<span class="keyword">break</span>;&#125;<span class="keyword">return</span> <span class="built_in">log</span>(k)*<span class="number">47</span>;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">BL</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">float</span> x=<span class="number">0</span>,y=<span class="number">0</span>;<span class="keyword">int</span> k;<span class="keyword">for</span>(k=<span class="number">0</span>;k++&lt;<span class="number">256</span>;)&#123;<span class="keyword">float</span> a=x*x-y*y+(i<span class="number">-768.0</span>)/<span class="number">512</span>;y=<span class="number">2</span>*x*y+(j<span class="number">-512.0</span>)/<span class="number">512</span>;x=a;<span class="keyword">if</span>(x*x+y*y&gt;<span class="number">4</span>)<span class="keyword">break</span>;&#125;<span class="keyword">return</span> <span class="number">128</span>-<span class="built_in">log</span>(k)*<span class="number">23</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="6-欣赏"><a href="#6-欣赏" class="headerlink" title="6. 欣赏"></a>6. 欣赏</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://ww3.sinaimg.cn/large/7cc829d3jw1f28vph3v7cj20sg0sg0yo.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">RD</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">double</span> a=<span class="number">0</span>,b=<span class="number">0</span>,c,d,n=<span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>((c=a*a)+(d=b*b)&lt;<span class="number">4</span>&amp;&amp;n++&lt;<span class="number">880</span>)</div><div class="line">    &#123;b=<span class="number">2</span>*a*b+j*<span class="number">8e-9</span><span class="number">-.645411</span>;a=c-d+i*<span class="number">8e-9</span>+<span class="number">.356888</span>;&#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">255</span>*<span class="built_in">pow</span>((n<span class="number">-80</span>)/<span class="number">800</span>,<span class="number">3.</span>);</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">GR</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">double</span> a=<span class="number">0</span>,b=<span class="number">0</span>,c,d,n=<span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>((c=a*a)+(d=b*b)&lt;<span class="number">4</span>&amp;&amp;n++&lt;<span class="number">880</span>)</div><div class="line">    &#123;b=<span class="number">2</span>*a*b+j*<span class="number">8e-9</span><span class="number">-.645411</span>;a=c-d+i*<span class="number">8e-9</span>+<span class="number">.356888</span>;&#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">255</span>*<span class="built_in">pow</span>((n<span class="number">-80</span>)/<span class="number">800</span>,<span class="number">.7</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">BL</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">double</span> a=<span class="number">0</span>,b=<span class="number">0</span>,c,d,n=<span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>((c=a*a)+(d=b*b)&lt;<span class="number">4</span>&amp;&amp;n++&lt;<span class="number">880</span>)</div><div class="line">    &#123;b=<span class="number">2</span>*a*b+j*<span class="number">8e-9</span><span class="number">-.645411</span>;a=c-d+i*<span class="number">8e-9</span>+<span class="number">.356888</span>;&#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">255</span>*<span class="built_in">pow</span>((n<span class="number">-80</span>)/<span class="number">800</span>,<span class="number">.5</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="7-欣赏"><a href="#7-欣赏" class="headerlink" title="7. 欣赏"></a>7. 欣赏</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://ww2.sinaimg.cn/large/7cc829d3jw1f28vpcabe9j20sg0sggvc.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">RD</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">static</span> <span class="keyword">double</span> k;k+=rand()/<span class="number">1.</span>/RAND_MAX;<span class="keyword">int</span> l=k;l%=<span class="number">512</span>;<span class="keyword">return</span> l&gt;<span class="number">255</span>?<span class="number">511</span>-l:l;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">GR</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">static</span> <span class="keyword">double</span> k;k+=rand()/<span class="number">1.</span>/RAND_MAX;<span class="keyword">int</span> l=k;l%=<span class="number">512</span>;<span class="keyword">return</span> l&gt;<span class="number">255</span>?<span class="number">511</span>-l:l;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">BL</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">static</span> <span class="keyword">double</span> k;k+=rand()/<span class="number">1.</span>/RAND_MAX;<span class="keyword">int</span> l=k;l%=<span class="number">512</span>;<span class="keyword">return</span> l&gt;<span class="number">255</span>?<span class="number">511</span>-l:l;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="8-欣赏"><a href="#8-欣赏" class="headerlink" title="8. 欣赏"></a>8. 欣赏</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://ww3.sinaimg.cn/large/7cc829d3jw1f28vpdjilsj20sg0sgkjl.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">RD</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">float</span> s=<span class="number">3.</span>/(j+<span class="number">99</span>);</div><div class="line">    <span class="keyword">float</span> y=(j+<span class="built_in">sin</span>((i*i+_sq(j<span class="number">-700</span>)*<span class="number">5</span>)/<span class="number">100.</span>/DIM)*<span class="number">35</span>)*s;</div><div class="line">    <span class="keyword">return</span> (<span class="keyword">int</span>((i+DIM)*s+y)%<span class="number">2</span>+<span class="keyword">int</span>((DIM*<span class="number">2</span>-i)*s+y)%<span class="number">2</span>)*<span class="number">127</span>;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">GR</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">float</span> s=<span class="number">3.</span>/(j+<span class="number">99</span>);</div><div class="line">    <span class="keyword">float</span> y=(j+<span class="built_in">sin</span>((i*i+_sq(j<span class="number">-700</span>)*<span class="number">5</span>)/<span class="number">100.</span>/DIM)*<span class="number">35</span>)*s;</div><div class="line">    <span class="keyword">return</span> (<span class="keyword">int</span>(<span class="number">5</span>*((i+DIM)*s+y))%<span class="number">2</span>+<span class="keyword">int</span>(<span class="number">5</span>*((DIM*<span class="number">2</span>-i)*s+y))%<span class="number">2</span>)*<span class="number">127</span>;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">BL</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="keyword">float</span> s=<span class="number">3.</span>/(j+<span class="number">99</span>);</div><div class="line">    <span class="keyword">float</span> y=(j+<span class="built_in">sin</span>((i*i+_sq(j<span class="number">-700</span>)*<span class="number">5</span>)/<span class="number">100.</span>/DIM)*<span class="number">35</span>)*s;</div><div class="line">    <span class="keyword">return</span> (<span class="keyword">int</span>(<span class="number">29</span>*((i+DIM)*s+y))%<span class="number">2</span>+<span class="keyword">int</span>(<span class="number">29</span>*((DIM*<span class="number">2</span>-i)*s+y))%<span class="number">2</span>)*<span class="number">127</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="9-欣赏"><a href="#9-欣赏" class="headerlink" title="9. 欣赏"></a>9. 欣赏</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://ww1.sinaimg.cn/large/7cc829d3jw1f28vpif0hwj20sg0sgh98.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">RD</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> D DIM</span></div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> M m[(x+D+(d==0)-(d==2))%D][(y+D+(d==1)-(d==3))%D]</span></div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> R rand()%D</span></div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> B m[x][y]</span></div><div class="line">    <span class="keyword">return</span>(i+j)?<span class="number">256</span>-(BL(i,j))/<span class="number">2</span>:<span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">GR</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> A static int m[D][D],e,x,y,d,c[4],f,n;<span class="meta-keyword">if</span>(i+j&lt;1)&#123;for(d=D*D;d;d--)&#123;m[d%D][d/D]=d%6?0:rand()%2000?1:255;&#125;for(n=1</span></div><div class="line">    <span class="keyword">return</span> RD(i,j);</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">char</span> <span class="title">BL</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">    A;n;n++)&#123;x=R;y=R;<span class="keyword">if</span>(B==<span class="number">1</span>)&#123;f=<span class="number">1</span>;<span class="keyword">for</span>(d=<span class="number">0</span>;d&lt;<span class="number">4</span>;d++)&#123;c[d]=M;f=f&lt;c[d]?c[d]:f;&#125;<span class="keyword">if</span>(f&gt;<span class="number">2</span>)&#123;B=f<span class="number">-1</span>;&#125;<span class="keyword">else</span>&#123;++e%=<span class="number">4</span>;d=e;<span class="keyword">if</span>(!c[e])&#123;B=<span class="number">0</span>;M=<span class="number">1</span>;&#125;&#125;&#125;&#125;&#125;<span class="keyword">return</span> m[i][j];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="10-欣赏"><a href="#10-欣赏" class="headerlink" title="10. 欣赏"></a>10. 欣赏</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://ww1.sinaimg.cn/large/7cc829d3jw1f28vpjht21j20sg0sg79t.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">unsigned char RD(int i,int j)&#123;</div><div class="line">    #define A float a=0,b,k,r,x</div><div class="line">    #define B int e,o</div><div class="line">    #define C(x) x&gt;255?255:x</div><div class="line">    #define R return</div><div class="line">    #define D DIM</div><div class="line">    R BL(i,j)*(D-i)/D;</div><div class="line">&#125;</div><div class="line"> </div><div class="line">unsigned char GR(int i,int j)&#123;</div><div class="line">    #define E DM1</div><div class="line">    #define F static float</div><div class="line">    #define G for(</div><div class="line">    #define H r=a*1.6/D+2.4;x=1.0001*b/D</div><div class="line">    R BL(i,j)*(D-j/2)/D;</div><div class="line">&#125;</div><div class="line"> </div><div class="line">unsigned char BL(int i,int j)&#123;</div><div class="line">    F c[D][D];if(i+j&lt;1)&#123;A;B;G;a&lt;D;a+=0.1)&#123;G b=0;b&lt;D;b++)&#123;H;G k=0;k&lt;D;k++)&#123;x=r*x*(1-x);if(k&gt;D/2)&#123;e=a;o=(E*x);c[e][o]+=0.01;&#125;&#125;&#125;&#125;&#125;R C(c[j][i])*i/D;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-03-14T15:15:22.241Z" itemprop="dateUpdated">2017年3月14日 23:15</time>
+</span><br>
+
+
+        这里写留言或版权声明：<a href="/2017/03/15/c-and-ppm-two/" target="_blank" rel="external">http://kompasim.github.io/2017/03/15/c-and-ppm-two/</a>
+    </div>
+    <footer>
+        <a href="http://kompasim.github.io">
+            <img src="/img/avatar.jpg" alt="alimjan">
+            alimjan
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/c/">c</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/image/">image</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://kompasim.github.io/2017/03/15/c-and-ppm-two/&title=《用c语言画ppm图片（二）》 — Kompasim&pic=http://kompasim.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://kompasim.github.io/2017/03/15/c-and-ppm-two/&title=《用c语言画ppm图片（二）》 — Kompasim&source=I like Atom but sometimes have to start the Sublime Text again ..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://kompasim.github.io/2017/03/15/c-and-ppm-two/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《用c语言画ppm图片（二）》 — Kompasim&url=http://kompasim.github.io/2017/03/15/c-and-ppm-two/&via=http://kompasim.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://kompasim.github.io/2017/03/15/c-and-ppm-two/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/03/28/nodejs-http-request/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">nodejs用superagent发http请求</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/03/14/c-and-ppm-one/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">用c语言画ppm图片（一）</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="c-and-ppm-two" data-title="用c语言画ppm图片（二）" data-url="http://kompasim.github.io/2017/03/15/c-and-ppm-two/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'kompasim', theme: 'none'};
+lazyScripts.push('//unpkg.com/hexo-theme-material-indigo@1.5.2/js/embed.min.js');
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>Kompasim &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://kompasim.github.io/2017/03/15/c-and-ppm-two/&title=《用c语言画ppm图片（二）》 — Kompasim&pic=http://kompasim.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://kompasim.github.io/2017/03/15/c-and-ppm-two/&title=《用c语言画ppm图片（二）》 — Kompasim&source=I like Atom but sometimes have to start the Sublime Text again ..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://kompasim.github.io/2017/03/15/c-and-ppm-two/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《用c语言画ppm图片（二）》 — Kompasim&url=http://kompasim.github.io/2017/03/15/c-and-ppm-two/&via=http://kompasim.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://kompasim.github.io/2017/03/15/c-and-ppm-two/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJ0lEQVR42u3aQY7CMAwFUO5/aWY9mqF82xQpyesKobbxA8lyHD8e8fWMr1f3X7/571OPOy4MDIxlGdWwkvdcB5qsnseGgYFxDiNJhT3A9fJV9svvMTAwMILkm6TpaimJgYGBcXfCzUO//gYDAwMj38T2isJqi+32vTgGBsaCjLzr/v3Pt5xvYGBgLMV4Fq9emywJK0+y/0SFgYGxNaO6TH5IOQ89jwcDA+MERnX0odfiT0LJhzzeUDEwMI5hVBPlJKVWR8oKCRcDA2MjRjLUNVm4mkCbBwAYGBjbMZIl54Vg8lTv0PRX1xADA+MwxiRp5s/2tqxvykEMDIztGM1b47DyUi9Pu81/BgMDY1lGtU2WJNbJcWavuMTAwDiHMTm8zBNudetbnhbBwMDYjpG30qpl3LwNVxitwMDAOIBRTXN5IThpqFXXwsDA2JuRD1VMisVqIVhu3mFgYGzK6KXO/Ahh8p6PDVtgYGAszsgXnmx6q/Xp/OfDwMDYj5GUZdV78oIySa9RVw0DA+MYxmc3sZOBsPKwGgYGxpGMakLMAyqHmLAxMDA2ZUwa+kl6TYLrpfg3MgwMjI0Y1TmrXis/mvJo1XhlGAYGxrKMJMn22m13HDwUakYMDIztGNU23HUazUc3eptYDAwMjPzA4L5tZ7N6xcDAwBjsj3vlZuFODAyMAxiTgYneoWa1GfexdhsGBsaCjGrdVR0IS1ppeY03Kj0xMDDWY/wAU43bGTFibFUAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.5.2/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@1.5.2/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
